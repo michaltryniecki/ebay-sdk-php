@@ -175,7 +175,9 @@ abstract class BaseService
                 $xmlParser = new XmlParser($responseClass);
 
                 $response = $xmlParser->parse($xmlResponse);
-                $response->attachment($attachment);
+                if( $response ) {
+                    $response->attachment($attachment);
+                }
 
                 return $response;
             }

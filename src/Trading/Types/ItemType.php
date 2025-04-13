@@ -40,6 +40,7 @@ namespace DTS\eBaySDK\Trading\Types;
  * @property \DTS\eBaySDK\Trading\Types\ProductListingDetailsType $ProductListingDetails
  * @property integer $Quantity
  * @property string $PrivateNotes
+ * @property \DTS\eBaySDK\Trading\Types\RegulatoryType $Regulatory
  * @property boolean $RelistLink
  * @property \DTS\eBaySDK\Trading\Types\AmountType $ReservePrice
  * @property \DTS\eBaySDK\Trading\Types\ReviseStatusType $ReviseStatus
@@ -312,6 +313,12 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PrivateNotes'
+        ],
+        'Regulatory' => [
+            'type' => 'DTS\eBaySDK\Trading\Types\RegulatoryType',
+            'repeatable' => false,
+            'attribute' => false,
+            'elementName' => 'Regulatory'
         ],
         'RelistLink' => [
             'type' => 'boolean',
