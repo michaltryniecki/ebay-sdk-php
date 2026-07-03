@@ -21,7 +21,7 @@ class MetadataService extends \DTS\eBaySDK\Metadata\Services\MetadataBaseService
         'GetSalesTaxJurisdictions' => [
             'method' => 'GET',
             'resource' => 'country/{countryCode}/sales_tax_jurisdiction',
-            'responseClass' => '\DTS\eBaySDK\Metadata\Types\GetSalesTaxJurisdictionsRestResponse',
+            'responseClass' => \DTS\eBaySDK\Metadata\Types\GetSalesTaxJurisdictionsRestResponse::class,
             'params' => [
                 'countryCode' => [
                     'valid' => ['string'],
@@ -32,7 +32,7 @@ class MetadataService extends \DTS\eBaySDK\Metadata\Services\MetadataBaseService
         'GetPoliciesForAutoPartsCompatibility' => [
             'method' => 'GET',
             'resource' => 'marketplace/{marketplace_id}/get_automotive_parts_compatibility_policies',
-            'responseClass' => '\DTS\eBaySDK\Metadata\Types\GetPoliciesForAutoPartsCompatibilityRestResponse',
+            'responseClass' => \DTS\eBaySDK\Metadata\Types\GetPoliciesForAutoPartsCompatibilityRestResponse::class,
             'params' => [
                 'filter' => [
                     'valid' => ['string']
@@ -46,7 +46,7 @@ class MetadataService extends \DTS\eBaySDK\Metadata\Services\MetadataBaseService
         'GetPoliciesForItemCondition' => [
             'method' => 'GET',
             'resource' => 'marketplace/{marketplace_id}/get_item_condition_policies',
-            'responseClass' => '\DTS\eBaySDK\Metadata\Types\GetPoliciesForItemConditionRestResponse',
+            'responseClass' => \DTS\eBaySDK\Metadata\Types\GetPoliciesForItemConditionRestResponse::class,
             'params' => [
                 'filter' => [
                     'valid' => ['string']
@@ -60,7 +60,7 @@ class MetadataService extends \DTS\eBaySDK\Metadata\Services\MetadataBaseService
         'GetPoliciesForListingStructures' => [
             'method' => 'GET',
             'resource' => 'marketplace/{marketplace_id}/get_listing_structure_policies',
-            'responseClass' => '\DTS\eBaySDK\Metadata\Types\GetPoliciesForListingStructuresRestResponse',
+            'responseClass' => \DTS\eBaySDK\Metadata\Types\GetPoliciesForListingStructuresRestResponse::class,
             'params' => [
                 'filter' => [
                     'valid' => ['string']
@@ -74,7 +74,7 @@ class MetadataService extends \DTS\eBaySDK\Metadata\Services\MetadataBaseService
         'GetPoliciesForNegotiatedPrice' => [
             'method' => 'GET',
             'resource' => 'marketplace/{marketplace_id}/get_negotiated_price_policies',
-            'responseClass' => '\DTS\eBaySDK\Metadata\Types\GetPoliciesForNegotiatedPriceRestResponse',
+            'responseClass' => \DTS\eBaySDK\Metadata\Types\GetPoliciesForNegotiatedPriceRestResponse::class,
             'params' => [
                 'filter' => [
                     'valid' => ['string']
@@ -88,7 +88,7 @@ class MetadataService extends \DTS\eBaySDK\Metadata\Services\MetadataBaseService
         'GetPoliciesForReturns' => [
             'method' => 'GET',
             'resource' => 'marketplace/{marketplace_id}/get_return_policies',
-            'responseClass' => '\DTS\eBaySDK\Metadata\Types\GetPoliciesForReturnsRestResponse',
+            'responseClass' => \DTS\eBaySDK\Metadata\Types\GetPoliciesForReturnsRestResponse::class,
             'params' => [
                 'filter' => [
                     'valid' => ['string']

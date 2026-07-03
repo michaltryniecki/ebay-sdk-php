@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\AdFormatEnabledCodeType;
 
-class AdFormatEnabledCodeTypeTest extends \PHPUnit_Framework_TestCase
+class AdFormatEnabledCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AdFormatEnabledCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\AdFormatEnabledCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\AdFormatEnabledCodeType::class, $this->obj);
     }
 }

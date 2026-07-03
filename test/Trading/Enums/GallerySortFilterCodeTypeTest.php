@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\GallerySortFilterCodeType;
 
-class GallerySortFilterCodeTypeTest extends \PHPUnit_Framework_TestCase
+class GallerySortFilterCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GallerySortFilterCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\GallerySortFilterCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\GallerySortFilterCodeType::class, $this->obj);
     }
 }

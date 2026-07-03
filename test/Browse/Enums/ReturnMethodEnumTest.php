@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Browse\Enums;
 
 use DTS\eBaySDK\Browse\Enums\ReturnMethodEnum;
 
-class ReturnMethodEnumTest extends \PHPUnit_Framework_TestCase
+class ReturnMethodEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ReturnMethodEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Browse\Enums\ReturnMethodEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Browse\Enums\ReturnMethodEnum::class, $this->obj);
     }
 }

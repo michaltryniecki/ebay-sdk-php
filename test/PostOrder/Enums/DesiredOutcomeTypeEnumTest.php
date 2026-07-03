@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\PostOrder\Enums;
 
 use DTS\eBaySDK\PostOrder\Enums\DesiredOutcomeTypeEnum;
 
-class DesiredOutcomeTypeEnumTest extends \PHPUnit_Framework_TestCase
+class DesiredOutcomeTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DesiredOutcomeTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Enums\DesiredOutcomeTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Enums\DesiredOutcomeTypeEnum::class, $this->obj);
     }
 }

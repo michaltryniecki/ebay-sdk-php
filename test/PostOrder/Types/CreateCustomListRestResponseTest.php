@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\CreateCustomListRestResponse;
 
-class CreateCustomListRestResponseTest extends \PHPUnit_Framework_TestCase
+class CreateCustomListRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CreateCustomListRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\CreateCustomListRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\CreateCustomListRestResponse::class, $this->obj);
     }
 
     public function testExtendsCreateCustomListResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\CreateCustomListResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\CreateCustomListResponse::class, $this->obj);
     }
 }

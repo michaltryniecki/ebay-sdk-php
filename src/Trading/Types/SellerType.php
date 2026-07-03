@@ -95,13 +95,13 @@ class SellerType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'SellerLevel'
         ],
         'SellerPaymentAddress' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
+            'type' => \DTS\eBaySDK\Trading\Types\AddressType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerPaymentAddress'
         ],
         'SchedulingInfo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SchedulingInfoType',
+            'type' => \DTS\eBaySDK\Trading\Types\SchedulingInfoType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SchedulingInfo'
@@ -161,7 +161,7 @@ class SellerType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'PaisaPayEscrowEMIStatus'
         ],
         'CharityAffiliationDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CharityAffiliationDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\CharityAffiliationDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CharityAffiliationDetails'
@@ -173,13 +173,13 @@ class SellerType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'TransactionPercent'
         ],
         'IntegratedMerchantCreditCardInfo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\IntegratedMerchantCreditCardInfoType',
+            'type' => \DTS\eBaySDK\Trading\Types\IntegratedMerchantCreditCardInfoType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'IntegratedMerchantCreditCardInfo'
         ],
         'FeatureEligibility' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FeatureEligibilityType',
+            'type' => \DTS\eBaySDK\Trading\Types\FeatureEligibilityType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeatureEligibility'
@@ -191,13 +191,13 @@ class SellerType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'TopRatedSeller'
         ],
         'TopRatedSellerDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\TopRatedSellerDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\TopRatedSellerDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TopRatedSellerDetails'
         ],
         'RecoupmentPolicyConsent' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\RecoupmentPolicyConsentType',
+            'type' => \DTS\eBaySDK\Trading\Types\RecoupmentPolicyConsentType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RecoupmentPolicyConsent'
@@ -215,18 +215,18 @@ class SellerType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

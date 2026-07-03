@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Order\Types;
 
 use DTS\eBaySDK\Order\Types\UpdateGuestShippingOptionRestRequest;
 
-class UpdateGuestShippingOptionRestRequestTest extends \PHPUnit_Framework_TestCase
+class UpdateGuestShippingOptionRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateGuestShippingOptionRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\UpdateGuestShippingOptionRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\UpdateGuestShippingOptionRestRequest::class, $this->obj);
     }
 
     public function testExtendsUpdateShippingOption()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\UpdateShippingOption', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\UpdateShippingOption::class, $this->obj);
     }
 }

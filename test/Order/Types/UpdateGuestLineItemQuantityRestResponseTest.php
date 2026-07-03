@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Order\Types;
 
 use DTS\eBaySDK\Order\Types\UpdateGuestLineItemQuantityRestResponse;
 
-class UpdateGuestLineItemQuantityRestResponseTest extends \PHPUnit_Framework_TestCase
+class UpdateGuestLineItemQuantityRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateGuestLineItemQuantityRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\UpdateGuestLineItemQuantityRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\UpdateGuestLineItemQuantityRestResponse::class, $this->obj);
     }
 
     public function testExtendsCheckoutSessionResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\CheckoutSessionResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\CheckoutSessionResponse::class, $this->obj);
     }
 }

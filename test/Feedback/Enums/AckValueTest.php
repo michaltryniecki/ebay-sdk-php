@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Feedback\Enums;
 
 use DTS\eBaySDK\Feedback\Enums\AckValue;
 
-class AckValueTest extends \PHPUnit_Framework_TestCase
+class AckValueTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AckValue();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Feedback\Enums\AckValue', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Feedback\Enums\AckValue::class, $this->obj);
     }
 }

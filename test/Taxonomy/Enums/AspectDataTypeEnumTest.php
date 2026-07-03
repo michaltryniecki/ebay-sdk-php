@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Taxonomy\Enums;
 
 use DTS\eBaySDK\Taxonomy\Enums\AspectDataTypeEnum;
 
-class AspectDataTypeEnumTest extends \PHPUnit_Framework_TestCase
+class AspectDataTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AspectDataTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Taxonomy\Enums\AspectDataTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Taxonomy\Enums\AspectDataTypeEnum::class, $this->obj);
     }
 }

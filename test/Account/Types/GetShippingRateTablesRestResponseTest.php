@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Account\Types;
 
 use DTS\eBaySDK\Account\Types\GetShippingRateTablesRestResponse;
 
-class GetShippingRateTablesRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetShippingRateTablesRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetShippingRateTablesRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\GetShippingRateTablesRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\GetShippingRateTablesRestResponse::class, $this->obj);
     }
 
     public function testExtendsRateTableResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\RateTableResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\RateTableResponse::class, $this->obj);
     }
 }

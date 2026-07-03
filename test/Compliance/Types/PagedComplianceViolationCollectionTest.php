@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Compliance\Types;
 
 use DTS\eBaySDK\Compliance\Types\PagedComplianceViolationCollection;
 
-class PagedComplianceViolationCollectionTest extends \PHPUnit_Framework_TestCase
+class PagedComplianceViolationCollectionTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PagedComplianceViolationCollection();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Compliance\Types\PagedComplianceViolationCollection', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Compliance\Types\PagedComplianceViolationCollection::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

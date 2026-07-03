@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\SellingManagerAutoRelistOptionCodeType;
 
-class SellingManagerAutoRelistOptionCodeTypeTest extends \PHPUnit_Framework_TestCase
+class SellingManagerAutoRelistOptionCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SellingManagerAutoRelistOptionCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\SellingManagerAutoRelistOptionCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\SellingManagerAutoRelistOptionCodeType::class, $this->obj);
     }
 }

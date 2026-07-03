@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\AttributeConversionEnabledCodeType;
 
-class AttributeConversionEnabledCodeTypeTest extends \PHPUnit_Framework_TestCase
+class AttributeConversionEnabledCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AttributeConversionEnabledCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\AttributeConversionEnabledCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\AttributeConversionEnabledCodeType::class, $this->obj);
     }
 }

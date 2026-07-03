@@ -58,13 +58,13 @@ class ReportTask extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'dateTo'
         ],
         'dimensions' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\Dimension',
+            'type' => \DTS\eBaySDK\Marketing\Types\Dimension::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'dimensions'
         ],
         'inventoryReferences' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\InventoryReference',
+            'type' => \DTS\eBaySDK\Marketing\Types\InventoryReference::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'inventoryReferences'
@@ -166,14 +166,14 @@ class ReportTask extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

@@ -25,7 +25,7 @@ assert(file_exists(__DIR__ . '/artifacts/ebay-sdk-php.phar'));
 
 // Grab and validate the tag annotation
 chdir(dirname(__DIR__));
-$message = `chag contents --tag "$tag"` or die('Chag could not find or parse the tag');
+$message = shell_exec("chag contents --tag \"$tag\"") or die('Chag could not find or parse the tag');
 
 // Create a GitHub client
 $client = new GuzzleHttp\Client([
@@ -34,7 +34,7 @@ $client = new GuzzleHttp\Client([
 ]);
 
 // Create the release
-$response = $client->post("repos/${owner}/${repo}/releases", [
+$response = $client->post("repos/{$owner}/{$repo}/releases", [
     'json' => [
         'tag_name' => $tag,
         'name'     => "Version {$tag}",

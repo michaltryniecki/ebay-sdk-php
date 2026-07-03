@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\CloseCaseRestRequest;
 
-class CloseCaseRestRequestTest extends \PHPUnit_Framework_TestCase
+class CloseCaseRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CloseCaseRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\CloseCaseRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\CloseCaseRestRequest::class, $this->obj);
     }
 
     public function testExtendsBuyerCloseCaseRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\BuyerCloseCaseRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\BuyerCloseCaseRequest::class, $this->obj);
     }
 }

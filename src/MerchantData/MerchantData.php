@@ -17,7 +17,7 @@ class MerchantData
 
     public function __construct()
     {
-        $this->xmlParser = new \DTS\eBaySDK\Parser\XmlParser('\DTS\eBaySDK\MerchantData\Types\BulkDataExchangeResponsesType');
+        $this->xmlParser = new \DTS\eBaySDK\Parser\XmlParser(\DTS\eBaySDK\MerchantData\Types\BulkDataExchangeResponsesType::class);
     }
 
     /**

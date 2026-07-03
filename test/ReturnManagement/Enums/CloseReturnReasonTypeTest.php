@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\ReturnManagement\Enums;
 
 use DTS\eBaySDK\ReturnManagement\Enums\CloseReturnReasonType;
 
-class CloseReturnReasonTypeTest extends \PHPUnit_Framework_TestCase
+class CloseReturnReasonTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CloseReturnReasonType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ReturnManagement\Enums\CloseReturnReasonType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ReturnManagement\Enums\CloseReturnReasonType::class, $this->obj);
     }
 }

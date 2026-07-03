@@ -29,7 +29,7 @@ class MerchantExternalProfile extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'acceptedPaymentMethods' => [
-            'type' => 'DTS\eBaySDK\Account\Types\ExternalPaymentMethod',
+            'type' => \DTS\eBaySDK\Account\Types\ExternalPaymentMethod::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'acceptedPaymentMethods'
@@ -41,13 +41,13 @@ class MerchantExternalProfile extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'accountCreationDate'
         ],
         'billingPaymentMethods' => [
-            'type' => 'DTS\eBaySDK\Account\Types\ExternalPaymentMethod',
+            'type' => \DTS\eBaySDK\Account\Types\ExternalPaymentMethod::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'billingPaymentMethods'
         ],
         'inventorySizing' => [
-            'type' => 'DTS\eBaySDK\Account\Types\InventorySizing',
+            'type' => \DTS\eBaySDK\Account\Types\InventorySizing::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'inventorySizing'
@@ -65,7 +65,7 @@ class MerchantExternalProfile extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'primaryCurrency'
         ],
         'returnSnapshots' => [
-            'type' => 'DTS\eBaySDK\Account\Types\ReturnSnapshot',
+            'type' => \DTS\eBaySDK\Account\Types\ReturnSnapshot::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnSnapshots'
@@ -77,7 +77,7 @@ class MerchantExternalProfile extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'sicCode'
         ],
         'transactionVolume' => [
-            'type' => 'DTS\eBaySDK\Account\Types\TransactionVolume',
+            'type' => \DTS\eBaySDK\Account\Types\TransactionVolume::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'transactionVolume'
@@ -89,14 +89,14 @@ class MerchantExternalProfile extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

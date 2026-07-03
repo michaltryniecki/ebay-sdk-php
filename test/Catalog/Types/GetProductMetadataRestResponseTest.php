@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Catalog\Types;
 
 use DTS\eBaySDK\Catalog\Types\GetProductMetadataRestResponse;
 
-class GetProductMetadataRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetProductMetadataRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetProductMetadataRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Catalog\Types\GetProductMetadataRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Catalog\Types\GetProductMetadataRestResponse::class, $this->obj);
     }
 
     public function testExtendsProductMetadata()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Catalog\Types\ProductMetadata', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Catalog\Types\ProductMetadata::class, $this->obj);
     }
 }

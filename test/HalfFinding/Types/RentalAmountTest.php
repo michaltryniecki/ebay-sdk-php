@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\HalfFinding\Types;
 
 use DTS\eBaySDK\HalfFinding\Types\RentalAmount;
 
-class RentalAmountTest extends \PHPUnit_Framework_TestCase
+class RentalAmountTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new RentalAmount();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\HalfFinding\Types\RentalAmount', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\HalfFinding\Types\RentalAmount::class, $this->obj);
     }
 
     public function testExtendsDoubleType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\DoubleType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\DoubleType::class, $this->obj);
     }
 }

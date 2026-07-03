@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\UpdateReturnRulesRestRequest;
 
-class UpdateReturnRulesRestRequestTest extends \PHPUnit_Framework_TestCase
+class UpdateReturnRulesRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateReturnRulesRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\UpdateReturnRulesRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\UpdateReturnRulesRestRequest::class, $this->obj);
     }
 
     public function testExtendsModifyDispositionRuleRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\ModifyDispositionRuleRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\ModifyDispositionRuleRequest::class, $this->obj);
     }
 }

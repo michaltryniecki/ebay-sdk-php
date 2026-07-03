@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\BulkCreateAdsByInventoryReferenceRestResponse;
 
-class BulkCreateAdsByInventoryReferenceRestResponseTest extends \PHPUnit_Framework_TestCase
+class BulkCreateAdsByInventoryReferenceRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new BulkCreateAdsByInventoryReferenceRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\BulkCreateAdsByInventoryReferenceRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\BulkCreateAdsByInventoryReferenceRestResponse::class, $this->obj);
     }
 
     public function testExtendsBulkCreateAdsByInventoryReferenceResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\BulkCreateAdsByInventoryReferenceResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\BulkCreateAdsByInventoryReferenceResponse::class, $this->obj);
     }
 }

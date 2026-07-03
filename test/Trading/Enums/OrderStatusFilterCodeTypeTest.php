@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\OrderStatusFilterCodeType;
 
-class OrderStatusFilterCodeTypeTest extends \PHPUnit_Framework_TestCase
+class OrderStatusFilterCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new OrderStatusFilterCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\OrderStatusFilterCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\OrderStatusFilterCodeType::class, $this->obj);
     }
 }

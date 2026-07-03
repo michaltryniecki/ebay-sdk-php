@@ -7,7 +7,7 @@ use DTS\eBaySDK\Test\Mocks\HttpOAuthHandler;
 use DTS\eBaySDK\Credentials\Credentials;
 use DTS\eBaySDK\Credentials\CredentialsProvider;
 
-class ServiceTest extends \PHPUnit_Framework_TestCase
+class ServiceTest extends \PHPUnit\Framework\TestCase
 {
     use ManageEnv;
 
@@ -17,9 +17,9 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
 
         $this->assertArrayHasKey('credentials', $d);
         $this->assertEquals([
-            'valid'   => ['DTS\eBaySDK\Credentials\CredentialsInterface', 'array', 'callable'],
+            'valid'   => [\DTS\eBaySDK\Credentials\CredentialsInterface::class, 'array', 'callable'],
             'fn'      => 'DTS\eBaySDK\applyCredentials',
-            'default' => [CredentialsProvider::class, 'defaultProvider']
+            'default' => CredentialsProvider::defaultProvider(...)
         ], $d['credentials']);
 
         $this->assertArrayHasKey('debug', $d);
@@ -103,12 +103,10 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         ]));
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage state parameter
-     */
     public function testExceptionThrowForMissingStateParam()
     {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('state parameter');
         $s = new OAuthService([
             'credentials' => [
                 'appId'  => 'foo',
@@ -123,12 +121,10 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         ]);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage scope parameter
-     */
     public function testExceptionThrowForMissingScopeParam()
     {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('scope parameter');
         $s = new OAuthService([
             'credentials' => [
                 'appId'  => 'foo',
@@ -240,7 +236,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         ]);
         $r = $s->getAppToken();
 
-        $this->assertInstanceOf('\DTS\eBaySDK\OAuth\Types\GetAppTokenRestResponse', $r);
+        $this->assertInstanceOf(\DTS\eBaySDK\OAuth\Types\GetAppTokenRestResponse::class, $r);
         $this->assertEquals('foo', $r->access_token);
         $this->assertEquals('bar', $r->token_type);
         $this->assertEquals(123, $r->expires_in);
@@ -271,10 +267,10 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
         ]);
         $r = $s->getAppToken();
 
-        $this->assertContains('Content-Type: application/x-www-form-urlencoded', $str);
-        $this->assertContains('Content-Length: '.strlen($body), $str);
-        $this->assertContains('foo', $str);
-        $this->assertContains('bar', $str);
+        $this->assertStringContainsString('Content-Type: application/x-www-form-urlencoded', $str);
+        $this->assertStringContainsString('Content-Length: '.strlen($body), $str);
+        $this->assertStringContainsString('foo', $str);
+        $this->assertStringContainsString('bar', $str);
     }
 
     public function testCredentialsInstanceCanBePassed()
@@ -310,9 +306,7 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
     public function testCredentialsCanBeProvided()
     {
         $s = new OAuthService([
-            'credentials' => function () {
-                return new Credentials('111', '222', '333');
-            },
+            'credentials' => fn() => new Credentials('111', '222', '333'),
             'ruName'      => 'foo'
         ]);
 
@@ -333,7 +327,7 @@ EOT;
 
         $dir = $this->clearEnv();
         file_put_contents($dir . '/credentials', $ini);
-        putenv('HOME=' . dirname($dir));
+        putenv('HOME=' . dirname((string) $dir));
 
         $s = new OAuthService([
             'profile' => 'foo',
@@ -348,19 +342,17 @@ EOT;
         unlink($dir . '/credentials');
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage No credentials present in INI profile
-     */
     public function testCredentialsIniWillThrowException()
     {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('No credentials present in INI profile');
         $ini = <<<EOT
 [foo]
 EOT;
 
         $dir = $this->clearEnv();
         file_put_contents($dir . '/credentials', $ini);
-        putenv('HOME=' . dirname($dir));
+        putenv('HOME=' . dirname((string) $dir));
 
         $s = new OAuthService([
             'profile' => 'foo',
@@ -375,16 +367,12 @@ EOT;
         }
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Cannot locate credentials
-     */
     public function testCredentialsProviderThrowsIfCantProvide()
     {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Cannot locate credentials');
         new OAuthService([
-            'credentials' => function () {
-                return new \InvalidArgumentException('Cannot locate credentials');
-            },
+            'credentials' => fn() => new \InvalidArgumentException('Cannot locate credentials'),
             'ruName'      => 'foo'
         ]);
     }
@@ -429,12 +417,10 @@ EOT;
         ], $s->getConfig());
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Invalid configuration value provided for "sandbox". Expected bool, but got int(-1)
-     */
     public function testSetConfigWillThrow()
     {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->expectExceptionMessage('Invalid configuration value provided for "sandbox". Expected bool, but got int(-1)');
         $s = new OAuthService([
             'credentials' => [
                 'appId'  => '',

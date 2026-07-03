@@ -21,7 +21,7 @@ class BrowseService extends \DTS\eBaySDK\Browse\Services\BrowseBaseService
         'GetItem' => [
             'method' => 'GET',
             'resource' => 'item/{item_id}',
-            'responseClass' => '\DTS\eBaySDK\Browse\Types\GetItemRestResponse',
+            'responseClass' => \DTS\eBaySDK\Browse\Types\GetItemRestResponse::class,
             'params' => [
                 'item_id' => [
                     'valid' => ['string'],
@@ -32,7 +32,7 @@ class BrowseService extends \DTS\eBaySDK\Browse\Services\BrowseBaseService
         'GetItemByLegacyId' => [
             'method' => 'GET',
             'resource' => 'item/get_item_by_legacy_id',
-            'responseClass' => '\DTS\eBaySDK\Browse\Types\GetItemByLegacyIdRestResponse',
+            'responseClass' => \DTS\eBaySDK\Browse\Types\GetItemByLegacyIdRestResponse::class,
             'params' => [
                 'legacy_item_id' => [
                     'valid' => ['string'],
@@ -49,7 +49,7 @@ class BrowseService extends \DTS\eBaySDK\Browse\Services\BrowseBaseService
         'GetItemsByItemGroup' => [
             'method' => 'GET',
             'resource' => 'item/get_items_by_item_group',
-            'responseClass' => '\DTS\eBaySDK\Browse\Types\GetItemsByItemGroupRestResponse',
+            'responseClass' => \DTS\eBaySDK\Browse\Types\GetItemsByItemGroupRestResponse::class,
             'params' => [
                 'item_group_id' => [
                     'valid' => ['string'],
@@ -60,7 +60,7 @@ class BrowseService extends \DTS\eBaySDK\Browse\Services\BrowseBaseService
         'SearchForItems' => [
             'method' => 'GET',
             'resource' => 'item_summary/search',
-            'responseClass' => '\DTS\eBaySDK\Browse\Types\SearchForItemsRestResponse',
+            'responseClass' => \DTS\eBaySDK\Browse\Types\SearchForItemsRestResponse::class,
             'params' => [
                 'aspect_filter' => [
                     'valid' => ['string']

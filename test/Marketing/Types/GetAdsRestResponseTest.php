@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\GetAdsRestResponse;
 
-class GetAdsRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetAdsRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetAdsRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\GetAdsRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\GetAdsRestResponse::class, $this->obj);
     }
 
     public function testExtendsAdPagedCollection()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\AdPagedCollection', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\AdPagedCollection::class, $this->obj);
     }
 }

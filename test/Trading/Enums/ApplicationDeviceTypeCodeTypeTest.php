@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\ApplicationDeviceTypeCodeType;
 
-class ApplicationDeviceTypeCodeTypeTest extends \PHPUnit_Framework_TestCase
+class ApplicationDeviceTypeCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ApplicationDeviceTypeCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\ApplicationDeviceTypeCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\ApplicationDeviceTypeCodeType::class, $this->obj);
     }
 }

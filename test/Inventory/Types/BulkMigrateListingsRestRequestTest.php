@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\BulkMigrateListingsRestRequest;
 
-class BulkMigrateListingsRestRequestTest extends \PHPUnit_Framework_TestCase
+class BulkMigrateListingsRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new BulkMigrateListingsRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\BulkMigrateListingsRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\BulkMigrateListingsRestRequest::class, $this->obj);
     }
 
     public function testExtendsBulkMigrateListing()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\BulkMigrateListing', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\BulkMigrateListing::class, $this->obj);
     }
 }

@@ -35,7 +35,7 @@ class TreeInterpreter
      *                               a function name argument and an array of
      *                               function arguments and returns the result.
      */
-    public function __construct(callable $fnDispatcher = null)
+    public function __construct(?callable $fnDispatcher = null)
     {
         $this->fnDispatcher = $fnDispatcher ?: FnDispatcher::getInstance();
     }
@@ -69,9 +69,9 @@ class TreeInterpreter
 
             case 'field':
                 if (is_array($value) || $value instanceof \ArrayAccess) {
-                    return isset($value[$node['value']]) ? $value[$node['value']] : null;
+                    return $value[$node['value']] ?? null;
                 } elseif ($value instanceof \stdClass || $value instanceof JmesPathableObjectInterface) {
-                    return isset($value->{$node['value']}) ? $value->{$node['value']} : null;
+                    return $value->{$node['value']} ?? null;
                 }
                 return null;
 
@@ -88,7 +88,7 @@ class TreeInterpreter
                 $idx = $node['value'] >= 0
                     ? $node['value']
                     : $node['value'] + count($value);
-                return isset($value[$idx]) ? $value[$idx] : null;
+                return $value[$idx] ?? null;
 
             case 'projection':
                 $left = $this->dispatch($node['children'][0], $value);
@@ -230,9 +230,7 @@ class TreeInterpreter
 
             case 'expref':
                 $apply = $node['children'][0];
-                return function ($value) use ($apply) {
-                    return $this->visit($apply, $value);
-                };
+                return fn($value) => $this->visit($apply, $value);
 
             default:
                 throw new \RuntimeException("Unknown node type: {$node['type']}");
@@ -251,12 +249,12 @@ class TreeInterpreter
             return false;
         }
 
-        switch ($cmp) {
-            case '>': return $left > $right;
-            case '>=': return $left >= $right;
-            case '<': return $left < $right;
-            case '<=': return $left <= $right;
-            default: throw new \RuntimeException("Invalid comparison: $cmp");
-        }
+        return match ($cmp) {
+            '>' => $left > $right,
+            '>=' => $left >= $right,
+            '<' => $left < $right,
+            '<=' => $left <= $right,
+            default => throw new \RuntimeException("Invalid comparison: $cmp"),
+        };
     }
 }

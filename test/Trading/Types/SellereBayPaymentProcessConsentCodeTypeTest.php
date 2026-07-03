@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\SellereBayPaymentProcessConsentCodeType;
 
-class SellereBayPaymentProcessConsentCodeTypeTest extends \PHPUnit_Framework_TestCase
+class SellereBayPaymentProcessConsentCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SellereBayPaymentProcessConsentCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\SellereBayPaymentProcessConsentCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\SellereBayPaymentProcessConsentCodeType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

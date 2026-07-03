@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\DeliveryStatusEmailCodeType;
 
-class DeliveryStatusEmailCodeTypeTest extends \PHPUnit_Framework_TestCase
+class DeliveryStatusEmailCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DeliveryStatusEmailCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\DeliveryStatusEmailCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\DeliveryStatusEmailCodeType::class, $this->obj);
     }
 }

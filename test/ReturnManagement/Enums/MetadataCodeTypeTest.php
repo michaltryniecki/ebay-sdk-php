@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\ReturnManagement\Enums;
 
 use DTS\eBaySDK\ReturnManagement\Enums\MetadataCodeType;
 
-class MetadataCodeTypeTest extends \PHPUnit_Framework_TestCase
+class MetadataCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new MetadataCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ReturnManagement\Enums\MetadataCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ReturnManagement\Enums\MetadataCodeType::class, $this->obj);
     }
 }

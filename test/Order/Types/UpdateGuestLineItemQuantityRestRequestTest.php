@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Order\Types;
 
 use DTS\eBaySDK\Order\Types\UpdateGuestLineItemQuantityRestRequest;
 
-class UpdateGuestLineItemQuantityRestRequestTest extends \PHPUnit_Framework_TestCase
+class UpdateGuestLineItemQuantityRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateGuestLineItemQuantityRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\UpdateGuestLineItemQuantityRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\UpdateGuestLineItemQuantityRestRequest::class, $this->obj);
     }
 
     public function testExtendsUpdateQuantity()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\UpdateQuantity', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\UpdateQuantity::class, $this->obj);
     }
 }

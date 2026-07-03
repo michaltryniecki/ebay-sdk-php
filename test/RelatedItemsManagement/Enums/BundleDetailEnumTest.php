@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\RelatedItemsManagement\Enums;
 
 use DTS\eBaySDK\RelatedItemsManagement\Enums\BundleDetailEnum;
 
-class BundleDetailEnumTest extends \PHPUnit_Framework_TestCase
+class BundleDetailEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new BundleDetailEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\RelatedItemsManagement\Enums\BundleDetailEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\RelatedItemsManagement\Enums\BundleDetailEnum::class, $this->obj);
     }
 }

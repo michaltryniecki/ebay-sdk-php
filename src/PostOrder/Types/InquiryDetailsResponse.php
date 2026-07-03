@@ -36,7 +36,7 @@ class InquiryDetailsResponse extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'claimAmount' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\Amount',
+            'type' => \DTS\eBaySDK\PostOrder\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'claimAmount'
@@ -54,13 +54,13 @@ class InquiryDetailsResponse extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'initiator'
         ],
         'inquiryDetails' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\InquiryDetails',
+            'type' => \DTS\eBaySDK\PostOrder\Types\InquiryDetails::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'inquiryDetails'
         ],
         'inquiryHistoryDetails' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\ClaimHistoryResponse',
+            'type' => \DTS\eBaySDK\PostOrder\Types\ClaimHistoryResponse::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'inquiryHistoryDetails'
@@ -78,7 +78,7 @@ class InquiryDetailsResponse extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'inquiryQuantity'
         ],
         'itemDetails' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\ItemDetails',
+            'type' => \DTS\eBaySDK\PostOrder\Types\ItemDetails::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemDetails'
@@ -90,19 +90,19 @@ class InquiryDetailsResponse extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'itemId'
         ],
         'returnDetails' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\ReturnAddress',
+            'type' => \DTS\eBaySDK\PostOrder\Types\ReturnAddress::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnDetails'
         ],
         'sellerMakeItRightByDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sellerMakeItRightByDate'
         ],
         'shippingCost' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\Amount',
+            'type' => \DTS\eBaySDK\PostOrder\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingCost'
@@ -138,14 +138,14 @@ class InquiryDetailsResponse extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\PostOrder\Enums;
 
 use DTS\eBaySDK\PostOrder\Enums\NoSellerUploadLabelReasonEnum;
 
-class NoSellerUploadLabelReasonEnumTest extends \PHPUnit_Framework_TestCase
+class NoSellerUploadLabelReasonEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new NoSellerUploadLabelReasonEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Enums\NoSellerUploadLabelReasonEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Enums\NoSellerUploadLabelReasonEnum::class, $this->obj);
     }
 }

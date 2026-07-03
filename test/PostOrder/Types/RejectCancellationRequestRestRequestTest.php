@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\RejectCancellationRequestRestRequest;
 
-class RejectCancellationRequestRestRequestTest extends \PHPUnit_Framework_TestCase
+class RejectCancellationRequestRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new RejectCancellationRequestRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\RejectCancellationRequestRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\RejectCancellationRequestRestRequest::class, $this->obj);
     }
 
     public function testExtendsRejectCancelRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\RejectCancelRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\RejectCancelRequest::class, $this->obj);
     }
 }

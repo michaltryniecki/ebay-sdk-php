@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\HalfFinding\Types;
 
 use DTS\eBaySDK\HalfFinding\Types\FindItemsResponse;
 
-class FindItemsResponseTest extends \PHPUnit_Framework_TestCase
+class FindItemsResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FindItemsResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\HalfFinding\Types\FindItemsResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\HalfFinding\Types\FindItemsResponse::class, $this->obj);
     }
 
     public function testExtendsBaseResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\HalfFinding\Types\BaseResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\HalfFinding\Types\BaseResponse::class, $this->obj);
     }
 }

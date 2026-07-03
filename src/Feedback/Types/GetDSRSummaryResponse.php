@@ -22,7 +22,7 @@ class GetDSRSummaryResponse extends \DTS\eBaySDK\Feedback\Types\BaseServiceRespo
      */
     private static $propertyTypes = [
         'DSRSummary' => [
-            'type' => 'DTS\eBaySDK\Feedback\Types\DSRSummary',
+            'type' => \DTS\eBaySDK\Feedback\Types\DSRSummary::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'DSRSummary'
@@ -40,18 +40,18 @@ class GetDSRSummaryResponse extends \DTS\eBaySDK\Feedback\Types\BaseServiceRespo
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="http://www.ebay.com/marketplace/services"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="http://www.ebay.com/marketplace/services"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

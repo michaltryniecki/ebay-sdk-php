@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Compliance\Types;
 
 use DTS\eBaySDK\Compliance\Types\GetListingViolationsRestResponse;
 
-class GetListingViolationsRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetListingViolationsRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetListingViolationsRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Compliance\Types\GetListingViolationsRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Compliance\Types\GetListingViolationsRestResponse::class, $this->obj);
     }
 
     public function testExtendsPagedComplianceViolationCollection()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Compliance\Types\PagedComplianceViolationCollection', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Compliance\Types\PagedComplianceViolationCollection::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\ClassifiedAdContactByEmailEnabledDefintionType;
 
-class ClassifiedAdContactByEmailEnabledDefintionTypeTest extends \PHPUnit_Framework_TestCase
+class ClassifiedAdContactByEmailEnabledDefintionTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ClassifiedAdContactByEmailEnabledDefintionType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\ClassifiedAdContactByEmailEnabledDefintionType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\ClassifiedAdContactByEmailEnabledDefintionType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

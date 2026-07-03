@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\CheckCancellationEligibilityRestResponse;
 
-class CheckCancellationEligibilityRestResponseTest extends \PHPUnit_Framework_TestCase
+class CheckCancellationEligibilityRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CheckCancellationEligibilityRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\CheckCancellationEligibilityRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\CheckCancellationEligibilityRestResponse::class, $this->obj);
     }
 
     public function testExtendsOrderEligibilityResult()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\OrderEligibilityResult', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\OrderEligibilityResult::class, $this->obj);
     }
 }

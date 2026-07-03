@@ -108,7 +108,7 @@ class TreeCompiler
      */
     private function outdent()
     {
-        $this->indentation = substr($this->indentation, 0, -4);
+        $this->indentation = substr((string) $this->indentation, 0, -4);
         return $this;
     }
 

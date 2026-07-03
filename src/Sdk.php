@@ -39,16 +39,10 @@ class Sdk
     public static $STRICT_PROPERTY_TYPES = true;
 
     /**
-     * @var array Configuration options for all services.
-     */
-    private $config;
-
-    /**
      * @param array $config Configuration option values for all services.
      */
-    public function __construct(array $config = [])
+    public function __construct(private array $config = [])
     {
-        $this->config = $config;
     }
 
     /**
@@ -60,10 +54,10 @@ class Sdk
      */
     public function __call($name, array $args)
     {
-        if (strpos($name, 'create') === 0) {
+        if (str_starts_with($name, 'create')) {
             return $this->createService(
                 substr($name, 6),
-                isset($args[0]) ? $args[0] : []
+                $args[0] ?? []
             );
         }
 

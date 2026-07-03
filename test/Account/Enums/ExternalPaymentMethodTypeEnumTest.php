@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Account\Enums;
 
 use DTS\eBaySDK\Account\Enums\ExternalPaymentMethodTypeEnum;
 
-class ExternalPaymentMethodTypeEnumTest extends \PHPUnit_Framework_TestCase
+class ExternalPaymentMethodTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ExternalPaymentMethodTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Enums\ExternalPaymentMethodTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Enums\ExternalPaymentMethodTypeEnum::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Order\Types;
 
 use DTS\eBaySDK\Order\Types\GetPurchaseOrderRestResponse;
 
-class GetPurchaseOrderRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetPurchaseOrderRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetPurchaseOrderRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\GetPurchaseOrderRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\GetPurchaseOrderRestResponse::class, $this->obj);
     }
 
     public function testExtendsPurchaseOrder()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\PurchaseOrder', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\PurchaseOrder::class, $this->obj);
     }
 }

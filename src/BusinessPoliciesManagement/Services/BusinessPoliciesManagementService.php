@@ -40,7 +40,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
         return $this->callOperationAsync(
             'getVersion',
             $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\GetVersionResponse'
+            \DTS\eBaySDK\BusinessPoliciesManagement\Types\GetVersionResponse::class
         );
     }
 
@@ -62,7 +62,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
         return $this->callOperationAsync(
             'removeProfile',
             $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveProfileResponse'
+            \DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveProfileResponse::class
         );
     }
 
@@ -84,7 +84,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
         return $this->callOperationAsync(
             'addSellerProfile',
             $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\AddSellerProfileResponse'
+            \DTS\eBaySDK\BusinessPoliciesManagement\Types\AddSellerProfileResponse::class
         );
     }
 
@@ -106,7 +106,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
         return $this->callOperationAsync(
             'getSellerProfiles',
             $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\GetSellerProfilesResponse'
+            \DTS\eBaySDK\BusinessPoliciesManagement\Types\GetSellerProfilesResponse::class
         );
     }
 
@@ -128,7 +128,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
         return $this->callOperationAsync(
             'setSellerProfile',
             $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\SetSellerProfileResponse'
+            \DTS\eBaySDK\BusinessPoliciesManagement\Types\SetSellerProfileResponse::class
         );
     }
 
@@ -150,7 +150,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
         return $this->callOperationAsync(
             'removeSellerProfiles',
             $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveSellerProfilesResponse'
+            \DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveSellerProfilesResponse::class
         );
     }
 
@@ -172,7 +172,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
         return $this->callOperationAsync(
             'consolidateShippingProfiles',
             $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\ConsolidateShippingProfilesResponse'
+            \DTS\eBaySDK\BusinessPoliciesManagement\Types\ConsolidateShippingProfilesResponse::class
         );
     }
 
@@ -194,7 +194,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
         return $this->callOperationAsync(
             'getConsolidationJobStatus',
             $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\GetConsolidationJobStatusResponse'
+            \DTS\eBaySDK\BusinessPoliciesManagement\Types\GetConsolidationJobStatusResponse::class
         );
     }
 
@@ -216,7 +216,7 @@ class BusinessPoliciesManagementService extends \DTS\eBaySDK\BusinessPoliciesMan
         return $this->callOperationAsync(
             'removeOverrides',
             $request,
-            '\DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveOverridesResponse'
+            \DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveOverridesResponse::class
         );
     }
 }

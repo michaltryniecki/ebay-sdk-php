@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Catalog\Enums;
 
 use DTS\eBaySDK\Catalog\Enums\ReferenceType;
 
-class ReferenceTypeTest extends \PHPUnit_Framework_TestCase
+class ReferenceTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ReferenceType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Catalog\Enums\ReferenceType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Catalog\Enums\ReferenceType::class, $this->obj);
     }
 }

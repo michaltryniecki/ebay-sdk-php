@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\AutomatedLeaveFeedbackEventCodeType;
 
-class AutomatedLeaveFeedbackEventCodeTypeTest extends \PHPUnit_Framework_TestCase
+class AutomatedLeaveFeedbackEventCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AutomatedLeaveFeedbackEventCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\AutomatedLeaveFeedbackEventCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\AutomatedLeaveFeedbackEventCodeType::class, $this->obj);
     }
 }

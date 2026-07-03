@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Analytics\Types;
 
 use DTS\eBaySDK\Analytics\Types\GetTrafficReportRestResponse;
 
-class GetTrafficReportRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetTrafficReportRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetTrafficReportRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Analytics\Types\GetTrafficReportRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Analytics\Types\GetTrafficReportRestResponse::class, $this->obj);
     }
 
     public function testExtendsReport()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Analytics\Types\Report', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Analytics\Types\Report::class, $this->obj);
     }
 }

@@ -3,29 +3,29 @@ namespace DTS\eBaySDK\Types\Test;
 
 use DTS\eBaySDK\Types\IntegerType;
 
-class IntegerTypeTest extends \PHPUnit_Framework_TestCase
+class IntegerTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new IntegerType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\IntegerType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\IntegerType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 
     public function testHasValueProperty()
     {
         $this->obj->value = 123;
         $this->assertEquals(123, $this->obj->value);
-        $this->assertInternalType('integer', $this->obj->value);
+        $this->assertIsInt($this->obj->value);
     }
 }

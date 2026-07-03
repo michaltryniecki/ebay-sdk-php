@@ -27,7 +27,7 @@ class GetFeedbackResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespons
      */
     private static $propertyTypes = [
         'FeedbackDetailArray' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FeedbackDetailArrayType',
+            'type' => \DTS\eBaySDK\Trading\Types\FeedbackDetailArrayType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeedbackDetailArray'
@@ -39,7 +39,7 @@ class GetFeedbackResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespons
             'elementName' => 'FeedbackDetailItemTotal'
         ],
         'FeedbackSummary' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FeedbackSummaryType',
+            'type' => \DTS\eBaySDK\Trading\Types\FeedbackSummaryType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeedbackSummary'
@@ -51,7 +51,7 @@ class GetFeedbackResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespons
             'elementName' => 'FeedbackScore'
         ],
         'PaginationResult' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaginationResultType',
+            'type' => \DTS\eBaySDK\Trading\Types\PaginationResultType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaginationResult'
@@ -75,18 +75,18 @@ class GetFeedbackResponseType extends \DTS\eBaySDK\Trading\Types\AbstractRespons
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

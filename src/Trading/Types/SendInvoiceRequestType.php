@@ -54,19 +54,19 @@ class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'elementName' => 'OrderID'
         ],
         'InternationalShippingServiceOptions' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType',
+            'type' => \DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'InternationalShippingServiceOptions'
         ],
         'ShippingServiceOptions' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType',
+            'type' => \DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ShippingServiceOptions'
         ],
         'SalesTax' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SalesTaxType',
+            'type' => \DTS\eBaySDK\Trading\Types\SalesTaxType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SalesTax'
@@ -78,7 +78,7 @@ class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'elementName' => 'InsuranceOption'
         ],
         'InsuranceFee' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InsuranceFee'
@@ -108,7 +108,7 @@ class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'elementName' => 'EmailCopyToSeller'
         ],
         'CODCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CODCost'
@@ -126,7 +126,7 @@ class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
             'elementName' => 'OrderLineItemID'
         ],
         'AdjustmentAmount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AdjustmentAmount'
@@ -138,22 +138,22 @@ class SendInvoiceRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequestT
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
-            self::$requestXmlRootElementNames[__CLASS__] = 'SendInvoiceRequest';
+        if (!array_key_exists(self::class, self::$requestXmlRootElementNames)) {
+            self::$requestXmlRootElementNames[self::class] = 'SendInvoiceRequest';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

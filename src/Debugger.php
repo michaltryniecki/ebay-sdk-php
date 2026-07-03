@@ -50,7 +50,7 @@ class Debugger
     {
         if ($this->config['scrub_credentials']) {
             foreach ($this->config['scrub_strings'] as $pattern => $replacement) {
-                $info = preg_replace($pattern, $replacement, $info);
+                $info = preg_replace($pattern, (string) $replacement, (string) $info);
             }
         }
         $this->config['logfn']($info);

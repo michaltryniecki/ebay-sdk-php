@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Analytics\Enums;
 
 use DTS\eBaySDK\Analytics\Enums\ProgramEnum;
 
-class ProgramEnumTest extends \PHPUnit_Framework_TestCase
+class ProgramEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ProgramEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Analytics\Enums\ProgramEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Analytics\Enums\ProgramEnum::class, $this->obj);
     }
 }

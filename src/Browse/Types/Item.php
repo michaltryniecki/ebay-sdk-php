@@ -67,7 +67,7 @@ class Item extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'additionalImages' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Image',
+            'type' => \DTS\eBaySDK\Browse\Types\Image::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'additionalImages'
@@ -121,7 +121,7 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'conditionId'
         ],
         'currentBidPrice' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
+            'type' => \DTS\eBaySDK\Browse\Types\ConvertedAmount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'currentBidPrice'
@@ -145,7 +145,7 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'epid'
         ],
         'estimatedAvailabilities' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\EstimatedAvailability',
+            'type' => \DTS\eBaySDK\Browse\Types\EstimatedAvailability::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'estimatedAvailabilities'
@@ -163,7 +163,7 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'gtin'
         ],
         'image' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Image',
+            'type' => \DTS\eBaySDK\Browse\Types\Image::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'image'
@@ -187,7 +187,7 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'itemId'
         ],
         'itemLocation' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Address',
+            'type' => \DTS\eBaySDK\Browse\Types\Address::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemLocation'
@@ -199,13 +199,13 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'itemWebUrl'
         ],
         'localizedAspects' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\TypedNameValue',
+            'type' => \DTS\eBaySDK\Browse\Types\TypedNameValue::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'localizedAspects'
         ],
         'marketingPrice' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\MarketingPrice',
+            'type' => \DTS\eBaySDK\Browse\Types\MarketingPrice::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'marketingPrice'
@@ -229,7 +229,7 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'pattern'
         ],
         'price' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
+            'type' => \DTS\eBaySDK\Browse\Types\ConvertedAmount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'price'
@@ -241,13 +241,13 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'priceDisplayCondition'
         ],
         'primaryItemGroup' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ItemGroupSummary',
+            'type' => \DTS\eBaySDK\Browse\Types\ItemGroupSummary::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'primaryItemGroup'
         ],
         'primaryProductReviewRating' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ReviewRating',
+            'type' => \DTS\eBaySDK\Browse\Types\ReviewRating::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'primaryProductReviewRating'
@@ -265,25 +265,25 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'quantityLimitPerBuyer'
         ],
         'returnTerms' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ItemReturnTerms',
+            'type' => \DTS\eBaySDK\Browse\Types\ItemReturnTerms::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnTerms'
         ],
         'seller' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Seller',
+            'type' => \DTS\eBaySDK\Browse\Types\Seller::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'seller'
         ],
         'shippingOptions' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ShippingOption',
+            'type' => \DTS\eBaySDK\Browse\Types\ShippingOption::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'shippingOptions'
         ],
         'shipToLocations' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ShipToLocations',
+            'type' => \DTS\eBaySDK\Browse\Types\ShipToLocations::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shipToLocations'
@@ -319,7 +319,7 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'subtitle'
         ],
         'taxes' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Taxes',
+            'type' => \DTS\eBaySDK\Browse\Types\Taxes::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'taxes'
@@ -343,7 +343,7 @@ class Item extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'uniqueBidderCount'
         ],
         'warnings' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ErrorDetailV3',
+            'type' => \DTS\eBaySDK\Browse\Types\ErrorDetailV3::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'warnings'
@@ -355,14 +355,14 @@ class Item extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

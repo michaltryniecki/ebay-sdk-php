@@ -128,7 +128,7 @@ trait HttpHeadersTrait
             }
 
             $value = $this->trimHeaderValues($value);
-            $normalized = strtolower($header);
+            $normalized = strtolower((string) $header);
             if (isset($this->headerNames[$normalized])) {
                 $header = $this->headerNames[$normalized];
                 $this->headers[$header] = array_merge($this->headers[$header], $value);
@@ -148,8 +148,6 @@ trait HttpHeadersTrait
      */
     private function trimHeaderValues(array $values)
     {
-        return array_map(function ($value) {
-            return trim($value, " \t");
-        }, $values);
+        return array_map(fn($value) => trim((string) $value, " \t"), $values);
     }
 }

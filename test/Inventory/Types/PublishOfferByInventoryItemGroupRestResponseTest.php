@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\PublishOfferByInventoryItemGroupRestResponse;
 
-class PublishOfferByInventoryItemGroupRestResponseTest extends \PHPUnit_Framework_TestCase
+class PublishOfferByInventoryItemGroupRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PublishOfferByInventoryItemGroupRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\PublishOfferByInventoryItemGroupRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\PublishOfferByInventoryItemGroupRestResponse::class, $this->obj);
     }
 
     public function testExtendsPublishResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\PublishResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\PublishResponse::class, $this->obj);
     }
 }

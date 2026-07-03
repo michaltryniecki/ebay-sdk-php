@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\CancelReturnRequestRestRequest;
 
-class CancelReturnRequestRestRequestTest extends \PHPUnit_Framework_TestCase
+class CancelReturnRequestRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CancelReturnRequestRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\CancelReturnRequestRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\CancelReturnRequestRestRequest::class, $this->obj);
     }
 
     public function testExtendsCloseReturnRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\CloseReturnRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\CloseReturnRequest::class, $this->obj);
     }
 }

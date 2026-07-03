@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\MerchantData\Enums;
 
 use DTS\eBaySDK\MerchantData\Enums\ItemSpecificSourceCodeType;
 
-class ItemSpecificSourceCodeTypeTest extends \PHPUnit_Framework_TestCase
+class ItemSpecificSourceCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ItemSpecificSourceCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Enums\ItemSpecificSourceCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Enums\ItemSpecificSourceCodeType::class, $this->obj);
     }
 }

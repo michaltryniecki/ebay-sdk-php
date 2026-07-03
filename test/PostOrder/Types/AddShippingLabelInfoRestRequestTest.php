@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\AddShippingLabelInfoRestRequest;
 
-class AddShippingLabelInfoRestRequestTest extends \PHPUnit_Framework_TestCase
+class AddShippingLabelInfoRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AddShippingLabelInfoRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\AddShippingLabelInfoRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\AddShippingLabelInfoRestRequest::class, $this->obj);
     }
 
     public function testExtendsProvideLabelRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\ProvideLabelRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\ProvideLabelRequest::class, $this->obj);
     }
 }

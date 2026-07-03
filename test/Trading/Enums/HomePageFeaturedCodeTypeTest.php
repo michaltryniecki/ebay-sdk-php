@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\HomePageFeaturedCodeType;
 
-class HomePageFeaturedCodeTypeTest extends \PHPUnit_Framework_TestCase
+class HomePageFeaturedCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new HomePageFeaturedCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\HomePageFeaturedCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\HomePageFeaturedCodeType::class, $this->obj);
     }
 }

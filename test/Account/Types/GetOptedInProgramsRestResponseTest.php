@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Account\Types;
 
 use DTS\eBaySDK\Account\Types\GetOptedInProgramsRestResponse;
 
-class GetOptedInProgramsRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetOptedInProgramsRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetOptedInProgramsRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\GetOptedInProgramsRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\GetOptedInProgramsRestResponse::class, $this->obj);
     }
 
     public function testExtendsPrograms()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\Programs', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\Programs::class, $this->obj);
     }
 }

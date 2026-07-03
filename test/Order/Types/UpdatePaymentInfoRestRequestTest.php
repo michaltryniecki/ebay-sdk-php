@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Order\Types;
 
 use DTS\eBaySDK\Order\Types\UpdatePaymentInfoRestRequest;
 
-class UpdatePaymentInfoRestRequestTest extends \PHPUnit_Framework_TestCase
+class UpdatePaymentInfoRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdatePaymentInfoRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\UpdatePaymentInfoRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\UpdatePaymentInfoRestRequest::class, $this->obj);
     }
 
     public function testExtendsUpdatePaymentInformation()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\UpdatePaymentInformation', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\UpdatePaymentInformation::class, $this->obj);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\AnnouncementMessageCodeType;
 
-class AnnouncementMessageCodeTypeTest extends \PHPUnit_Framework_TestCase
+class AnnouncementMessageCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AnnouncementMessageCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\AnnouncementMessageCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\AnnouncementMessageCodeType::class, $this->obj);
     }
 }

@@ -41,7 +41,7 @@ class SimpleClass extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'DateTime'
         ],
         'SimpleClass' => [
-            'type' => 'DTS\eBaySDK\Test\Mocks\SimpleClass',
+            'type' => \DTS\eBaySDK\Test\Mocks\SimpleClass::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SimpleClass'
@@ -59,49 +59,49 @@ class SimpleClass extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'integers'
         ],
         'base64BinaryType' => [
-            'type' => 'DTS\eBaySDK\Test\Mocks\Base64BinaryType',
+            'type' => \DTS\eBaySDK\Test\Mocks\Base64BinaryType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'base64BinaryType'
         ],
         'booleanType' => [
-            'type' => 'DTS\eBaySDK\Test\Mocks\BooleanType',
+            'type' => \DTS\eBaySDK\Test\Mocks\BooleanType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'booleanType'
         ],
         'decimalType' => [
-            'type' => 'DTS\eBaySDK\Test\Mocks\DecimalType',
+            'type' => \DTS\eBaySDK\Test\Mocks\DecimalType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'decimalType'
         ],
         'doubleType' => [
-            'type' => 'DTS\eBaySDK\Test\Mocks\DoubleType',
+            'type' => \DTS\eBaySDK\Test\Mocks\DoubleType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'doubleType'
         ],
         'integerType' => [
-            'type' => 'DTS\eBaySDK\Test\Mocks\IntegerType',
+            'type' => \DTS\eBaySDK\Test\Mocks\IntegerType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'integerType'
         ],
         'stringType' => [
-            'type' => 'DTS\eBaySDK\Test\Mocks\StringType',
+            'type' => \DTS\eBaySDK\Test\Mocks\StringType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'stringType'
         ],
         'tokenType' => [
-            'type' => 'DTS\eBaySDK\Test\Mocks\TokenType',
+            'type' => \DTS\eBaySDK\Test\Mocks\TokenType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'tokenType'
         ],
         'uriType' => [
-            'type' => 'DTS\eBaySDK\Test\Mocks\URIType',
+            'type' => \DTS\eBaySDK\Test\Mocks\URIType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'uriType'
@@ -137,31 +137,31 @@ class SimpleClass extends \DTS\eBaySDK\Types\BaseType
             'attributeName' => 'DateTimeAttribute'
         ],
         'decimalTypes' => [
-            'type' => 'DTS\eBaySDK\Test\Mocks\DecimalType',
+            'type' => \DTS\eBaySDK\Test\Mocks\DecimalType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'decimalTypes'
         ],
         'decimalTypePosInteger' => [
-            'type' => 'DTS\eBaySDK\Test\Mocks\DecimalType',
+            'type' => \DTS\eBaySDK\Test\Mocks\DecimalType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'decimalTypePosInteger'
         ],
         'decimalTypePosFloat' => [
-            'type' => 'DTS\eBaySDK\Test\Mocks\DecimalType',
+            'type' => \DTS\eBaySDK\Test\Mocks\DecimalType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'decimalTypePosFloat'
         ],
         'decimalTypeNegInteger' => [
-            'type' => 'DTS\eBaySDK\Test\Mocks\DecimalType',
+            'type' => \DTS\eBaySDK\Test\Mocks\DecimalType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'decimalTypeNegInteger'
         ],
         'decimalTypeNegFloat' => [
-            'type' => 'DTS\eBaySDK\Test\Mocks\DecimalType',
+            'type' => \DTS\eBaySDK\Test\Mocks\DecimalType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'decimalTypeNegFloat'
@@ -182,18 +182,18 @@ class SimpleClass extends \DTS\eBaySDK\Types\BaseType
 
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="http://davidtsadler.com"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="http://davidtsadler.com"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

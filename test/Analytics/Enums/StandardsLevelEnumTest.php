@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Analytics\Enums;
 
 use DTS\eBaySDK\Analytics\Enums\StandardsLevelEnum;
 
-class StandardsLevelEnumTest extends \PHPUnit_Framework_TestCase
+class StandardsLevelEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new StandardsLevelEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Analytics\Enums\StandardsLevelEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Analytics\Enums\StandardsLevelEnum::class, $this->obj);
     }
 }

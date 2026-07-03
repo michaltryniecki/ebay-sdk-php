@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\PostOrder\Enums;
 
 use DTS\eBaySDK\PostOrder\Enums\GetReturnFieldGroupEnum;
 
-class GetReturnFieldGroupEnumTest extends \PHPUnit_Framework_TestCase
+class GetReturnFieldGroupEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetReturnFieldGroupEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Enums\GetReturnFieldGroupEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Enums\GetReturnFieldGroupEnum::class, $this->obj);
     }
 }

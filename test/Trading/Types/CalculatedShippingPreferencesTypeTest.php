@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\CalculatedShippingPreferencesType;
 
-class CalculatedShippingPreferencesTypeTest extends \PHPUnit_Framework_TestCase
+class CalculatedShippingPreferencesTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CalculatedShippingPreferencesType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\CalculatedShippingPreferencesType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\CalculatedShippingPreferencesType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

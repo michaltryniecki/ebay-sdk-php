@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\BulkUpdatePriceAndQuantityRestRequest;
 
-class BulkUpdatePriceAndQuantityRestRequestTest extends \PHPUnit_Framework_TestCase
+class BulkUpdatePriceAndQuantityRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new BulkUpdatePriceAndQuantityRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\BulkUpdatePriceAndQuantityRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\BulkUpdatePriceAndQuantityRestRequest::class, $this->obj);
     }
 
     public function testExtendsBulkPriceQuantity()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\BulkPriceQuantity', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\BulkPriceQuantity::class, $this->obj);
     }
 }

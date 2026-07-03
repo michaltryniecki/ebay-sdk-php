@@ -21,7 +21,7 @@ class AnalyticsService extends \DTS\eBaySDK\Analytics\Services\AnalyticsBaseServ
         'GetASpecificSellerProfile' => [
             'method' => 'GET',
             'resource' => 'seller_standards_profile/{program}/{cycle}',
-            'responseClass' => '\DTS\eBaySDK\Analytics\Types\GetASpecificSellerProfileRestResponse',
+            'responseClass' => \DTS\eBaySDK\Analytics\Types\GetASpecificSellerProfileRestResponse::class,
             'params' => [
                 'cycle' => [
                     'valid' => ['string'],
@@ -36,14 +36,14 @@ class AnalyticsService extends \DTS\eBaySDK\Analytics\Services\AnalyticsBaseServ
         'GetAllSellerProfiles' => [
             'method' => 'GET',
             'resource' => 'seller_standards_profile',
-            'responseClass' => '\DTS\eBaySDK\Analytics\Types\GetAllSellerProfilesRestResponse',
+            'responseClass' => \DTS\eBaySDK\Analytics\Types\GetAllSellerProfilesRestResponse::class,
             'params' => [
             ]
         ],
         'GetTrafficReport' => [
             'method' => 'GET',
             'resource' => 'traffic_report',
-            'responseClass' => '\DTS\eBaySDK\Analytics\Types\GetTrafficReportRestResponse',
+            'responseClass' => \DTS\eBaySDK\Analytics\Types\GetTrafficReportRestResponse::class,
             'params' => [
                 'dimension' => [
                     'valid' => ['string'],

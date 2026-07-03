@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\BusinessRoleType;
 
-class BusinessRoleTypeTest extends \PHPUnit_Framework_TestCase
+class BusinessRoleTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new BusinessRoleType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\BusinessRoleType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\BusinessRoleType::class, $this->obj);
     }
 }

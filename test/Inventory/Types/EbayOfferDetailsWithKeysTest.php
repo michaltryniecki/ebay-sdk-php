@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\EbayOfferDetailsWithKeys;
 
-class EbayOfferDetailsWithKeysTest extends \PHPUnit_Framework_TestCase
+class EbayOfferDetailsWithKeysTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new EbayOfferDetailsWithKeys();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\EbayOfferDetailsWithKeys', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\EbayOfferDetailsWithKeys::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

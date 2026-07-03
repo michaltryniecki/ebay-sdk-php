@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\AmountType;
 
-class AmountTypeTest extends \PHPUnit_Framework_TestCase
+class AmountTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AmountType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\AmountType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\AmountType::class, $this->obj);
     }
 
     public function testExtendsDoubleType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\DoubleType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\DoubleType::class, $this->obj);
     }
 }

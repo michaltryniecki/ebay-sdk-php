@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\ItemFormatSortFilterCodeType;
 
-class ItemFormatSortFilterCodeTypeTest extends \PHPUnit_Framework_TestCase
+class ItemFormatSortFilterCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ItemFormatSortFilterCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\ItemFormatSortFilterCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\ItemFormatSortFilterCodeType::class, $this->obj);
     }
 }

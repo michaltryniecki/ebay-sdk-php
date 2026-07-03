@@ -5,14 +5,14 @@ use DTS\eBaySDK\Trading\Services;
 use DTS\eBaySDK\Trading\Types;
 use DTS\eBaySDK\Test\Mocks\HttpHandler;
 
-class MultipartFormDataTest extends \PHPUnit_Framework_TestCase
+class MultipartFormDataTest extends \PHPUnit\Framework\TestCase
 {
     private $httpHandler;
     private $service;
     private $request;
     private $requestXml;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         /**
          * Use a class that will fake sending requests and getting responses.
@@ -40,9 +40,9 @@ class MultipartFormDataTest extends \PHPUnit_Framework_TestCase
         $this->request->attachment('ABC123', 'image/jpeg');
         $this->service->uploadSiteHostedPictures($this->request);
         $this->assertArrayHasKey('Content-Type', $this->httpHandler->headers);
-        $this->assertEquals('multipart/form-data;boundary="boundary"', $this->httpHandler->headers['Content-Type']);
+        $this->assertEquals('multipart/form-data;boundary=boundary', $this->httpHandler->headers['Content-Type']);
         $this->assertArrayHasKey('Content-Length', $this->httpHandler->headers);
-        $this->assertEquals(strlen($this->requestXml), $this->httpHandler->headers['Content-Length']);
+        $this->assertEquals(strlen((string) $this->requestXml), $this->httpHandler->headers['Content-Length']);
     }
 
     public function testMultipartFormDataIsCreated()

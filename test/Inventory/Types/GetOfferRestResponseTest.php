@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\GetOfferRestResponse;
 
-class GetOfferRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetOfferRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetOfferRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\GetOfferRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\GetOfferRestResponse::class, $this->obj);
     }
 
     public function testExtendsEbayOfferDetailsWithAll()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\EbayOfferDetailsWithAll', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\EbayOfferDetailsWithAll::class, $this->obj);
     }
 }

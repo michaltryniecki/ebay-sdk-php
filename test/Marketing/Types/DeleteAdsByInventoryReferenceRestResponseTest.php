@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\DeleteAdsByInventoryReferenceRestResponse;
 
-class DeleteAdsByInventoryReferenceRestResponseTest extends \PHPUnit_Framework_TestCase
+class DeleteAdsByInventoryReferenceRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DeleteAdsByInventoryReferenceRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\DeleteAdsByInventoryReferenceRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\DeleteAdsByInventoryReferenceRestResponse::class, $this->obj);
     }
 
     public function testExtendsAdIds()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\AdIds', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\AdIds::class, $this->obj);
     }
 }

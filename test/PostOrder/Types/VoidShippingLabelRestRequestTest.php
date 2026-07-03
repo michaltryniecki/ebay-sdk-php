@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\VoidShippingLabelRestRequest;
 
-class VoidShippingLabelRestRequestTest extends \PHPUnit_Framework_TestCase
+class VoidShippingLabelRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new VoidShippingLabelRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\VoidShippingLabelRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\VoidShippingLabelRestRequest::class, $this->obj);
     }
 
     public function testExtendsVoidLabelRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\VoidLabelRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\VoidLabelRequest::class, $this->obj);
     }
 }

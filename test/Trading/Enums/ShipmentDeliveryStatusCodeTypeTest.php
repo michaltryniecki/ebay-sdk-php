@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\ShipmentDeliveryStatusCodeType;
 
-class ShipmentDeliveryStatusCodeTypeTest extends \PHPUnit_Framework_TestCase
+class ShipmentDeliveryStatusCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ShipmentDeliveryStatusCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\ShipmentDeliveryStatusCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\ShipmentDeliveryStatusCodeType::class, $this->obj);
     }
 }

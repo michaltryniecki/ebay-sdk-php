@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\SellerFavoriteItemPreferencesType;
 
-class SellerFavoriteItemPreferencesTypeTest extends \PHPUnit_Framework_TestCase
+class SellerFavoriteItemPreferencesTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SellerFavoriteItemPreferencesType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\SellerFavoriteItemPreferencesType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\SellerFavoriteItemPreferencesType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

@@ -21,7 +21,7 @@ class FeedService extends \DTS\eBaySDK\Feed\Services\FeedBaseService
         'GetItemFeed' => [
             'method' => 'GET',
             'resource' => 'item_summary',
-            'responseClass' => '\DTS\eBaySDK\Feed\Types\GetItemFeedRestResponse',
+            'responseClass' => \DTS\eBaySDK\Feed\Types\GetItemFeedRestResponse::class,
             'params' => [
                 'category_id' => [
                     'valid' => ['string'],

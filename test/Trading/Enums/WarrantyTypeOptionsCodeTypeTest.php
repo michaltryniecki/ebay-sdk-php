@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\WarrantyTypeOptionsCodeType;
 
-class WarrantyTypeOptionsCodeTypeTest extends \PHPUnit_Framework_TestCase
+class WarrantyTypeOptionsCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new WarrantyTypeOptionsCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\WarrantyTypeOptionsCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\WarrantyTypeOptionsCodeType::class, $this->obj);
     }
 }

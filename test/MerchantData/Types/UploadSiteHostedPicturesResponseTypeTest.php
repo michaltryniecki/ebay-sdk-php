@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\MerchantData\Types;
 
 use DTS\eBaySDK\MerchantData\Types\UploadSiteHostedPicturesResponseType;
 
-class UploadSiteHostedPicturesResponseTypeTest extends \PHPUnit_Framework_TestCase
+class UploadSiteHostedPicturesResponseTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UploadSiteHostedPicturesResponseType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\UploadSiteHostedPicturesResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\UploadSiteHostedPicturesResponseType::class, $this->obj);
     }
 
     public function testExtendsAbstractResponseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\AbstractResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\AbstractResponseType::class, $this->obj);
     }
 }

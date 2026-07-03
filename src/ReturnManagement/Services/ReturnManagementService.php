@@ -40,7 +40,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
         return $this->callOperationAsync(
             'getVersion',
             $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\GetVersionResponse'
+            \DTS\eBaySDK\ReturnManagement\Types\GetVersionResponse::class
         );
     }
 
@@ -62,7 +62,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
         return $this->callOperationAsync(
             'getUserReturns',
             $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\GetUserReturnsResponse'
+            \DTS\eBaySDK\ReturnManagement\Types\GetUserReturnsResponse::class
         );
     }
 
@@ -84,7 +84,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
         return $this->callOperationAsync(
             'getReturnDetail',
             $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\GetReturnDetailResponse'
+            \DTS\eBaySDK\ReturnManagement\Types\GetReturnDetailResponse::class
         );
     }
 
@@ -106,7 +106,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
         return $this->callOperationAsync(
             'getActivityOptions',
             $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\GetActivityOptionsResponse'
+            \DTS\eBaySDK\ReturnManagement\Types\GetActivityOptionsResponse::class
         );
     }
 
@@ -128,7 +128,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
         return $this->callOperationAsync(
             'issueRefund',
             $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\IssueRefundResponse'
+            \DTS\eBaySDK\ReturnManagement\Types\IssueRefundResponse::class
         );
     }
 
@@ -150,7 +150,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
         return $this->callOperationAsync(
             'provideSellerInfo',
             $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\ProvideSellerInfoResponse'
+            \DTS\eBaySDK\ReturnManagement\Types\ProvideSellerInfoResponse::class
         );
     }
 
@@ -172,7 +172,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
         return $this->callOperationAsync(
             'getReturnMetadata',
             $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\GetReturnMetadataResponse'
+            \DTS\eBaySDK\ReturnManagement\Types\GetReturnMetadataResponse::class
         );
     }
 
@@ -194,7 +194,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
         return $this->callOperationAsync(
             'provideTrackingInfo',
             $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\ProvideTrackingInfoResponse'
+            \DTS\eBaySDK\ReturnManagement\Types\ProvideTrackingInfoResponse::class
         );
     }
 
@@ -216,7 +216,7 @@ class ReturnManagementService extends \DTS\eBaySDK\ReturnManagement\Services\Ret
         return $this->callOperationAsync(
             'setItemAsReceived',
             $request,
-            '\DTS\eBaySDK\ReturnManagement\Types\SetItemAsReceivedResponse'
+            \DTS\eBaySDK\ReturnManagement\Types\SetItemAsReceivedResponse::class
         );
     }
 }

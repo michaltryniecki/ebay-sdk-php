@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Catalog\Enums;
 
 use DTS\eBaySDK\Catalog\Enums\ChangeRequestStatus;
 
-class ChangeRequestStatusTest extends \PHPUnit_Framework_TestCase
+class ChangeRequestStatusTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ChangeRequestStatus();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Catalog\Enums\ChangeRequestStatus', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Catalog\Enums\ChangeRequestStatus::class, $this->obj);
     }
 }

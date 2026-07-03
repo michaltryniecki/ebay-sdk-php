@@ -41,9 +41,7 @@ class JsonParser
             return $value;
         }
 
-        return array_filter($value, function ($val) {
-            return !is_null($val);
-        });
+        return array_filter($value, fn($val) => !is_null($val));
     }
 
     /**
@@ -80,7 +78,7 @@ class JsonParser
             return $value;
         }
 
-        $types = explode('|', $propertyMeta->phpType);
+        $types = explode('|', (string) $propertyMeta->phpType);
 
         foreach ($types as $type) {
             switch ($type) {

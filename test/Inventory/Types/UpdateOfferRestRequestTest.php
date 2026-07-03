@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\UpdateOfferRestRequest;
 
-class UpdateOfferRestRequestTest extends \PHPUnit_Framework_TestCase
+class UpdateOfferRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateOfferRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\UpdateOfferRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\UpdateOfferRestRequest::class, $this->obj);
     }
 
     public function testExtendsEbayOfferDetailsWithId()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\EbayOfferDetailsWithId', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\EbayOfferDetailsWithId::class, $this->obj);
     }
 }

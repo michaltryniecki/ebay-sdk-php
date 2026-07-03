@@ -40,7 +40,7 @@ class FeedbackService extends \DTS\eBaySDK\Feedback\Services\FeedbackBaseService
         return $this->callOperationAsync(
             'createDSRSummaryByTransaction',
             $request,
-            '\DTS\eBaySDK\Feedback\Types\CreateDSRSummaryResponse'
+            \DTS\eBaySDK\Feedback\Types\CreateDSRSummaryResponse::class
         );
     }
 
@@ -62,7 +62,7 @@ class FeedbackService extends \DTS\eBaySDK\Feedback\Services\FeedbackBaseService
         return $this->callOperationAsync(
             'createDSRSummaryByPeriod',
             $request,
-            '\DTS\eBaySDK\Feedback\Types\CreateDSRSummaryResponse'
+            \DTS\eBaySDK\Feedback\Types\CreateDSRSummaryResponse::class
         );
     }
 
@@ -84,7 +84,7 @@ class FeedbackService extends \DTS\eBaySDK\Feedback\Services\FeedbackBaseService
         return $this->callOperationAsync(
             'createDSRSummaryByCategory',
             $request,
-            '\DTS\eBaySDK\Feedback\Types\CreateDSRSummaryResponse'
+            \DTS\eBaySDK\Feedback\Types\CreateDSRSummaryResponse::class
         );
     }
 
@@ -106,7 +106,7 @@ class FeedbackService extends \DTS\eBaySDK\Feedback\Services\FeedbackBaseService
         return $this->callOperationAsync(
             'createDSRSummaryByShippingDetail',
             $request,
-            '\DTS\eBaySDK\Feedback\Types\CreateDSRSummaryResponse'
+            \DTS\eBaySDK\Feedback\Types\CreateDSRSummaryResponse::class
         );
     }
 
@@ -128,7 +128,7 @@ class FeedbackService extends \DTS\eBaySDK\Feedback\Services\FeedbackBaseService
         return $this->callOperationAsync(
             'getDSRSummary',
             $request,
-            '\DTS\eBaySDK\Feedback\Types\GetDSRSummaryResponse'
+            \DTS\eBaySDK\Feedback\Types\GetDSRSummaryResponse::class
         );
     }
 }

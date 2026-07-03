@@ -7,11 +7,6 @@ namespace DTS\eBaySDK;
 class ConfigurationResolver
 {
     /**
-     * @var array $definitions Definitions for each configuration option.
-     */
-    private $definitions;
-
-    /**
      * @var array Map of type to function that confirms type.
      */
     private static $typeMap = [
@@ -25,9 +20,8 @@ class ConfigurationResolver
     /**
      * @param array $definitions Definitions for each configuration option.
      */
-    public function __construct(array $definitions)
+    public function __construct(private array $definitions)
     {
-        $this->definitions = $definitions;
     }
 
     /**

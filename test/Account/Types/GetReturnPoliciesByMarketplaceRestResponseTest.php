@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Account\Types;
 
 use DTS\eBaySDK\Account\Types\GetReturnPoliciesByMarketplaceRestResponse;
 
-class GetReturnPoliciesByMarketplaceRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetReturnPoliciesByMarketplaceRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetReturnPoliciesByMarketplaceRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\GetReturnPoliciesByMarketplaceRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\GetReturnPoliciesByMarketplaceRestResponse::class, $this->obj);
     }
 
     public function testExtendsReturnPolicyResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\ReturnPolicyResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\ReturnPolicyResponse::class, $this->obj);
     }
 }

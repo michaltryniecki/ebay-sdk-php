@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\SendInquiryMessageRestRequest;
 
-class SendInquiryMessageRestRequestTest extends \PHPUnit_Framework_TestCase
+class SendInquiryMessageRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SendInquiryMessageRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\SendInquiryMessageRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\SendInquiryMessageRestRequest::class, $this->obj);
     }
 
     public function testExtendsSendMessageRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\SendMessageRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\SendMessageRequest::class, $this->obj);
     }
 }

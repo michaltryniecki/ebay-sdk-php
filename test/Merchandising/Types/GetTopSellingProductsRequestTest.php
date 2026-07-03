@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Merchandising\Types;
 
 use DTS\eBaySDK\Merchandising\Types\GetTopSellingProductsRequest;
 
-class GetTopSellingProductsRequestTest extends \PHPUnit_Framework_TestCase
+class GetTopSellingProductsRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetTopSellingProductsRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Merchandising\Types\GetTopSellingProductsRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Merchandising\Types\GetTopSellingProductsRequest::class, $this->obj);
     }
 
     public function testExtendsBaseMerchandisingServiceRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Merchandising\Types\BaseMerchandisingServiceRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Merchandising\Types\BaseMerchandisingServiceRequest::class, $this->obj);
     }
 }

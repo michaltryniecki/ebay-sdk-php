@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\GetReturnRuleTemplatesRestResponse;
 
-class GetReturnRuleTemplatesRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetReturnRuleTemplatesRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetReturnRuleTemplatesRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\GetReturnRuleTemplatesRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\GetReturnRuleTemplatesRestResponse::class, $this->obj);
     }
 
     public function testExtendsGetDispositionRuleTemplatesResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\GetDispositionRuleTemplatesResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\GetDispositionRuleTemplatesResponse::class, $this->obj);
     }
 }

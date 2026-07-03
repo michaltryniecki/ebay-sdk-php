@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Account\Types;
 
 use DTS\eBaySDK\Account\Types\GetASalesTaxTableRestResponse;
 
-class GetASalesTaxTableRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetASalesTaxTableRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetASalesTaxTableRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\GetASalesTaxTableRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\GetASalesTaxTableRestResponse::class, $this->obj);
     }
 
     public function testExtendsSalesTax()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\SalesTax', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\SalesTax::class, $this->obj);
     }
 }

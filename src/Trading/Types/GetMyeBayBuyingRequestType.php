@@ -33,73 +33,73 @@ class GetMyeBayBuyingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
      */
     private static $propertyTypes = [
         'WatchList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WatchList'
         ],
         'BidList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BidList'
         ],
         'BestOfferList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BestOfferList'
         ],
         'WonList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WonList'
         ],
         'LostList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LostList'
         ],
         'FavoriteSearches' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MyeBaySelectionType',
+            'type' => \DTS\eBaySDK\Trading\Types\MyeBaySelectionType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FavoriteSearches'
         ],
         'FavoriteSellers' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MyeBaySelectionType',
+            'type' => \DTS\eBaySDK\Trading\Types\MyeBaySelectionType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FavoriteSellers'
         ],
         'SecondChanceOffer' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MyeBaySelectionType',
+            'type' => \DTS\eBaySDK\Trading\Types\MyeBaySelectionType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SecondChanceOffer'
         ],
         'DeletedFromWonList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeletedFromWonList'
         ],
         'DeletedFromLostList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeletedFromLostList'
         ],
         'BuyingSummary' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyingSummary'
         ],
         'UserDefinedLists' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MyeBaySelectionType',
+            'type' => \DTS\eBaySDK\Trading\Types\MyeBaySelectionType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UserDefinedLists'
@@ -117,22 +117,22 @@ class GetMyeBayBuyingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractRequ
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
-            self::$requestXmlRootElementNames[__CLASS__] = 'GetMyeBayBuyingRequest';
+        if (!array_key_exists(self::class, self::$requestXmlRootElementNames)) {
+            self::$requestXmlRootElementNames[self::class] = 'GetMyeBayBuyingRequest';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

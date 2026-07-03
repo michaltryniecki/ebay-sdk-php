@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Account\Types;
 
 use DTS\eBaySDK\Account\Types\GetPaymentPoliciesByMarketplaceRestResponse;
 
-class GetPaymentPoliciesByMarketplaceRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetPaymentPoliciesByMarketplaceRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetPaymentPoliciesByMarketplaceRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\GetPaymentPoliciesByMarketplaceRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\GetPaymentPoliciesByMarketplaceRestResponse::class, $this->obj);
     }
 
     public function testExtendsPaymentPolicyResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\PaymentPolicyResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\PaymentPolicyResponse::class, $this->obj);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\ClassifiedAdBestOfferEnabledCodeType;
 
-class ClassifiedAdBestOfferEnabledCodeTypeTest extends \PHPUnit_Framework_TestCase
+class ClassifiedAdBestOfferEnabledCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ClassifiedAdBestOfferEnabledCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\ClassifiedAdBestOfferEnabledCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\ClassifiedAdBestOfferEnabledCodeType::class, $this->obj);
     }
 }

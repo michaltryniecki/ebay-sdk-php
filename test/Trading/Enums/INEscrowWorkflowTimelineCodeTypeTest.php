@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\INEscrowWorkflowTimelineCodeType;
 
-class INEscrowWorkflowTimelineCodeTypeTest extends \PHPUnit_Framework_TestCase
+class INEscrowWorkflowTimelineCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new INEscrowWorkflowTimelineCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\INEscrowWorkflowTimelineCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\INEscrowWorkflowTimelineCodeType::class, $this->obj);
     }
 }

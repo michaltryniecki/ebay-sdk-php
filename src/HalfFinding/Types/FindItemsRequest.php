@@ -24,25 +24,25 @@ class FindItemsRequest extends \DTS\eBaySDK\HalfFinding\Types\BaseRequest
      */
     private static $propertyTypes = [
         'productID' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\ProductIDType',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\ProductIDType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'productID'
         ],
         'paginationInput' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\PaginationInputType',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\PaginationInputType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paginationInput'
         ],
         'itemFilter' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\ItemFilter',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\ItemFilter::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'itemFilter'
         ],
         'sortBy' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\SortByType',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\SortByType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sortBy'
@@ -54,22 +54,22 @@ class FindItemsRequest extends \DTS\eBaySDK\HalfFinding\Types\BaseRequest
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="http://www.ebay.com/marketplace/half/v1/services"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="http://www.ebay.com/marketplace/half/v1/services"';
         }
 
-        if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
-            self::$requestXmlRootElementNames[__CLASS__] = 'findHalfItemsRequest';
+        if (!array_key_exists(self::class, self::$requestXmlRootElementNames)) {
+            self::$requestXmlRootElementNames[self::class] = 'findHalfItemsRequest';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

@@ -7,7 +7,7 @@ class RestService extends \DTS\eBaySDK\Test\Mocks\BaseRestService
         'foo' => [
             'method' => 'GET',
             'resource' => '',
-            'responseClass' => '\DTS\eBaySDK\Test\Mocks\ComplexClass',
+            'responseClass' => \DTS\eBaySDK\Test\Mocks\ComplexClass::class,
             'params' => [
             ]
         ]

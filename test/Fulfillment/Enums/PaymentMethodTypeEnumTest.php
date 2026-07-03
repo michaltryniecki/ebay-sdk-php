@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Fulfillment\Enums;
 
 use DTS\eBaySDK\Fulfillment\Enums\PaymentMethodTypeEnum;
 
-class PaymentMethodTypeEnumTest extends \PHPUnit_Framework_TestCase
+class PaymentMethodTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PaymentMethodTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Fulfillment\Enums\PaymentMethodTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Fulfillment\Enums\PaymentMethodTypeEnum::class, $this->obj);
     }
 }

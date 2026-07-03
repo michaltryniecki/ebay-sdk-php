@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\MerchantData\Enums;
 
 use DTS\eBaySDK\MerchantData\Enums\FeedbackRatingStarCodeType;
 
-class FeedbackRatingStarCodeTypeTest extends \PHPUnit_Framework_TestCase
+class FeedbackRatingStarCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FeedbackRatingStarCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Enums\FeedbackRatingStarCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Enums\FeedbackRatingStarCodeType::class, $this->obj);
     }
 }

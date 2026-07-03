@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\SendReturnShippingLabelRestResponse;
 
-class SendReturnShippingLabelRestResponseTest extends \PHPUnit_Framework_TestCase
+class SendReturnShippingLabelRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SendReturnShippingLabelRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\SendReturnShippingLabelRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\SendReturnShippingLabelRestResponse::class, $this->obj);
     }
 
     public function testExtendsSendShippingLabelResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\SendShippingLabelResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\SendShippingLabelResponse::class, $this->obj);
     }
 }

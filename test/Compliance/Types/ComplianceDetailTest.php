@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Compliance\Types;
 
 use DTS\eBaySDK\Compliance\Types\ComplianceDetail;
 
-class ComplianceDetailTest extends \PHPUnit_Framework_TestCase
+class ComplianceDetailTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ComplianceDetail();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Compliance\Types\ComplianceDetail', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Compliance\Types\ComplianceDetail::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

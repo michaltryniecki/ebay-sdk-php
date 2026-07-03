@@ -48,31 +48,31 @@ class SellingManagerSoldOrderType extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'SellingManagerSoldTransaction' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerSoldTransactionType',
+            'type' => \DTS\eBaySDK\Trading\Types\SellingManagerSoldTransactionType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'SellingManagerSoldTransaction'
         ],
         'ShippingAddress' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
+            'type' => \DTS\eBaySDK\Trading\Types\AddressType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingAddress'
         ],
         'ShippingDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\ShippingDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingDetails'
         ],
         'CashOnDeliveryCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CashOnDeliveryCost'
         ],
         'TotalAmount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalAmount'
@@ -84,61 +84,61 @@ class SellingManagerSoldOrderType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'TotalQuantity'
         ],
         'ItemCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemCost'
         ],
         'VATRate' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\VATRateType',
+            'type' => \DTS\eBaySDK\Trading\Types\VATRateType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'VATRate'
         ],
         'NetInsuranceFee' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NetInsuranceFee'
         ],
         'VATInsuranceFee' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VATInsuranceFee'
         ],
         'VATShippingFee' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VATShippingFee'
         ],
         'NetShippingFee' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NetShippingFee'
         ],
         'NetTotalAmount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'NetTotalAmount'
         ],
         'VATTotalAmount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VATTotalAmount'
         ],
         'ActualShippingCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ActualShippingCost'
         ],
         'AdjustmentAmount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AdjustmentAmount'
@@ -162,7 +162,7 @@ class SellingManagerSoldOrderType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'NotesToSeller'
         ],
         'OrderStatus' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingManagerOrderStatusType',
+            'type' => \DTS\eBaySDK\Trading\Types\SellingManagerOrderStatusType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderStatus'
@@ -174,7 +174,7 @@ class SellingManagerSoldOrderType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'UnpaidItemStatus'
         ],
         'SalePrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SalePrice'
@@ -222,18 +222,18 @@ class SellingManagerSoldOrderType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Product\Types;
 
 use DTS\eBaySDK\Product\Types\GetProductCompatibilitiesRequest;
 
-class GetProductCompatibilitiesRequestTest extends \PHPUnit_Framework_TestCase
+class GetProductCompatibilitiesRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetProductCompatibilitiesRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Product\Types\GetProductCompatibilitiesRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Product\Types\GetProductCompatibilitiesRequest::class, $this->obj);
     }
 
     public function testExtendsBaseServiceRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Product\Types\BaseServiceRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Product\Types\BaseServiceRequest::class, $this->obj);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Account\Enums;
 
 use DTS\eBaySDK\Account\Enums\RecipientAccountReferenceTypeEnum;
 
-class RecipientAccountReferenceTypeEnumTest extends \PHPUnit_Framework_TestCase
+class RecipientAccountReferenceTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new RecipientAccountReferenceTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Enums\RecipientAccountReferenceTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Enums\RecipientAccountReferenceTypeEnum::class, $this->obj);
     }
 }

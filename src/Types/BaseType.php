@@ -55,11 +55,11 @@ class BaseType implements JmesPathableObjectInterface
      */
     public function __construct(array $values = [])
     {
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = [];
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = [];
         }
 
-        $this->setValues(__CLASS__, $values);
+        $this->setValues(self::class, $values);
 
         $this->attachment = ['data' => null, 'mimeType' => null];
     }
@@ -73,7 +73,7 @@ class BaseType implements JmesPathableObjectInterface
      */
     public function __get($name)
     {
-        return $this->get(get_class($this), $name);
+        return $this->get(static::class, $name);
     }
 
     /**
@@ -84,7 +84,7 @@ class BaseType implements JmesPathableObjectInterface
      */
     public function __set($name, $value)
     {
-        $this->set(get_class($this), $name, $value);
+        $this->set(static::class, $name, $value);
     }
 
     /**
@@ -96,7 +96,7 @@ class BaseType implements JmesPathableObjectInterface
      */
     public function __isset($name)
     {
-        return $this->isPropertySet(get_class($this), $name);
+        return $this->isPropertySet(static::class, $name);
     }
 
     /**
@@ -106,7 +106,7 @@ class BaseType implements JmesPathableObjectInterface
      */
     public function __unset($name)
     {
-        $this->unSetProperty(get_class($this), $name);
+        $this->unSetProperty(static::class, $name);
     }
 
     /**
@@ -116,7 +116,7 @@ class BaseType implements JmesPathableObjectInterface
      */
     public function toRequestXml()
     {
-        return $this->toXml(self::$requestXmlRootElementNames[get_class($this)], true);
+        return $this->toXml(self::$requestXmlRootElementNames[static::class], true);
     }
 
     /**
@@ -134,7 +134,7 @@ class BaseType implements JmesPathableObjectInterface
             $rootElement ? "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" : '',
             $elementName,
             $this->attributesToXml(),
-            array_key_exists(get_class($this), self::$xmlNamespaces) ? sprintf(' %s', self::$xmlNamespaces[get_class($this)]) : '',
+            array_key_exists(static::class, self::$xmlNamespaces) ? sprintf(' %s', self::$xmlNamespaces[static::class]) : '',
             $this->propertiesToXml(),
             $elementName
         );
@@ -152,7 +152,7 @@ class BaseType implements JmesPathableObjectInterface
      */
     public function elementMeta($elementName)
     {
-        $class = get_class($this);
+        $class = static::class;
         if (array_key_exists($elementName, self::$properties[$class])) {
             $info = self::$properties[$class][$elementName];
             $nameKey = $info['attribute'] ? 'attributeName' : 'elementName';
@@ -216,7 +216,7 @@ class BaseType implements JmesPathableObjectInterface
     {
         $array = [];
 
-        foreach (self::$properties[get_class($this)] as $name => $info) {
+        foreach (self::$properties[static::class] as $name => $info) {
             if (!array_key_exists($name, $this->values)) {
                 continue;
             }
@@ -253,9 +253,9 @@ class BaseType implements JmesPathableObjectInterface
     /**
      * @return string JSON string of the object's properties and values.
      */
-    public function __toString()
+    public function __toString(): string
     {
-        return json_encode($this->toArray());
+        return (string) json_encode($this->toArray());
     }
 
     /**
@@ -380,9 +380,9 @@ class BaseType implements JmesPathableObjectInterface
         } else {
             $actualType = self::getActualType($value);
             if ('array' !== $actualType) {
-                throw new Exceptions\InvalidPropertyTypeException($name, 'DTS\eBaySDK\Types\RepeatableType', $actualType);
+                throw new Exceptions\InvalidPropertyTypeException($name, \DTS\eBaySDK\Types\RepeatableType::class, $actualType);
             } else {
-                $this->values[$name] = new Types\RepeatableType(get_class($this), $name, $info['type']);
+                $this->values[$name] = new Types\RepeatableType(static::class, $name, $info['type']);
                 foreach ($value as $item) {
                     $this->values[$name][] = $item;
                 }
@@ -399,7 +399,7 @@ class BaseType implements JmesPathableObjectInterface
     {
         $attributes = [];
 
-        foreach (self::$properties[get_class($this)] as $name => $info) {
+        foreach (self::$properties[static::class] as $name => $info) {
             if (!$info['attribute']) {
                 continue;
             }
@@ -423,7 +423,7 @@ class BaseType implements JmesPathableObjectInterface
     {
         $properties = [];
 
-        foreach (self::$properties[get_class($this)] as $name => $info) {
+        foreach (self::$properties[static::class] as $name => $info) {
             if ($info['attribute']) {
                 continue;
             }
@@ -479,7 +479,7 @@ class BaseType implements JmesPathableObjectInterface
         $isValid = false;
         $info = self::propertyInfo($class, $name);
         $actualType = self::getActualType($value);
-        $valid = explode('|', $info['type']);
+        $valid = explode('|', (string) $info['type']);
 
         foreach ($valid as $check) {
             if ($check !== 'any' && \DTS\eBaySDK\checkPropertyType($check)) {
@@ -510,7 +510,7 @@ class BaseType implements JmesPathableObjectInterface
         $actualType = gettype($value);
 
         if ('object' === $actualType) {
-            $actualType = get_class($value);
+            $actualType = $value::class;
         }
 
         return $actualType;
@@ -569,7 +569,7 @@ class BaseType implements JmesPathableObjectInterface
      */
     private static function propertyToXml($name, $value)
     {
-        if (is_subclass_of($value, '\DTS\eBaySDK\Types\BaseType', false)) {
+        if (is_subclass_of($value, \DTS\eBaySDK\Types\BaseType::class, false)) {
             return $value->toXml($name);
         } else {
             return sprintf('<%s>%s</%s>', $name, self::encodeValueXml($value), $name);
@@ -590,7 +590,7 @@ class BaseType implements JmesPathableObjectInterface
         } elseif (is_bool($value)) {
             return $value ? 'true' : 'false';
         } else {
-            return htmlspecialchars($value, ENT_QUOTES, 'UTF-8', true);
+            return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8', true);
         }
     }
 
@@ -603,7 +603,7 @@ class BaseType implements JmesPathableObjectInterface
      */
     private static function propertyToArrayValue($value)
     {
-        if (is_subclass_of($value, '\DTS\eBaySDK\Types\BaseType', false)) {
+        if (is_subclass_of($value, \DTS\eBaySDK\Types\BaseType::class, false)) {
             return $value->toArray();
         } elseif ($value instanceof \DateTime) {
             return $value->format('Y-m-d\TH:i:s.000\Z');
@@ -658,7 +658,7 @@ class BaseType implements JmesPathableObjectInterface
             return $value;
         }
 
-        $types = explode('|', $info['type']);
+        $types = explode('|', (string) $info['type']);
 
         foreach ($types as $type) {
             switch ($type) {
@@ -687,8 +687,6 @@ class BaseType implements JmesPathableObjectInterface
             return $value;
         }
 
-        return array_filter($value, function ($val) {
-            return !is_null($val);
-        });
+        return array_filter($value, fn($val) => !is_null($val));
     }
 }

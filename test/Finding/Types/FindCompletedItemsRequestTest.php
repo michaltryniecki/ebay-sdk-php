@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Finding\Types;
 
 use DTS\eBaySDK\Finding\Types\FindCompletedItemsRequest;
 
-class FindCompletedItemsRequestTest extends \PHPUnit_Framework_TestCase
+class FindCompletedItemsRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FindCompletedItemsRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Finding\Types\FindCompletedItemsRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Finding\Types\FindCompletedItemsRequest::class, $this->obj);
     }
 
     public function testExtendsBaseFindingServiceRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Finding\Types\BaseFindingServiceRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Finding\Types\BaseFindingServiceRequest::class, $this->obj);
     }
 }

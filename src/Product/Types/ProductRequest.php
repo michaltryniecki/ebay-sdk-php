@@ -47,13 +47,13 @@ class ProductRequest extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'keywords'
         ],
         'propertyFilter' => [
-            'type' => 'DTS\eBaySDK\Product\Types\PropertyValue',
+            'type' => \DTS\eBaySDK\Product\Types\PropertyValue::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'propertyFilter'
         ],
         'sortOrder' => [
-            'type' => 'DTS\eBaySDK\Product\Types\SortOrder',
+            'type' => \DTS\eBaySDK\Product\Types\SortOrder::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sortOrder'
@@ -71,13 +71,13 @@ class ProductRequest extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'datasetPropertyName'
         ],
         'paginationInput' => [
-            'type' => 'DTS\eBaySDK\Product\Types\PaginationInput',
+            'type' => \DTS\eBaySDK\Product\Types\PaginationInput::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paginationInput'
         ],
         'productStatusFilter' => [
-            'type' => 'DTS\eBaySDK\Product\Types\ProductStatus',
+            'type' => \DTS\eBaySDK\Product\Types\ProductStatus::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'productStatusFilter'
@@ -89,18 +89,18 @@ class ProductRequest extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="http://www.ebay.com/marketplace/marketplacecatalog/v1/services"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="http://www.ebay.com/marketplace/marketplacecatalog/v1/services"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

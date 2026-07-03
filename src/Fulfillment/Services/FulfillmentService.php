@@ -21,7 +21,7 @@ class FulfillmentService extends \DTS\eBaySDK\Fulfillment\Services\FulfillmentBa
         'GetOrders' => [
             'method' => 'GET',
             'resource' => 'order',
-            'responseClass' => '\DTS\eBaySDK\Fulfillment\Types\GetOrdersRestResponse',
+            'responseClass' => \DTS\eBaySDK\Fulfillment\Types\GetOrdersRestResponse::class,
             'params' => [
                 'filter' => [
                     'valid' => ['string']
@@ -40,7 +40,7 @@ class FulfillmentService extends \DTS\eBaySDK\Fulfillment\Services\FulfillmentBa
         'GetAnOrder' => [
             'method' => 'GET',
             'resource' => 'order/{orderId}',
-            'responseClass' => '\DTS\eBaySDK\Fulfillment\Types\GetAnOrderRestResponse',
+            'responseClass' => \DTS\eBaySDK\Fulfillment\Types\GetAnOrderRestResponse::class,
             'params' => [
                 'orderId' => [
                     'valid' => ['string'],
@@ -51,7 +51,7 @@ class FulfillmentService extends \DTS\eBaySDK\Fulfillment\Services\FulfillmentBa
         'CreateAShippingFulfillment' => [
             'method' => 'POST',
             'resource' => 'order/{orderId}/shipping_fulfillment',
-            'responseClass' => '\DTS\eBaySDK\Fulfillment\Types\CreateAShippingFulfillmentRestResponse',
+            'responseClass' => \DTS\eBaySDK\Fulfillment\Types\CreateAShippingFulfillmentRestResponse::class,
             'params' => [
                 'orderId' => [
                     'valid' => ['string'],
@@ -62,7 +62,7 @@ class FulfillmentService extends \DTS\eBaySDK\Fulfillment\Services\FulfillmentBa
         'GetShippingFulfillments' => [
             'method' => 'GET',
             'resource' => 'order/{orderId}/shipping_fulfillment',
-            'responseClass' => '\DTS\eBaySDK\Fulfillment\Types\GetShippingFulfillmentsRestResponse',
+            'responseClass' => \DTS\eBaySDK\Fulfillment\Types\GetShippingFulfillmentsRestResponse::class,
             'params' => [
                 'orderId' => [
                     'valid' => ['string'],
@@ -73,7 +73,7 @@ class FulfillmentService extends \DTS\eBaySDK\Fulfillment\Services\FulfillmentBa
         'GetAShippingFulfillment' => [
             'method' => 'GET',
             'resource' => 'order/{orderId}/shipping_fulfillment/{fulfillmentId}',
-            'responseClass' => '\DTS\eBaySDK\Fulfillment\Types\GetAShippingFulfillmentRestResponse',
+            'responseClass' => \DTS\eBaySDK\Fulfillment\Types\GetAShippingFulfillmentRestResponse::class,
             'params' => [
                 'fulfillmentId' => [
                     'valid' => ['string'],

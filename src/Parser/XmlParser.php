@@ -7,11 +7,6 @@ namespace DTS\eBaySDK\Parser;
 class XmlParser
 {
     /**
-     * @var string The name of the PHP class that will be created.
-     */
-    private $rootObjectClass;
-
-    /**
      * @var mixed The PHP object created from the XML.
      */
     private $rootObject;
@@ -24,10 +19,8 @@ class XmlParser
     /**
      * @param string $rootObjectClass The name of the PHP class that will be created.
      */
-    public function __construct($rootObjectClass)
+    public function __construct(private $rootObjectClass)
     {
-        $this->rootObjectClass = $rootObjectClass;
-
         $this->metaStack = new \SplStack();
     }
 
@@ -44,13 +37,10 @@ class XmlParser
 
         xml_parser_set_option($parser, XML_OPTION_CASE_FOLDING, 0);
         xml_parser_set_option($parser, XML_OPTION_SKIP_WHITE, 1);
-        xml_set_object($parser, $this);
-        xml_set_element_handler($parser, 'startElement', 'endElement');
-        xml_set_character_data_handler($parser, 'cdata');
+        xml_set_element_handler($parser, $this->startElement(...), $this->endElement(...));
+        xml_set_character_data_handler($parser, $this->cdata(...));
 
         xml_parse($parser, $xml, true);
-
-        xml_parser_free($parser);
 
         return $this->rootObject;
     }
@@ -203,7 +193,7 @@ class XmlParser
      */
     private function newPhpObject(\stdClass $meta)
     {
-        $phpTypes = explode('|', $meta->phpType);
+        $phpTypes = explode('|', (string) $meta->phpType);
 
         foreach ($phpTypes as $phpType) {
             switch ($phpType) {
@@ -249,7 +239,7 @@ class XmlParser
      */
     private function isSimplePhpType(\stdClass $meta)
     {
-        $phpTypes = explode('|', $meta->phpType);
+        $phpTypes = explode('|', (string) $meta->phpType);
 
         foreach ($phpTypes as $phpType) {
             switch ($phpType) {
@@ -277,14 +267,14 @@ class XmlParser
     private function setByValue(\stdClass $meta)
     {
         return (
-            is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\Base64BinaryType', false) ||
-            is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\BooleanType', false) ||
-            is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\DecimalType', false) ||
-            is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\DoubleType', false) ||
-            is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\IntegerType', false) ||
-            is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\StringType', false) ||
-            is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\TokenType', false) ||
-            is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\URIType', false)
+            is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\Base64BinaryType::class, false) ||
+            is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\BooleanType::class, false) ||
+            is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\DecimalType::class, false) ||
+            is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\DoubleType::class, false) ||
+            is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\IntegerType::class, false) ||
+            is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\StringType::class, false) ||
+            is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\TokenType::class, false) ||
+            is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\URIType::class, false)
         );
     }
 
@@ -299,11 +289,11 @@ class XmlParser
     {
         switch ($meta->phpType) {
             case 'integer':
-                return (integer)$meta->strData;
+                return (int)$meta->strData;
             case 'double':
-                return (double)$meta->strData;
+                return (float)$meta->strData;
             case 'boolean':
-                return strtolower($meta->strData) === 'true';
+                return strtolower((string) $meta->strData) === 'true';
             case 'DateTime':
                 return new \DateTime($meta->strData, new \DateTimeZone('UTC'));
             case 'string':
@@ -321,21 +311,21 @@ class XmlParser
      */
     private function getValueToAssignToValue(\stdClass $meta)
     {
-        if (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\Base64BinaryType', false)) {
+        if (is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\Base64BinaryType::class, false)) {
             return $meta->strData;
-        } elseif (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\BooleanType', false)) {
-            return strtolower($meta->strData) === 'true';
-        } elseif (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\DecimalType', false)) {
-            return is_int(0 + $meta->strData) ? (integer)$meta->strData : (double)$meta->strData;
-        } elseif (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\DoubleType', false)) {
-            return (double)$meta->strData;
-        } elseif (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\IntegerType', false)) {
-            return (integer)$meta->strData;
-        } elseif (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\StringType', false)) {
+        } elseif (is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\BooleanType::class, false)) {
+            return strtolower((string) $meta->strData) === 'true';
+        } elseif (is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\DecimalType::class, false)) {
+            return is_int(0 + $meta->strData) ? (int)$meta->strData : (float)$meta->strData;
+        } elseif (is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\DoubleType::class, false)) {
+            return (float)$meta->strData;
+        } elseif (is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\IntegerType::class, false)) {
+            return (int)$meta->strData;
+        } elseif (is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\StringType::class, false)) {
             return $meta->strData;
-        } elseif (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\TokenType', false)) {
+        } elseif (is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\TokenType::class, false)) {
             return $meta->strData;
-        } elseif (is_subclass_of($meta->phpObject, '\DTS\eBaySDK\Types\URIType', false)) {
+        } elseif (is_subclass_of($meta->phpObject, \DTS\eBaySDK\Types\URIType::class, false)) {
             return $meta->strData;
         }
 

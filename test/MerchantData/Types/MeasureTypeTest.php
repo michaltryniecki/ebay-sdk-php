@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\MerchantData\Types;
 
 use DTS\eBaySDK\MerchantData\Types\MeasureType;
 
-class MeasureTypeTest extends \PHPUnit_Framework_TestCase
+class MeasureTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new MeasureType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\MeasureType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\MeasureType::class, $this->obj);
     }
 
     public function testExtendsDecimalType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\DecimalType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\DecimalType::class, $this->obj);
     }
 }

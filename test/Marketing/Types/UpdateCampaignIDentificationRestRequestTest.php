@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\UpdateCampaignIDentificationRestRequest;
 
-class UpdateCampaignIDentificationRestRequestTest extends \PHPUnit_Framework_TestCase
+class UpdateCampaignIDentificationRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateCampaignIDentificationRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\UpdateCampaignIDentificationRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\UpdateCampaignIDentificationRestRequest::class, $this->obj);
     }
 
     public function testExtendsUpdateCampaignIdentificationRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\UpdateCampaignIdentificationRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\UpdateCampaignIdentificationRequest::class, $this->obj);
     }
 }

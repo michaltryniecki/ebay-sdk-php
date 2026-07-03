@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\MerchantData\Enums;
 
 use DTS\eBaySDK\MerchantData\Enums\BuyerProtectionSourceCodeType;
 
-class BuyerProtectionSourceCodeTypeTest extends \PHPUnit_Framework_TestCase
+class BuyerProtectionSourceCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new BuyerProtectionSourceCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Enums\BuyerProtectionSourceCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Enums\BuyerProtectionSourceCodeType::class, $this->obj);
     }
 }

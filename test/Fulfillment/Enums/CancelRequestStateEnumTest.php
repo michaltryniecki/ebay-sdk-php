@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Fulfillment\Enums;
 
 use DTS\eBaySDK\Fulfillment\Enums\CancelRequestStateEnum;
 
-class CancelRequestStateEnumTest extends \PHPUnit_Framework_TestCase
+class CancelRequestStateEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CancelRequestStateEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Fulfillment\Enums\CancelRequestStateEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Fulfillment\Enums\CancelRequestStateEnum::class, $this->obj);
     }
 }

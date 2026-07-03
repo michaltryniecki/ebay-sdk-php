@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\AddressAttributeType;
 
-class AddressAttributeTypeTest extends \PHPUnit_Framework_TestCase
+class AddressAttributeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AddressAttributeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\AddressAttributeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\AddressAttributeType::class, $this->obj);
     }
 
     public function testExtendsStringType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\StringType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\StringType::class, $this->obj);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\SellingManagerInventoryPropertyTypeCodeType;
 
-class SellingManagerInventoryPropertyTypeCodeTypeTest extends \PHPUnit_Framework_TestCase
+class SellingManagerInventoryPropertyTypeCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SellingManagerInventoryPropertyTypeCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\SellingManagerInventoryPropertyTypeCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\SellingManagerInventoryPropertyTypeCodeType::class, $this->obj);
     }
 }

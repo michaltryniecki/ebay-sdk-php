@@ -105,7 +105,7 @@ class DebugRuntime
     {
         fwrite($this->out, "Code\n========\n\n");
         $dir = sys_get_temp_dir();
-        $hash = md5($expression);
+        $hash = md5((string) $expression);
         $functionName = "jmespath_{$hash}";
         $filename = "{$dir}/{$functionName}.php";
         fwrite($this->out, "File: {$filename}\n\n");

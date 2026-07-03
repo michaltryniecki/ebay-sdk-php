@@ -78,13 +78,13 @@ class SearchItem extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'subtitle'
         ],
         'primaryCategory' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\Category',
+            'type' => \DTS\eBaySDK\Finding\Types\Category::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'primaryCategory'
         ],
         'secondaryCategory' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\Category',
+            'type' => \DTS\eBaySDK\Finding\Types\Category::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'secondaryCategory'
@@ -96,7 +96,7 @@ class SearchItem extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'galleryURL'
         ],
         'galleryInfoContainer' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\GalleryInfoContainer',
+            'type' => \DTS\eBaySDK\Finding\Types\GalleryInfoContainer::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'galleryInfoContainer'
@@ -114,7 +114,7 @@ class SearchItem extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'charityId'
         ],
         'productId' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\ProductId',
+            'type' => \DTS\eBaySDK\Finding\Types\ProductId::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'productId'
@@ -150,31 +150,31 @@ class SearchItem extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'country'
         ],
         'storeInfo' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\Storefront',
+            'type' => \DTS\eBaySDK\Finding\Types\Storefront::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'storeInfo'
         ],
         'sellerInfo' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\SellerInfo',
+            'type' => \DTS\eBaySDK\Finding\Types\SellerInfo::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sellerInfo'
         ],
         'shippingInfo' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\ShippingInfo',
+            'type' => \DTS\eBaySDK\Finding\Types\ShippingInfo::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shippingInfo'
         ],
         'sellingStatus' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\SellingStatus',
+            'type' => \DTS\eBaySDK\Finding\Types\SellingStatus::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sellingStatus'
         ],
         'listingInfo' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\ListingInfo',
+            'type' => \DTS\eBaySDK\Finding\Types\ListingInfo::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'listingInfo'
@@ -198,13 +198,13 @@ class SearchItem extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'compatibility'
         ],
         'distance' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\Distance',
+            'type' => \DTS\eBaySDK\Finding\Types\Distance::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'distance'
         ],
         'condition' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\Condition',
+            'type' => \DTS\eBaySDK\Finding\Types\Condition::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'condition'
@@ -216,7 +216,7 @@ class SearchItem extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'isMultiVariationListing'
         ],
         'discountPriceInfo' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\DiscountPriceInfo',
+            'type' => \DTS\eBaySDK\Finding\Types\DiscountPriceInfo::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'discountPriceInfo'
@@ -234,13 +234,13 @@ class SearchItem extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'pictureURLLarge'
         ],
         'unitPrice' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\UnitPriceInfo',
+            'type' => \DTS\eBaySDK\Finding\Types\UnitPriceInfo::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'unitPrice'
         ],
         'attribute' => [
-            'type' => 'DTS\eBaySDK\Finding\Types\ItemAttribute',
+            'type' => \DTS\eBaySDK\Finding\Types\ItemAttribute::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'attribute'
@@ -264,18 +264,18 @@ class SearchItem extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="http://www.ebay.com/marketplace/search/v1/services"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="http://www.ebay.com/marketplace/search/v1/services"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Product\Enums;
 
 use DTS\eBaySDK\Product\Enums\SortPriority;
 
-class SortPriorityTest extends \PHPUnit_Framework_TestCase
+class SortPriorityTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SortPriority();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Product\Enums\SortPriority', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Product\Enums\SortPriority::class, $this->obj);
     }
 }

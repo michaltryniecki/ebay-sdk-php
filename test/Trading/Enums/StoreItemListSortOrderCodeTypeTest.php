@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\StoreItemListSortOrderCodeType;
 
-class StoreItemListSortOrderCodeTypeTest extends \PHPUnit_Framework_TestCase
+class StoreItemListSortOrderCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new StoreItemListSortOrderCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\StoreItemListSortOrderCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\StoreItemListSortOrderCodeType::class, $this->obj);
     }
 }

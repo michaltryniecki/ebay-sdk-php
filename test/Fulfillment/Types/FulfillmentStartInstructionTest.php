@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Fulfillment\Types;
 
 use DTS\eBaySDK\Fulfillment\Types\FulfillmentStartInstruction;
 
-class FulfillmentStartInstructionTest extends \PHPUnit_Framework_TestCase
+class FulfillmentStartInstructionTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FulfillmentStartInstruction();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Fulfillment\Types\FulfillmentStartInstruction', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Fulfillment\Types\FulfillmentStartInstruction::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

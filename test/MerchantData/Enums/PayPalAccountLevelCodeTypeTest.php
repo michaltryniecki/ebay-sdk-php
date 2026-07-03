@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\MerchantData\Enums;
 
 use DTS\eBaySDK\MerchantData\Enums\PayPalAccountLevelCodeType;
 
-class PayPalAccountLevelCodeTypeTest extends \PHPUnit_Framework_TestCase
+class PayPalAccountLevelCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PayPalAccountLevelCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Enums\PayPalAccountLevelCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Enums\PayPalAccountLevelCodeType::class, $this->obj);
     }
 }

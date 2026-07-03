@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Feedback\Types;
 
 use DTS\eBaySDK\Feedback\Types\CreateDSRSummaryByShippingDetailRequest;
 
-class CreateDSRSummaryByShippingDetailRequestTest extends \PHPUnit_Framework_TestCase
+class CreateDSRSummaryByShippingDetailRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CreateDSRSummaryByShippingDetailRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Feedback\Types\CreateDSRSummaryByShippingDetailRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Feedback\Types\CreateDSRSummaryByShippingDetailRequest::class, $this->obj);
     }
 
     public function testExtendsBaseServiceRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Feedback\Types\BaseServiceRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Feedback\Types\BaseServiceRequest::class, $this->obj);
     }
 }

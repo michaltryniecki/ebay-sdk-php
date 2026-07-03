@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\UpdateShipmentTrackingRestRequest;
 
-class UpdateShipmentTrackingRestRequestTest extends \PHPUnit_Framework_TestCase
+class UpdateShipmentTrackingRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateShipmentTrackingRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\UpdateShipmentTrackingRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\UpdateShipmentTrackingRestRequest::class, $this->obj);
     }
 
     public function testExtendsUpdateTrackingRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\UpdateTrackingRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\UpdateTrackingRequest::class, $this->obj);
     }
 }

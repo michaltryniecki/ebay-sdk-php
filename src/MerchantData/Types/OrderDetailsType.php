@@ -154,31 +154,31 @@ class OrderDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'OrderCreationTime'
         ],
         'OrderSalePrice' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderSalePrice'
         ],
         'TaxAmount' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TaxAmount'
         ],
         'InsuranceCost' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InsuranceCost'
         ],
         'ShippingCost' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingCost'
         ],
         'OrderTotalCost' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderTotalCost'
@@ -190,7 +190,7 @@ class OrderDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'SellingManagerSaleRecordID'
         ],
         'OrderItemDetails' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\OrderItemDetailsType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\OrderItemDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'OrderItemDetails'
@@ -208,7 +208,7 @@ class OrderDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShippingServiceToken'
         ],
         'CheckoutStatus' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\CheckoutStatusType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\CheckoutStatusType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CheckoutStatus'
@@ -220,7 +220,7 @@ class OrderDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'PaymentHoldStatus'
         ],
         'ExternalTransaction' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ExternalTransactionType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\ExternalTransactionType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ExternalTransaction'
@@ -232,13 +232,13 @@ class OrderDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShipReferenceId'
         ],
         'PickupDetails' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\PickupDetailsType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\PickupDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PickupDetails'
         ],
         'PickupMethodSelected' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\PickupMethodSelectedType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\PickupMethodSelectedType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PickupMethodSelected'
@@ -250,18 +250,18 @@ class OrderDetailsType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

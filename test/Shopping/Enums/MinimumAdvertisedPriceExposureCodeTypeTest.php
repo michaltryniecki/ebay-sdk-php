@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Shopping\Enums;
 
 use DTS\eBaySDK\Shopping\Enums\MinimumAdvertisedPriceExposureCodeType;
 
-class MinimumAdvertisedPriceExposureCodeTypeTest extends \PHPUnit_Framework_TestCase
+class MinimumAdvertisedPriceExposureCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new MinimumAdvertisedPriceExposureCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Enums\MinimumAdvertisedPriceExposureCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Shopping\Enums\MinimumAdvertisedPriceExposureCodeType::class, $this->obj);
     }
 }

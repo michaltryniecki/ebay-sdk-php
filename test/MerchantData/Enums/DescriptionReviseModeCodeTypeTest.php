@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\MerchantData\Enums;
 
 use DTS\eBaySDK\MerchantData\Enums\DescriptionReviseModeCodeType;
 
-class DescriptionReviseModeCodeTypeTest extends \PHPUnit_Framework_TestCase
+class DescriptionReviseModeCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DescriptionReviseModeCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Enums\DescriptionReviseModeCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Enums\DescriptionReviseModeCodeType::class, $this->obj);
     }
 }

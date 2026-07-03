@@ -55,7 +55,7 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'GlobalShipping'
         ],
         'CalculatedShippingRate' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingRateType',
+            'type' => \DTS\eBaySDK\Trading\Types\CalculatedShippingRateType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CalculatedShippingRate'
@@ -85,7 +85,7 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'PaymentInstructions'
         ],
         'SalesTax' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SalesTaxType',
+            'type' => \DTS\eBaySDK\Trading\Types\SalesTaxType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SalesTax'
@@ -103,13 +103,13 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShippingRateType'
         ],
         'ShippingServiceOptions' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType',
+            'type' => \DTS\eBaySDK\Trading\Types\ShippingServiceOptionsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ShippingServiceOptions'
         ],
         'InternationalShippingServiceOption' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType',
+            'type' => \DTS\eBaySDK\Trading\Types\InternationalShippingServiceOptionsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'InternationalShippingServiceOption'
@@ -127,7 +127,7 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'SellingManagerSalesRecordNumber'
         ],
         'TaxTable' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\TaxTableType',
+            'type' => \DTS\eBaySDK\Trading\Types\TaxTableType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TaxTable'
@@ -145,13 +145,13 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShippingDiscountProfileID'
         ],
         'FlatShippingDiscount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingDiscountType',
+            'type' => \DTS\eBaySDK\Trading\Types\FlatShippingDiscountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FlatShippingDiscount'
         ],
         'CalculatedShippingDiscount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
+            'type' => \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CalculatedShippingDiscount'
@@ -169,13 +169,13 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'InternationalShippingDiscountProfileID'
         ],
         'InternationalFlatShippingDiscount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\FlatShippingDiscountType',
+            'type' => \DTS\eBaySDK\Trading\Types\FlatShippingDiscountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InternationalFlatShippingDiscount'
         ],
         'InternationalCalculatedShippingDiscount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType',
+            'type' => \DTS\eBaySDK\Trading\Types\CalculatedShippingDiscountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InternationalCalculatedShippingDiscount'
@@ -187,13 +187,13 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'InternationalPromotionalShippingDiscount'
         ],
         'PromotionalShippingDiscountDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\PromotionalShippingDiscountDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PromotionalShippingDiscountDetails'
         ],
         'CODCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CODCost'
@@ -211,13 +211,13 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'SellerExcludeShipToLocationsPreference'
         ],
         'ShipmentTrackingDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ShipmentTrackingDetails'
         ],
         'RateTableDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\RateTableDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\RateTableDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RateTableDetails'
@@ -229,18 +229,18 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

@@ -21,7 +21,7 @@ class OrderService extends \DTS\eBaySDK\Order\Services\OrderBaseService
         'GetCheckoutSession' => [
             'method' => 'GET',
             'resource' => 'checkout_session/{checkoutSessionId}',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\GetCheckoutSessionRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\GetCheckoutSessionRestResponse::class,
             'params' => [
                 'checkoutSessionId' => [
                     'valid' => ['string'],
@@ -32,14 +32,14 @@ class OrderService extends \DTS\eBaySDK\Order\Services\OrderBaseService
         'InitiateCheckoutSession' => [
             'method' => 'POST',
             'resource' => 'checkout_session/initiate',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\InitiateCheckoutSessionRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\InitiateCheckoutSessionRestResponse::class,
             'params' => [
             ]
         ],
         'PlaceOrder' => [
             'method' => 'POST',
             'resource' => 'checkout_session/{checkoutSessionId}/place_order',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\PlaceOrderRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\PlaceOrderRestResponse::class,
             'params' => [
                 'checkoutSessionId' => [
                     'valid' => ['string'],
@@ -50,7 +50,7 @@ class OrderService extends \DTS\eBaySDK\Order\Services\OrderBaseService
         'UpdatePaymentInfo' => [
             'method' => 'POST',
             'resource' => 'checkout_session/{checkoutSessionId}/update_payment_info',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\UpdatePaymentInfoRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\UpdatePaymentInfoRestResponse::class,
             'params' => [
                 'checkoutSessionId' => [
                     'valid' => ['string'],
@@ -61,7 +61,7 @@ class OrderService extends \DTS\eBaySDK\Order\Services\OrderBaseService
         'UpdateQuantityForLineItem' => [
             'method' => 'POST',
             'resource' => 'checkout_session/{checkoutSessionId}/update_quantity',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\UpdateQuantityForLineItemRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\UpdateQuantityForLineItemRestResponse::class,
             'params' => [
                 'checkoutSessionId' => [
                     'valid' => ['string'],
@@ -72,7 +72,7 @@ class OrderService extends \DTS\eBaySDK\Order\Services\OrderBaseService
         'UpdateShippingAddress' => [
             'method' => 'POST',
             'resource' => '_session/{checkoutSessionId}/update_shipping_address',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\UpdateShippingAddressRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\UpdateShippingAddressRestResponse::class,
             'params' => [
                 'checkoutSessionId' => [
                     'valid' => ['string'],
@@ -83,7 +83,7 @@ class OrderService extends \DTS\eBaySDK\Order\Services\OrderBaseService
         'UpdateShippingOption' => [
             'method' => 'POST',
             'resource' => 'checkout_session/{checkoutSessionId}/update_shipping_option',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\UpdateShippingOptionRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\UpdateShippingOptionRestResponse::class,
             'params' => [
                 'checkoutSessionId' => [
                     'valid' => ['string'],
@@ -94,7 +94,7 @@ class OrderService extends \DTS\eBaySDK\Order\Services\OrderBaseService
         'GetGuestCheckoutSession' => [
             'method' => 'GET',
             'resource' => 'guest_checkout_session/{checkoutSessionId}',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\GetGuestCheckoutSessionRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\GetGuestCheckoutSessionRestResponse::class,
             'params' => [
                 'checkoutSessionId' => [
                     'valid' => ['string'],
@@ -105,14 +105,14 @@ class OrderService extends \DTS\eBaySDK\Order\Services\OrderBaseService
         'InitiateGuestCheckoutSession' => [
             'method' => 'POST',
             'resource' => 'guest_checkout_session/initiate',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\InitiateGuestCheckoutSessionRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\InitiateGuestCheckoutSessionRestResponse::class,
             'params' => [
             ]
         ],
         'PlaceGuestOrder' => [
             'method' => 'POST',
             'resource' => 'guest_checkout_session/{checkoutSessionId}/place_order',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\PlaceGuestOrderRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\PlaceGuestOrderRestResponse::class,
             'params' => [
                 'checkoutSessionId' => [
                     'valid' => ['string'],
@@ -123,7 +123,7 @@ class OrderService extends \DTS\eBaySDK\Order\Services\OrderBaseService
         'UpdateGuestLineItemQuantity' => [
             'method' => 'POST',
             'resource' => 'guest_checkout_session/{checkoutSessionId}/update_quantity',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\UpdateGuestLineItemQuantityRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\UpdateGuestLineItemQuantityRestResponse::class,
             'params' => [
                 'checkoutSessionId' => [
                     'valid' => ['string'],
@@ -134,7 +134,7 @@ class OrderService extends \DTS\eBaySDK\Order\Services\OrderBaseService
         'UpdateGuestLineItemShippingAddress' => [
             'method' => 'POST',
             'resource' => 'guest_checkout_session/{checkoutSessionId}/update_shipping_address',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\UpdateGuestLineItemShippingAddressRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\UpdateGuestLineItemShippingAddressRestResponse::class,
             'params' => [
                 'checkoutSessionId' => [
                     'valid' => ['string'],
@@ -145,7 +145,7 @@ class OrderService extends \DTS\eBaySDK\Order\Services\OrderBaseService
         'UpdateGuestPaymentInfo' => [
             'method' => 'POST',
             'resource' => 'guest_checkout_session/{checkoutSessionId}/update_payment_info',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\UpdateGuestPaymentInfoRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\UpdateGuestPaymentInfoRestResponse::class,
             'params' => [
                 'checkoutSessionId' => [
                     'valid' => ['string'],
@@ -156,7 +156,7 @@ class OrderService extends \DTS\eBaySDK\Order\Services\OrderBaseService
         'UpdateGuestShippingOption' => [
             'method' => 'POST',
             'resource' => 'guest_checkout_session/{checkoutSessionId}/update_shipping_option',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\UpdateGuestShippingOptionRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\UpdateGuestShippingOptionRestResponse::class,
             'params' => [
                 'checkoutSessionId' => [
                     'valid' => ['string'],
@@ -167,7 +167,7 @@ class OrderService extends \DTS\eBaySDK\Order\Services\OrderBaseService
         'GetGuestPurchaseOrder' => [
             'method' => 'GET',
             'resource' => 'guest_purchase_order/{purchaseOrderId}',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\GetGuestPurchaseOrderRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\GetGuestPurchaseOrderRestResponse::class,
             'params' => [
                 'purchaseOrderId' => [
                     'valid' => ['string'],
@@ -178,7 +178,7 @@ class OrderService extends \DTS\eBaySDK\Order\Services\OrderBaseService
         'GetPurchaseOrder' => [
             'method' => 'GET',
             'resource' => 'purchase_order/{purchaseOrderId}',
-            'responseClass' => '\DTS\eBaySDK\Order\Types\GetPurchaseOrderRestResponse',
+            'responseClass' => \DTS\eBaySDK\Order\Types\GetPurchaseOrderRestResponse::class,
             'params' => [
                 'purchaseOrderId' => [
                     'valid' => ['string'],

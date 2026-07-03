@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\CombinedPaymentOptionCodeType;
 
-class CombinedPaymentOptionCodeTypeTest extends \PHPUnit_Framework_TestCase
+class CombinedPaymentOptionCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CombinedPaymentOptionCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\CombinedPaymentOptionCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\CombinedPaymentOptionCodeType::class, $this->obj);
     }
 }

@@ -40,25 +40,25 @@ class LineItem extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'appliedPromotions' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\AppliedPromotion',
+            'type' => \DTS\eBaySDK\Fulfillment\Types\AppliedPromotion::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'appliedPromotions'
         ],
         'deliveryCost' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\DeliveryCost',
+            'type' => \DTS\eBaySDK\Fulfillment\Types\DeliveryCost::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'deliveryCost'
         ],
         'discountedLineItemCost' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',
+            'type' => \DTS\eBaySDK\Fulfillment\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'discountedLineItemCost'
         ],
         'giftDetails' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\GiftDetails',
+            'type' => \DTS\eBaySDK\Fulfillment\Types\GiftDetails::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'giftDetails'
@@ -76,13 +76,13 @@ class LineItem extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'legacyVariationId'
         ],
         'lineItemCost' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',
+            'type' => \DTS\eBaySDK\Fulfillment\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'lineItemCost'
         ],
         'lineItemFulfillmentInstructions' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\LineItemFulfillmentInstructions',
+            'type' => \DTS\eBaySDK\Fulfillment\Types\LineItemFulfillmentInstructions::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'lineItemFulfillmentInstructions'
@@ -106,7 +106,7 @@ class LineItem extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'listingMarketplaceId'
         ],
         'properties' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\LineItemProperties',
+            'type' => \DTS\eBaySDK\Fulfillment\Types\LineItemProperties::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'properties'
@@ -124,7 +124,7 @@ class LineItem extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'quantity'
         ],
         'refunds' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\LineItemRefund',
+            'type' => \DTS\eBaySDK\Fulfillment\Types\LineItemRefund::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'refunds'
@@ -142,7 +142,7 @@ class LineItem extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'soldFormat'
         ],
         'taxes' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\Tax',
+            'type' => \DTS\eBaySDK\Fulfillment\Types\Tax::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'taxes'
@@ -154,7 +154,7 @@ class LineItem extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'title'
         ],
         'total' => [
-            'type' => 'DTS\eBaySDK\Fulfillment\Types\Amount',
+            'type' => \DTS\eBaySDK\Fulfillment\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'total'
@@ -166,14 +166,14 @@ class LineItem extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

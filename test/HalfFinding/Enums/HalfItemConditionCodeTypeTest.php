@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\HalfFinding\Enums;
 
 use DTS\eBaySDK\HalfFinding\Enums\HalfItemConditionCodeType;
 
-class HalfItemConditionCodeTypeTest extends \PHPUnit_Framework_TestCase
+class HalfItemConditionCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new HalfItemConditionCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\HalfFinding\Enums\HalfItemConditionCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\HalfFinding\Enums\HalfItemConditionCodeType::class, $this->obj);
     }
 }

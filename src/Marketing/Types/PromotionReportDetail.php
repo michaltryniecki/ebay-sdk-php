@@ -35,25 +35,25 @@ class PromotionReportDetail extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'averageItemDiscount' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\Amount',
+            'type' => \DTS\eBaySDK\Marketing\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'averageItemDiscount'
         ],
         'averageItemRevenue' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\Amount',
+            'type' => \DTS\eBaySDK\Marketing\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'averageItemRevenue'
         ],
         'averageOrderDiscount' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\Amount',
+            'type' => \DTS\eBaySDK\Marketing\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'averageOrderDiscount'
         ],
         'averageOrderRevenue' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\Amount',
+            'type' => \DTS\eBaySDK\Marketing\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'averageOrderRevenue'
@@ -65,7 +65,7 @@ class PromotionReportDetail extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'averageOrderSize'
         ],
         'baseSale' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\Amount',
+            'type' => \DTS\eBaySDK\Marketing\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'baseSale'
@@ -107,19 +107,19 @@ class PromotionReportDetail extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'promotionReportId'
         ],
         'promotionSale' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\Amount',
+            'type' => \DTS\eBaySDK\Marketing\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'promotionSale'
         ],
         'totalDiscount' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\Amount',
+            'type' => \DTS\eBaySDK\Marketing\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'totalDiscount'
         ],
         'totalSale' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\Amount',
+            'type' => \DTS\eBaySDK\Marketing\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'totalSale'
@@ -131,14 +131,14 @@ class PromotionReportDetail extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

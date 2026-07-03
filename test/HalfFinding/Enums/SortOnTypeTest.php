@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\HalfFinding\Enums;
 
 use DTS\eBaySDK\HalfFinding\Enums\SortOnType;
 
-class SortOnTypeTest extends \PHPUnit_Framework_TestCase
+class SortOnTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SortOnType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\HalfFinding\Enums\SortOnType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\HalfFinding\Enums\SortOnType::class, $this->obj);
     }
 }
