@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\GetListingFeesRestRequest;
 
-class GetListingFeesRestRequestTest extends \PHPUnit_Framework_TestCase
+class GetListingFeesRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetListingFeesRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\GetListingFeesRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\GetListingFeesRestRequest::class, $this->obj);
     }
 
     public function testExtendsOfferKeysWithId()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\OfferKeysWithId', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\OfferKeysWithId::class, $this->obj);
     }
 }

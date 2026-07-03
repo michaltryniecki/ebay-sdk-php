@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Account\Enums;
 
 use DTS\eBaySDK\Account\Enums\ShippingOptionTypeEnum;
 
-class ShippingOptionTypeEnumTest extends \PHPUnit_Framework_TestCase
+class ShippingOptionTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ShippingOptionTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Enums\ShippingOptionTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Enums\ShippingOptionTypeEnum::class, $this->obj);
     }
 }

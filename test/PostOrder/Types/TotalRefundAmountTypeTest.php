@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\TotalRefundAmountType;
 
-class TotalRefundAmountTypeTest extends \PHPUnit_Framework_TestCase
+class TotalRefundAmountTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new TotalRefundAmountType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\TotalRefundAmountType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\TotalRefundAmountType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

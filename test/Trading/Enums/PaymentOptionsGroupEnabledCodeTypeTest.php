@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\PaymentOptionsGroupEnabledCodeType;
 
-class PaymentOptionsGroupEnabledCodeTypeTest extends \PHPUnit_Framework_TestCase
+class PaymentOptionsGroupEnabledCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PaymentOptionsGroupEnabledCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\PaymentOptionsGroupEnabledCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\PaymentOptionsGroupEnabledCodeType::class, $this->obj);
     }
 }

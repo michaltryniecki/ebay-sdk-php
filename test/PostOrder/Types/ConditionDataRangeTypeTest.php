@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\ConditionDataRangeType;
 
-class ConditionDataRangeTypeTest extends \PHPUnit_Framework_TestCase
+class ConditionDataRangeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ConditionDataRangeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\ConditionDataRangeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\ConditionDataRangeType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

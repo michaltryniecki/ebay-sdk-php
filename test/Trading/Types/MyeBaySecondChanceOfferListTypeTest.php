@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\MyeBaySecondChanceOfferListType;
 
-class MyeBaySecondChanceOfferListTypeTest extends \PHPUnit_Framework_TestCase
+class MyeBaySecondChanceOfferListTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new MyeBaySecondChanceOfferListType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\MyeBaySecondChanceOfferListType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\MyeBaySecondChanceOfferListType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

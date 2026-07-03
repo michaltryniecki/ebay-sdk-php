@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\SendInvoiceRequestType;
 
-class SendInvoiceRequestTypeTest extends \PHPUnit_Framework_TestCase
+class SendInvoiceRequestTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SendInvoiceRequestType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\SendInvoiceRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\SendInvoiceRequestType::class, $this->obj);
     }
 
     public function testExtendsAbstractRequestType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\AbstractRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\AbstractRequestType::class, $this->obj);
     }
 }

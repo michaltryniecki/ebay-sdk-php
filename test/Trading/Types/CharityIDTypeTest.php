@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\CharityIDType;
 
-class CharityIDTypeTest extends \PHPUnit_Framework_TestCase
+class CharityIDTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CharityIDType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\CharityIDType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\CharityIDType::class, $this->obj);
     }
 
     public function testExtendsStringType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\StringType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\StringType::class, $this->obj);
     }
 }

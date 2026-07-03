@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Finding\Types;
 
 use DTS\eBaySDK\Finding\Types\GetSearchKeywordsRecommendationResponse;
 
-class GetSearchKeywordsRecommendationResponseTest extends \PHPUnit_Framework_TestCase
+class GetSearchKeywordsRecommendationResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetSearchKeywordsRecommendationResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Finding\Types\GetSearchKeywordsRecommendationResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Finding\Types\GetSearchKeywordsRecommendationResponse::class, $this->obj);
     }
 
     public function testExtendsBaseServiceResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Finding\Types\BaseServiceResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Finding\Types\BaseServiceResponse::class, $this->obj);
     }
 }

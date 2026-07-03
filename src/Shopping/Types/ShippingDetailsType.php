@@ -31,7 +31,7 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'InsuranceCost' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'type' => \DTS\eBaySDK\Shopping\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InsuranceCost'
@@ -43,13 +43,13 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'InsuranceOption'
         ],
         'InternationalShippingServiceOption' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\InternationalShippingServiceOptionType',
+            'type' => \DTS\eBaySDK\Shopping\Types\InternationalShippingServiceOptionType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'InternationalShippingServiceOption'
         ],
         'SalesTax' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\SalesTaxType',
+            'type' => \DTS\eBaySDK\Shopping\Types\SalesTaxType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SalesTax'
@@ -61,19 +61,19 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShippingRateErrorMessage'
         ],
         'ShippingServiceOption' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\ShippingServiceOptionType',
+            'type' => \DTS\eBaySDK\Shopping\Types\ShippingServiceOptionType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ShippingServiceOption'
         ],
         'TaxTable' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\TaxTableType',
+            'type' => \DTS\eBaySDK\Shopping\Types\TaxTableType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TaxTable'
         ],
         'InternationalInsuranceCost' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'type' => \DTS\eBaySDK\Shopping\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InternationalInsuranceCost'
@@ -85,7 +85,7 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'InternationalInsuranceOption'
         ],
         'CODCost' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'type' => \DTS\eBaySDK\Shopping\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CODCost'
@@ -103,18 +103,18 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

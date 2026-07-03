@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\GetPromotionSummaryReportRestResponse;
 
-class GetPromotionSummaryReportRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetPromotionSummaryReportRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetPromotionSummaryReportRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\GetPromotionSummaryReportRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\GetPromotionSummaryReportRestResponse::class, $this->obj);
     }
 
     public function testExtendsSummaryReportResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\SummaryReportResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\SummaryReportResponse::class, $this->obj);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\BulkDataExchange\Enums;
 
 use DTS\eBaySDK\BulkDataExchange\Enums\ListingType;
 
-class ListingTypeTest extends \PHPUnit_Framework_TestCase
+class ListingTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ListingType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BulkDataExchange\Enums\ListingType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BulkDataExchange\Enums\ListingType::class, $this->obj);
     }
 }

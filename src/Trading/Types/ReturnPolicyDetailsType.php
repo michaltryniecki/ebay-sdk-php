@@ -32,19 +32,19 @@ class ReturnPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'Refund' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\RefundDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\RefundDetailsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'Refund'
         ],
         'ReturnsWithin' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ReturnsWithinDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\ReturnsWithinDetailsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ReturnsWithin'
         ],
         'ReturnsAccepted' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ReturnsAcceptedDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\ReturnsAcceptedDetailsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ReturnsAccepted'
@@ -56,19 +56,19 @@ class ReturnPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'Description'
         ],
         'WarrantyOffered' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\WarrantyOfferedDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\WarrantyOfferedDetailsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'WarrantyOffered'
         ],
         'WarrantyType' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\WarrantyTypeDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\WarrantyTypeDetailsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'WarrantyType'
         ],
         'WarrantyDuration' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\WarrantyDurationDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\WarrantyDurationDetailsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'WarrantyDuration'
@@ -80,13 +80,13 @@ class ReturnPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'EAN'
         ],
         'ShippingCostPaidBy' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingCostPaidByDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\ShippingCostPaidByDetailsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ShippingCostPaidBy'
         ],
         'RestockingFeeValue' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\RestockingFeeValueDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\RestockingFeeValueDetailsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'RestockingFeeValue'
@@ -110,18 +110,18 @@ class ReturnPolicyDetailsType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

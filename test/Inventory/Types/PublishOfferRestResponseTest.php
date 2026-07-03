@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\PublishOfferRestResponse;
 
-class PublishOfferRestResponseTest extends \PHPUnit_Framework_TestCase
+class PublishOfferRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PublishOfferRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\PublishOfferRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\PublishOfferRestResponse::class, $this->obj);
     }
 
     public function testExtendsPublishResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\PublishResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\PublishResponse::class, $this->obj);
     }
 }

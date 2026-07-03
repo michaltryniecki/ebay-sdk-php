@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\AttributeSetArrayType;
 
-class AttributeSetArrayTypeTest extends \PHPUnit_Framework_TestCase
+class AttributeSetArrayTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AttributeSetArrayType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\AttributeSetArrayType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\AttributeSetArrayType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

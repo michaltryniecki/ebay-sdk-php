@@ -9,7 +9,7 @@ class Service extends \DTS\eBaySDK\Account\Services\AccountBaseService
         'testOperation' => [
             'method' => 'GET',
             'resource' => 'item/{item_id}',
-            'responseClass' => '\DTS\eBaySDK\Test\Mocks\ComplexClass',
+            'responseClass' => \DTS\eBaySDK\Test\Mocks\ComplexClass::class,
             'params' => [
             ]
         ]

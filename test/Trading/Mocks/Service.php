@@ -15,7 +15,7 @@ class Service extends \DTS\eBaySDK\Trading\Services\TradingBaseService
         return $this->callOperationAsync(
             'testOperation',
             new GeteBayOfficialTimeRequestType(),
-            '\DTS\eBaySDK\Test\Mocks\ComplexClass'
+            \DTS\eBaySDK\Test\Mocks\ComplexClass::class
         )->wait();
     }
 }

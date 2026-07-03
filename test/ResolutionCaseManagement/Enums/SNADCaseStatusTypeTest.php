@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\ResolutionCaseManagement\Enums;
 
 use DTS\eBaySDK\ResolutionCaseManagement\Enums\SNADCaseStatusType;
 
-class SNADCaseStatusTypeTest extends \PHPUnit_Framework_TestCase
+class SNADCaseStatusTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SNADCaseStatusType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ResolutionCaseManagement\Enums\SNADCaseStatusType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ResolutionCaseManagement\Enums\SNADCaseStatusType::class, $this->obj);
     }
 }

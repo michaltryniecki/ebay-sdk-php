@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\RelatedItemsManagement\Types;
 
 use DTS\eBaySDK\RelatedItemsManagement\Types\FindBundlesRequest;
 
-class FindBundlesRequestTest extends \PHPUnit_Framework_TestCase
+class FindBundlesRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FindBundlesRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\RelatedItemsManagement\Types\FindBundlesRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\RelatedItemsManagement\Types\FindBundlesRequest::class, $this->obj);
     }
 
     public function testExtendsBaseRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\RelatedItemsManagement\Types\BaseRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\RelatedItemsManagement\Types\BaseRequest::class, $this->obj);
     }
 }

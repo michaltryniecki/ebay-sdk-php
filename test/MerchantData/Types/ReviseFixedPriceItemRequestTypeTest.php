@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\MerchantData\Types;
 
 use DTS\eBaySDK\MerchantData\Types\ReviseFixedPriceItemRequestType;
 
-class ReviseFixedPriceItemRequestTypeTest extends \PHPUnit_Framework_TestCase
+class ReviseFixedPriceItemRequestTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ReviseFixedPriceItemRequestType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\ReviseFixedPriceItemRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\ReviseFixedPriceItemRequestType::class, $this->obj);
     }
 
     public function testExtendsAbstractRequestType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\AbstractRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\AbstractRequestType::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\StoreSubscriptionArrayType;
 
-class StoreSubscriptionArrayTypeTest extends \PHPUnit_Framework_TestCase
+class StoreSubscriptionArrayTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new StoreSubscriptionArrayType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\StoreSubscriptionArrayType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\StoreSubscriptionArrayType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\SetShippingDiscountProfilesRequestType;
 
-class SetShippingDiscountProfilesRequestTypeTest extends \PHPUnit_Framework_TestCase
+class SetShippingDiscountProfilesRequestTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SetShippingDiscountProfilesRequestType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\SetShippingDiscountProfilesRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\SetShippingDiscountProfilesRequestType::class, $this->obj);
     }
 
     public function testExtendsAbstractRequestType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\AbstractRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\AbstractRequestType::class, $this->obj);
     }
 }

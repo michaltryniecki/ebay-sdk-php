@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\RevisePriceAllowedDefinitionType;
 
-class RevisePriceAllowedDefinitionTypeTest extends \PHPUnit_Framework_TestCase
+class RevisePriceAllowedDefinitionTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new RevisePriceAllowedDefinitionType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\RevisePriceAllowedDefinitionType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\RevisePriceAllowedDefinitionType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\PhotoDisplayCodeType;
 
-class PhotoDisplayCodeTypeTest extends \PHPUnit_Framework_TestCase
+class PhotoDisplayCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PhotoDisplayCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\PhotoDisplayCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\PhotoDisplayCodeType::class, $this->obj);
     }
 }

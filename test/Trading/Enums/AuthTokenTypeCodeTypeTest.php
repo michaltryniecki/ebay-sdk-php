@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\AuthTokenTypeCodeType;
 
-class AuthTokenTypeCodeTypeTest extends \PHPUnit_Framework_TestCase
+class AuthTokenTypeCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AuthTokenTypeCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\AuthTokenTypeCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\AuthTokenTypeCodeType::class, $this->obj);
     }
 }

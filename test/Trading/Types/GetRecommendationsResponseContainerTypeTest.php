@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\GetRecommendationsResponseContainerType;
 
-class GetRecommendationsResponseContainerTypeTest extends \PHPUnit_Framework_TestCase
+class GetRecommendationsResponseContainerTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetRecommendationsResponseContainerType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\GetRecommendationsResponseContainerType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\GetRecommendationsResponseContainerType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

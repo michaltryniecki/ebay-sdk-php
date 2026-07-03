@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\PostOrder\Enums;
 
 use DTS\eBaySDK\PostOrder\Enums\TrackingStatusEnum;
 
-class TrackingStatusEnumTest extends \PHPUnit_Framework_TestCase
+class TrackingStatusEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new TrackingStatusEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Enums\TrackingStatusEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Enums\TrackingStatusEnum::class, $this->obj);
     }
 }

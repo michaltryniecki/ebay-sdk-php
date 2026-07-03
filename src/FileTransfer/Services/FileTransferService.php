@@ -40,7 +40,7 @@ class FileTransferService extends \DTS\eBaySDK\FileTransfer\Services\FileTransfe
         return $this->callOperationAsync(
             'uploadFile',
             $request,
-            '\DTS\eBaySDK\FileTransfer\Types\UploadFileResponse'
+            \DTS\eBaySDK\FileTransfer\Types\UploadFileResponse::class
         );
     }
 
@@ -62,7 +62,7 @@ class FileTransferService extends \DTS\eBaySDK\FileTransfer\Services\FileTransfe
         return $this->callOperationAsync(
             'downloadFile',
             $request,
-            '\DTS\eBaySDK\FileTransfer\Types\DownloadFileResponse'
+            \DTS\eBaySDK\FileTransfer\Types\DownloadFileResponse::class
         );
     }
 }

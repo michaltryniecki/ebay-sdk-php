@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\DiscountBenefit;
 
-class DiscountBenefitTest extends \PHPUnit_Framework_TestCase
+class DiscountBenefitTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DiscountBenefit();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\DiscountBenefit', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\DiscountBenefit::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

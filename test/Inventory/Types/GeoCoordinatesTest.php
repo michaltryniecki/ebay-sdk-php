@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\GeoCoordinates;
 
-class GeoCoordinatesTest extends \PHPUnit_Framework_TestCase
+class GeoCoordinatesTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GeoCoordinates();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\GeoCoordinates', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\GeoCoordinates::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

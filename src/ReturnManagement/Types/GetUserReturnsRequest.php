@@ -28,7 +28,7 @@ class GetUserReturnsRequest extends \DTS\eBaySDK\ReturnManagement\Types\BaseRequ
      */
     private static $propertyTypes = [
         'itemFilter' => [
-            'type' => 'DTS\eBaySDK\ReturnManagement\Types\ItemFilterType',
+            'type' => \DTS\eBaySDK\ReturnManagement\Types\ItemFilterType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemFilter'
@@ -40,25 +40,25 @@ class GetUserReturnsRequest extends \DTS\eBaySDK\ReturnManagement\Types\BaseRequ
             'elementName' => 'orderId'
         ],
         'creationDateRangeFilter' => [
-            'type' => 'DTS\eBaySDK\ReturnManagement\Types\DateRangeFilterType',
+            'type' => \DTS\eBaySDK\ReturnManagement\Types\DateRangeFilterType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'creationDateRangeFilter'
         ],
         'ReturnStatusFilter' => [
-            'type' => 'DTS\eBaySDK\ReturnManagement\Types\ReturnStatusFilterType',
+            'type' => \DTS\eBaySDK\ReturnManagement\Types\ReturnStatusFilterType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnStatusFilter'
         ],
         'otherUserFilter' => [
-            'type' => 'DTS\eBaySDK\ReturnManagement\Types\UserFilterType',
+            'type' => \DTS\eBaySDK\ReturnManagement\Types\UserFilterType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'otherUserFilter'
         ],
         'paginationInput' => [
-            'type' => 'DTS\eBaySDK\ReturnManagement\Types\PaginationInput',
+            'type' => \DTS\eBaySDK\ReturnManagement\Types\PaginationInput::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'paginationInput'
@@ -82,22 +82,22 @@ class GetUserReturnsRequest extends \DTS\eBaySDK\ReturnManagement\Types\BaseRequ
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="http://www.ebay.com/marketplace/returns/v1/services"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="http://www.ebay.com/marketplace/returns/v1/services"';
         }
 
-        if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
-            self::$requestXmlRootElementNames[__CLASS__] = 'getUserReturnsRequest';
+        if (!array_key_exists(self::class, self::$requestXmlRootElementNames)) {
+            self::$requestXmlRootElementNames[self::class] = 'getUserReturnsRequest';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

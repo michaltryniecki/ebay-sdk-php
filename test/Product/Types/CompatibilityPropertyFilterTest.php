@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Product\Types;
 
 use DTS\eBaySDK\Product\Types\CompatibilityPropertyFilter;
 
-class CompatibilityPropertyFilterTest extends \PHPUnit_Framework_TestCase
+class CompatibilityPropertyFilterTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CompatibilityPropertyFilter();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Product\Types\CompatibilityPropertyFilter', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Product\Types\CompatibilityPropertyFilter::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

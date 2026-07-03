@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\DimensionKeyAnnotation;
 
-class DimensionKeyAnnotationTest extends \PHPUnit_Framework_TestCase
+class DimensionKeyAnnotationTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DimensionKeyAnnotation();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\DimensionKeyAnnotation', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\DimensionKeyAnnotation::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

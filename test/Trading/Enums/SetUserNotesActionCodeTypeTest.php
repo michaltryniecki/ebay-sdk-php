@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\SetUserNotesActionCodeType;
 
-class SetUserNotesActionCodeTypeTest extends \PHPUnit_Framework_TestCase
+class SetUserNotesActionCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SetUserNotesActionCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\SetUserNotesActionCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\SetUserNotesActionCodeType::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Shopping\Types;
 
 use DTS\eBaySDK\Shopping\Types\FindProductsRequestType;
 
-class FindProductsRequestTypeTest extends \PHPUnit_Framework_TestCase
+class FindProductsRequestTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FindProductsRequestType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Types\FindProductsRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Shopping\Types\FindProductsRequestType::class, $this->obj);
     }
 
     public function testExtendsAbstractRequestType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Types\AbstractRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Shopping\Types\AbstractRequestType::class, $this->obj);
     }
 }

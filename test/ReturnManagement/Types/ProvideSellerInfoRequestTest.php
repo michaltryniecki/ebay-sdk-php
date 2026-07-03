@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\ReturnManagement\Types;
 
 use DTS\eBaySDK\ReturnManagement\Types\ProvideSellerInfoRequest;
 
-class ProvideSellerInfoRequestTest extends \PHPUnit_Framework_TestCase
+class ProvideSellerInfoRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ProvideSellerInfoRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ReturnManagement\Types\ProvideSellerInfoRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ReturnManagement\Types\ProvideSellerInfoRequest::class, $this->obj);
     }
 
     public function testExtendsBaseRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ReturnManagement\Types\BaseRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ReturnManagement\Types\BaseRequest::class, $this->obj);
     }
 }

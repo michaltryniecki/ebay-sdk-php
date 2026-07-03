@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\BusinessPoliciesManagement\Enums;
 
 use DTS\eBaySDK\BusinessPoliciesManagement\Enums\ConsolidationJobType;
 
-class ConsolidationJobTypeTest extends \PHPUnit_Framework_TestCase
+class ConsolidationJobTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ConsolidationJobType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BusinessPoliciesManagement\Enums\ConsolidationJobType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BusinessPoliciesManagement\Enums\ConsolidationJobType::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\ModifyDispositionRuleRequest;
 
-class ModifyDispositionRuleRequestTest extends \PHPUnit_Framework_TestCase
+class ModifyDispositionRuleRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ModifyDispositionRuleRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\ModifyDispositionRuleRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\ModifyDispositionRuleRequest::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\RespondToBestOfferResponseType;
 
-class RespondToBestOfferResponseTypeTest extends \PHPUnit_Framework_TestCase
+class RespondToBestOfferResponseTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new RespondToBestOfferResponseType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\RespondToBestOfferResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\RespondToBestOfferResponseType::class, $this->obj);
     }
 
     public function testExtendsAbstractResponseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\AbstractResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\AbstractResponseType::class, $this->obj);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\MerchantData\Enums;
 
 use DTS\eBaySDK\MerchantData\Enums\PaymentTypeCodeType;
 
-class PaymentTypeCodeTypeTest extends \PHPUnit_Framework_TestCase
+class PaymentTypeCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PaymentTypeCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Enums\PaymentTypeCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Enums\PaymentTypeCodeType::class, $this->obj);
     }
 }

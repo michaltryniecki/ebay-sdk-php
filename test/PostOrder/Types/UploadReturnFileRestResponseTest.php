@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\UploadReturnFileRestResponse;
 
-class UploadReturnFileRestResponseTest extends \PHPUnit_Framework_TestCase
+class UploadReturnFileRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UploadReturnFileRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\UploadReturnFileRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\UploadReturnFileRestResponse::class, $this->obj);
     }
 
     public function testExtendsUploadFileResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\UploadFileResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\UploadFileResponse::class, $this->obj);
     }
 }

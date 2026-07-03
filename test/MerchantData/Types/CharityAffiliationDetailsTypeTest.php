@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\MerchantData\Types;
 
 use DTS\eBaySDK\MerchantData\Types\CharityAffiliationDetailsType;
 
-class CharityAffiliationDetailsTypeTest extends \PHPUnit_Framework_TestCase
+class CharityAffiliationDetailsTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CharityAffiliationDetailsType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\CharityAffiliationDetailsType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\CharityAffiliationDetailsType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

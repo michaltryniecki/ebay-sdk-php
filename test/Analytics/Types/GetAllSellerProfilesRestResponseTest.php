@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Analytics\Types;
 
 use DTS\eBaySDK\Analytics\Types\GetAllSellerProfilesRestResponse;
 
-class GetAllSellerProfilesRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetAllSellerProfilesRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetAllSellerProfilesRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Analytics\Types\GetAllSellerProfilesRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Analytics\Types\GetAllSellerProfilesRestResponse::class, $this->obj);
     }
 
     public function testExtendsFindSellerStandardsProfilesResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Analytics\Types\FindSellerStandardsProfilesResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Analytics\Types\FindSellerStandardsProfilesResponse::class, $this->obj);
     }
 }

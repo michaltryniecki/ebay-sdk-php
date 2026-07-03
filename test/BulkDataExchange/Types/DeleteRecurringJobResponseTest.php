@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\BulkDataExchange\Types;
 
 use DTS\eBaySDK\BulkDataExchange\Types\DeleteRecurringJobResponse;
 
-class DeleteRecurringJobResponseTest extends \PHPUnit_Framework_TestCase
+class DeleteRecurringJobResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DeleteRecurringJobResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BulkDataExchange\Types\DeleteRecurringJobResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BulkDataExchange\Types\DeleteRecurringJobResponse::class, $this->obj);
     }
 
     public function testExtendsBaseServiceResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BulkDataExchange\Types\BaseServiceResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BulkDataExchange\Types\BaseServiceResponse::class, $this->obj);
     }
 }

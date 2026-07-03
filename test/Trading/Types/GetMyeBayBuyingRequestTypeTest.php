@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\GetMyeBayBuyingRequestType;
 
-class GetMyeBayBuyingRequestTypeTest extends \PHPUnit_Framework_TestCase
+class GetMyeBayBuyingRequestTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetMyeBayBuyingRequestType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\GetMyeBayBuyingRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\GetMyeBayBuyingRequestType::class, $this->obj);
     }
 
     public function testExtendsAbstractRequestType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\AbstractRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\AbstractRequestType::class, $this->obj);
     }
 }

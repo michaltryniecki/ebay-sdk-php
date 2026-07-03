@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\FindCampaignByAdReferenceRestResponse;
 
-class FindCampaignByAdReferenceRestResponseTest extends \PHPUnit_Framework_TestCase
+class FindCampaignByAdReferenceRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FindCampaignByAdReferenceRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\FindCampaignByAdReferenceRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\FindCampaignByAdReferenceRestResponse::class, $this->obj);
     }
 
     public function testExtendsCampaigns()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\Campaigns', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\Campaigns::class, $this->obj);
     }
 }

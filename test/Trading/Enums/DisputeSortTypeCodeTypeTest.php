@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\DisputeSortTypeCodeType;
 
-class DisputeSortTypeCodeTypeTest extends \PHPUnit_Framework_TestCase
+class DisputeSortTypeCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DisputeSortTypeCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\DisputeSortTypeCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\DisputeSortTypeCodeType::class, $this->obj);
     }
 }

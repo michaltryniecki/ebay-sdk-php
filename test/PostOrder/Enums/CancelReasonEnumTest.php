@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\PostOrder\Enums;
 
 use DTS\eBaySDK\PostOrder\Enums\CancelReasonEnum;
 
-class CancelReasonEnumTest extends \PHPUnit_Framework_TestCase
+class CancelReasonEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CancelReasonEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Enums\CancelReasonEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Enums\CancelReasonEnum::class, $this->obj);
     }
 }

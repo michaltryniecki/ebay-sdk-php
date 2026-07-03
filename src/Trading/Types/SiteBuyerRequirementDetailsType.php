@@ -35,25 +35,25 @@ class SiteBuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'LinkedPayPalAccount'
         ],
         'MaximumBuyerPolicyViolations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MaximumBuyerPolicyViolationsDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\MaximumBuyerPolicyViolationsDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaximumBuyerPolicyViolations'
         ],
         'MaximumItemRequirements' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MaximumItemRequirementsDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\MaximumItemRequirementsDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaximumItemRequirements'
         ],
         'MaximumUnpaidItemStrikesInfo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MaximumUnpaidItemStrikesInfoDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\MaximumUnpaidItemStrikesInfoDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaximumUnpaidItemStrikesInfo'
         ],
         'MinimumFeedbackScore' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MinimumFeedbackScoreDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\MinimumFeedbackScoreDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MinimumFeedbackScore'
@@ -65,7 +65,7 @@ class SiteBuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShipToRegistrationCountry'
         ],
         'VerifiedUserRequirements' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\VerifiedUserRequirementsDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\VerifiedUserRequirementsDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VerifiedUserRequirements'
@@ -89,18 +89,18 @@ class SiteBuyerRequirementDetailsType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

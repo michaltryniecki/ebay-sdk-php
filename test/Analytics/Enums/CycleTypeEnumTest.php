@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Analytics\Enums;
 
 use DTS\eBaySDK\Analytics\Enums\CycleTypeEnum;
 
-class CycleTypeEnumTest extends \PHPUnit_Framework_TestCase
+class CycleTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CycleTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Analytics\Enums\CycleTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Analytics\Enums\CycleTypeEnum::class, $this->obj);
     }
 }

@@ -36,7 +36,7 @@ class ReturnSummaryType extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'buyerAvailableOptions' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\AvailableOptionType',
+            'type' => \DTS\eBaySDK\PostOrder\Types\AvailableOptionType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'buyerAvailableOptions'
@@ -48,19 +48,19 @@ class ReturnSummaryType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'buyerLoginName'
         ],
         'buyerResponseDue' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\ReturnResponseDueType',
+            'type' => \DTS\eBaySDK\PostOrder\Types\ReturnResponseDueType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'buyerResponseDue'
         ],
         'buyerTotalRefund' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\TotalRefundAmountType',
+            'type' => \DTS\eBaySDK\PostOrder\Types\TotalRefundAmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'buyerTotalRefund'
         ],
         'creationInfo' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\ReturnCreationInfoType',
+            'type' => \DTS\eBaySDK\PostOrder\Types\ReturnCreationInfoType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'creationInfo'
@@ -78,7 +78,7 @@ class ReturnSummaryType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'dispositionRuleTriggered'
         ],
         'escalationInfo' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\EscalationInfoType',
+            'type' => \DTS\eBaySDK\PostOrder\Types\EscalationInfoType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'escalationInfo'
@@ -90,13 +90,13 @@ class ReturnSummaryType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'returnId'
         ],
         'returnPolicy' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\ReturnPolicyType',
+            'type' => \DTS\eBaySDK\PostOrder\Types\ReturnPolicyType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnPolicy'
         ],
         'sellerAvailableOptions' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\AvailableOptionType',
+            'type' => \DTS\eBaySDK\PostOrder\Types\AvailableOptionType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'sellerAvailableOptions'
@@ -108,13 +108,13 @@ class ReturnSummaryType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'sellerLoginName'
         ],
         'sellerResponseDue' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\ReturnResponseDueType',
+            'type' => \DTS\eBaySDK\PostOrder\Types\ReturnResponseDueType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sellerResponseDue'
         ],
         'sellerTotalRefund' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\TotalRefundAmountType',
+            'type' => \DTS\eBaySDK\PostOrder\Types\TotalRefundAmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sellerTotalRefund'
@@ -138,14 +138,14 @@ class ReturnSummaryType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

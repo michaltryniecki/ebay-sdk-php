@@ -105,9 +105,7 @@ abstract class BaseRestService
     {
         return $option === null
             ? $this->config
-            : (isset($this->config[$option])
-                ? $this->config[$option]
-                : null);
+            : ($this->config[$option] ?? null);
     }
 
     /**
@@ -131,7 +129,7 @@ abstract class BaseRestService
      *
      * @return \GuzzleHttp\Promise\PromiseInterface A promise that will be resolved with an object created from the JSON response.
      */
-    protected function callOperationAsync($name, \DTS\eBaySDK\Types\BaseType $request = null)
+    protected function callOperationAsync($name, ?\DTS\eBaySDK\Types\BaseType $request = null)
     {
         $operation = static::$operations[$name];
 

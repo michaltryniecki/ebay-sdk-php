@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\DisputeCreditEligibilityCodeType;
 
-class DisputeCreditEligibilityCodeTypeTest extends \PHPUnit_Framework_TestCase
+class DisputeCreditEligibilityCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DisputeCreditEligibilityCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\DisputeCreditEligibilityCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\DisputeCreditEligibilityCodeType::class, $this->obj);
     }
 }

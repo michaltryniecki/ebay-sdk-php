@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\BusinessPoliciesManagement\Types;
 
 use DTS\eBaySDK\BusinessPoliciesManagement\Types\ReturnPolicyProfile;
 
-class ReturnPolicyProfileTest extends \PHPUnit_Framework_TestCase
+class ReturnPolicyProfileTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ReturnPolicyProfile();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BusinessPoliciesManagement\Types\ReturnPolicyProfile', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BusinessPoliciesManagement\Types\ReturnPolicyProfile::class, $this->obj);
     }
 
     public function testExtendsSellerProfile()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BusinessPoliciesManagement\Types\SellerProfile', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BusinessPoliciesManagement\Types\SellerProfile::class, $this->obj);
     }
 }

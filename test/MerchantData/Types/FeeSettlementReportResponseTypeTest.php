@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\MerchantData\Types;
 
 use DTS\eBaySDK\MerchantData\Types\FeeSettlementReportResponseType;
 
-class FeeSettlementReportResponseTypeTest extends \PHPUnit_Framework_TestCase
+class FeeSettlementReportResponseTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FeeSettlementReportResponseType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\FeeSettlementReportResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\FeeSettlementReportResponseType::class, $this->obj);
     }
 
     public function testExtendsAbstractResponseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\AbstractResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\AbstractResponseType::class, $this->obj);
     }
 }

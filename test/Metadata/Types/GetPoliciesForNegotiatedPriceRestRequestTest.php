@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Metadata\Types;
 
 use DTS\eBaySDK\Metadata\Types\GetPoliciesForNegotiatedPriceRestRequest;
 
-class GetPoliciesForNegotiatedPriceRestRequestTest extends \PHPUnit_Framework_TestCase
+class GetPoliciesForNegotiatedPriceRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetPoliciesForNegotiatedPriceRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Metadata\Types\GetPoliciesForNegotiatedPriceRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Metadata\Types\GetPoliciesForNegotiatedPriceRestRequest::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

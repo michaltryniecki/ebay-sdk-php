@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\MerchantData\Enums;
 
 use DTS\eBaySDK\MerchantData\Enums\PickupStatusCodeType;
 
-class PickupStatusCodeTypeTest extends \PHPUnit_Framework_TestCase
+class PickupStatusCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PickupStatusCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Enums\PickupStatusCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Enums\PickupStatusCodeType::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\BulkDataExchange\Types;
 
 use DTS\eBaySDK\BulkDataExchange\Types\GetJobsResponse;
 
-class GetJobsResponseTest extends \PHPUnit_Framework_TestCase
+class GetJobsResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetJobsResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BulkDataExchange\Types\GetJobsResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BulkDataExchange\Types\GetJobsResponse::class, $this->obj);
     }
 
     public function testExtendsBaseServiceResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BulkDataExchange\Types\BaseServiceResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BulkDataExchange\Types\BaseServiceResponse::class, $this->obj);
     }
 }

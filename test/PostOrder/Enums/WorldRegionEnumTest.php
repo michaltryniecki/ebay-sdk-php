@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\PostOrder\Enums;
 
 use DTS\eBaySDK\PostOrder\Enums\WorldRegionEnum;
 
-class WorldRegionEnumTest extends \PHPUnit_Framework_TestCase
+class WorldRegionEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new WorldRegionEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Enums\WorldRegionEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Enums\WorldRegionEnum::class, $this->obj);
     }
 }

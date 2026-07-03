@@ -39,31 +39,31 @@ class GetUserPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
      */
     private static $propertyTypes = [
         'BidderNoticePreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BidderNoticePreferencesType',
+            'type' => \DTS\eBaySDK\Trading\Types\BidderNoticePreferencesType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BidderNoticePreferences'
         ],
         'CombinedPaymentPreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CombinedPaymentPreferencesType',
+            'type' => \DTS\eBaySDK\Trading\Types\CombinedPaymentPreferencesType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CombinedPaymentPreferences'
         ],
         'SellerPaymentPreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerPaymentPreferencesType',
+            'type' => \DTS\eBaySDK\Trading\Types\SellerPaymentPreferencesType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerPaymentPreferences'
         ],
         'SellerFavoriteItemPreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerFavoriteItemPreferencesType',
+            'type' => \DTS\eBaySDK\Trading\Types\SellerFavoriteItemPreferencesType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerFavoriteItemPreferences'
         ],
         'EndOfAuctionEmailPreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\EndOfAuctionEmailPreferencesType',
+            'type' => \DTS\eBaySDK\Trading\Types\EndOfAuctionEmailPreferencesType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'EndOfAuctionEmailPreferences'
@@ -81,31 +81,31 @@ class GetUserPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
             'elementName' => 'RequiredShipPhoneNumberPreference'
         ],
         'UnpaidItemAssistancePreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\UnpaidItemAssistancePreferencesType',
+            'type' => \DTS\eBaySDK\Trading\Types\UnpaidItemAssistancePreferencesType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UnpaidItemAssistancePreferences'
         ],
         'SellerExcludeShipToLocationPreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerExcludeShipToLocationPreferencesType',
+            'type' => \DTS\eBaySDK\Trading\Types\SellerExcludeShipToLocationPreferencesType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerExcludeShipToLocationPreferences'
         ],
         'PurchaseReminderEmailPreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PurchaseReminderEmailPreferencesType',
+            'type' => \DTS\eBaySDK\Trading\Types\PurchaseReminderEmailPreferencesType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PurchaseReminderEmailPreferences'
         ],
         'SellerProfilePreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerProfilePreferencesType',
+            'type' => \DTS\eBaySDK\Trading\Types\SellerProfilePreferencesType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerProfilePreferences'
         ],
         'SellerReturnPreferences' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerReturnPreferencesType',
+            'type' => \DTS\eBaySDK\Trading\Types\SellerReturnPreferencesType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerReturnPreferences'
@@ -117,7 +117,7 @@ class GetUserPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
             'elementName' => 'OfferGlobalShippingProgramPreference'
         ],
         'DispatchCutoffTimePreference' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\DispatchCutoffTimePreferencesType',
+            'type' => \DTS\eBaySDK\Trading\Types\DispatchCutoffTimePreferencesType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DispatchCutoffTimePreference'
@@ -147,7 +147,7 @@ class GetUserPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
             'elementName' => 'OutOfStockControlPreference'
         ],
         'eBayPLUSPreference' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\EBayPLUSPreferenceType',
+            'type' => \DTS\eBaySDK\Trading\Types\EBayPLUSPreferenceType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'eBayPLUSPreference'
@@ -159,18 +159,18 @@ class GetUserPreferencesResponseType extends \DTS\eBaySDK\Trading\Types\Abstract
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

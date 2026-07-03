@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\ProductMetadata\Types;
 
 use DTS\eBaySDK\ProductMetadata\Types\GetProductSearchValuesBulkResponse;
 
-class GetProductSearchValuesBulkResponseTest extends \PHPUnit_Framework_TestCase
+class GetProductSearchValuesBulkResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetProductSearchValuesBulkResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ProductMetadata\Types\GetProductSearchValuesBulkResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ProductMetadata\Types\GetProductSearchValuesBulkResponse::class, $this->obj);
     }
 
     public function testExtendsGetProductSearchValuesResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ProductMetadata\Types\GetProductSearchValuesResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ProductMetadata\Types\GetProductSearchValuesResponse::class, $this->obj);
     }
 }

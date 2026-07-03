@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\MerchantData\Types;
 
 use DTS\eBaySDK\MerchantData\Types\MaximumItemRequirementsType;
 
-class MaximumItemRequirementsTypeTest extends \PHPUnit_Framework_TestCase
+class MaximumItemRequirementsTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new MaximumItemRequirementsType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\MaximumItemRequirementsType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\MaximumItemRequirementsType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

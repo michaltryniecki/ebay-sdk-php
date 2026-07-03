@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Taxonomy\Types;
 
 use DTS\eBaySDK\Taxonomy\Types\CategoryTreeNode;
 
-class CategoryTreeNodeTest extends \PHPUnit_Framework_TestCase
+class CategoryTreeNodeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CategoryTreeNode();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Taxonomy\Types\CategoryTreeNode', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Taxonomy\Types\CategoryTreeNode::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

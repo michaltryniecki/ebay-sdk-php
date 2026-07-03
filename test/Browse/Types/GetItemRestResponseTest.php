@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Browse\Types;
 
 use DTS\eBaySDK\Browse\Types\GetItemRestResponse;
 
-class GetItemRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetItemRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetItemRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Browse\Types\GetItemRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Browse\Types\GetItemRestResponse::class, $this->obj);
     }
 
     public function testExtendsItem()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Browse\Types\Item', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Browse\Types\Item::class, $this->obj);
     }
 }

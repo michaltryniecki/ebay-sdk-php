@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\MarkReturnRefundReceivedRestResponse;
 
-class MarkReturnRefundReceivedRestResponseTest extends \PHPUnit_Framework_TestCase
+class MarkReturnRefundReceivedRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new MarkReturnRefundReceivedRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\MarkReturnRefundReceivedRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\MarkReturnRefundReceivedRestResponse::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

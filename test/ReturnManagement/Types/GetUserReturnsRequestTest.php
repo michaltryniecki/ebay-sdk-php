@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\ReturnManagement\Types;
 
 use DTS\eBaySDK\ReturnManagement\Types\GetUserReturnsRequest;
 
-class GetUserReturnsRequestTest extends \PHPUnit_Framework_TestCase
+class GetUserReturnsRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetUserReturnsRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ReturnManagement\Types\GetUserReturnsRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ReturnManagement\Types\GetUserReturnsRequest::class, $this->obj);
     }
 
     public function testExtendsBaseRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ReturnManagement\Types\BaseRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ReturnManagement\Types\BaseRequest::class, $this->obj);
     }
 }

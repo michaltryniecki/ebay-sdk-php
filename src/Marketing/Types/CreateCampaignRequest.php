@@ -26,7 +26,7 @@ class CreateCampaignRequest extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'campaignCriterion' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\CampaignCriterion',
+            'type' => \DTS\eBaySDK\Marketing\Types\CampaignCriterion::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'campaignCriterion'
@@ -44,7 +44,7 @@ class CreateCampaignRequest extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'endDate'
         ],
         'fundingStrategy' => [
-            'type' => 'DTS\eBaySDK\Marketing\Types\FundingStrategy',
+            'type' => \DTS\eBaySDK\Marketing\Types\FundingStrategy::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'fundingStrategy'
@@ -68,14 +68,14 @@ class CreateCampaignRequest extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

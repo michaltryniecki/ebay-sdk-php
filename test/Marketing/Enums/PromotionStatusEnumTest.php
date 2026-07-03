@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Marketing\Enums;
 
 use DTS\eBaySDK\Marketing\Enums\PromotionStatusEnum;
 
-class PromotionStatusEnumTest extends \PHPUnit_Framework_TestCase
+class PromotionStatusEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PromotionStatusEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Enums\PromotionStatusEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Enums\PromotionStatusEnum::class, $this->obj);
     }
 }

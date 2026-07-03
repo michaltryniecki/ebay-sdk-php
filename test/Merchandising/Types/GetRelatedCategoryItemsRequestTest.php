@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Merchandising\Types;
 
 use DTS\eBaySDK\Merchandising\Types\GetRelatedCategoryItemsRequest;
 
-class GetRelatedCategoryItemsRequestTest extends \PHPUnit_Framework_TestCase
+class GetRelatedCategoryItemsRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetRelatedCategoryItemsRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Merchandising\Types\GetRelatedCategoryItemsRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Merchandising\Types\GetRelatedCategoryItemsRequest::class, $this->obj);
     }
 
     public function testExtendsBaseMerchandisingServiceRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Merchandising\Types\BaseMerchandisingServiceRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Merchandising\Types\BaseMerchandisingServiceRequest::class, $this->obj);
     }
 }

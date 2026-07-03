@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\PickupAtLocationAvailability;
 
-class PickupAtLocationAvailabilityTest extends \PHPUnit_Framework_TestCase
+class PickupAtLocationAvailabilityTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PickupAtLocationAvailability();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\PickupAtLocationAvailability', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\PickupAtLocationAvailability::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

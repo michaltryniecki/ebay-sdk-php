@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\ReturnManagement\Enums;
 
 use DTS\eBaySDK\ReturnManagement\Enums\ReturnUserRoleType;
 
-class ReturnUserRoleTypeTest extends \PHPUnit_Framework_TestCase
+class ReturnUserRoleTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ReturnUserRoleType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ReturnManagement\Enums\ReturnUserRoleType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ReturnManagement\Enums\ReturnUserRoleType::class, $this->obj);
     }
 }

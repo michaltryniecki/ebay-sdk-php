@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\MerchantData\Types;
 
 use DTS\eBaySDK\MerchantData\Types\TransactionReferenceType;
 
-class TransactionReferenceTypeTest extends \PHPUnit_Framework_TestCase
+class TransactionReferenceTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new TransactionReferenceType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\TransactionReferenceType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\TransactionReferenceType::class, $this->obj);
     }
 
     public function testExtendsStringType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\StringType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\StringType::class, $this->obj);
     }
 }

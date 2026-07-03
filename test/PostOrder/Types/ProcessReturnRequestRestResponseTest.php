@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\ProcessReturnRequestRestResponse;
 
-class ProcessReturnRequestRestResponseTest extends \PHPUnit_Framework_TestCase
+class ProcessReturnRequestRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ProcessReturnRequestRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\ProcessReturnRequestRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\ProcessReturnRequestRestResponse::class, $this->obj);
     }
 
     public function testExtendsDecideReturnResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\DecideReturnResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\DecideReturnResponse::class, $this->obj);
     }
 }

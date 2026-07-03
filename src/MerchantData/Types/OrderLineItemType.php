@@ -110,25 +110,25 @@ class OrderLineItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'QuantitySold'
         ],
         'SalePrice' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SalePrice'
         ],
         'TaxAmount' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TaxAmount'
         ],
         'ShippingCost' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingCost'
         ],
         'TotalCost' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TotalCost'
@@ -140,7 +140,7 @@ class OrderLineItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'PaymentClearedTime'
         ],
         'InsuranceCost' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InsuranceCost'
@@ -176,7 +176,7 @@ class OrderLineItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'FeeDescription'
         ],
         'FeeAmount' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeeAmount'
@@ -194,7 +194,7 @@ class OrderLineItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'BuyerPaymentTransactionNumber'
         ],
         'Variation' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\MerchantDataVariationType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\MerchantDataVariationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Variation'
@@ -206,25 +206,25 @@ class OrderLineItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'TaxCategory'
         ],
         'Taxes' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\TaxesType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\TaxesType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Taxes'
         ],
         'Status' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\TransactionStatusType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\TransactionStatusType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Status'
         ],
         'ActualShippingCost' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ActualShippingCost'
         ],
         'UnpaidItem' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\UnpaidItemType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\UnpaidItemType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UnpaidItem'
@@ -236,18 +236,18 @@ class OrderLineItemType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

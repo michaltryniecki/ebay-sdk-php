@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\AddMemberMessagesAAQToBidderRequestContainerType;
 
-class AddMemberMessagesAAQToBidderRequestContainerTypeTest extends \PHPUnit_Framework_TestCase
+class AddMemberMessagesAAQToBidderRequestContainerTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AddMemberMessagesAAQToBidderRequestContainerType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\AddMemberMessagesAAQToBidderRequestContainerType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\AddMemberMessagesAAQToBidderRequestContainerType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

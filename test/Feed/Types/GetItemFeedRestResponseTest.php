@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Feed\Types;
 
 use DTS\eBaySDK\Feed\Types\GetItemFeedRestResponse;
 
-class GetItemFeedRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetItemFeedRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetItemFeedRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Feed\Types\GetItemFeedRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Feed\Types\GetItemFeedRestResponse::class, $this->obj);
     }
 
     public function testExtendsItemFeedResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Feed\Types\ItemFeedResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Feed\Types\ItemFeedResponse::class, $this->obj);
     }
 }

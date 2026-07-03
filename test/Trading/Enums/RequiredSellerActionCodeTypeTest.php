@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\RequiredSellerActionCodeType;
 
-class RequiredSellerActionCodeTypeTest extends \PHPUnit_Framework_TestCase
+class RequiredSellerActionCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new RequiredSellerActionCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\RequiredSellerActionCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\RequiredSellerActionCodeType::class, $this->obj);
     }
 }

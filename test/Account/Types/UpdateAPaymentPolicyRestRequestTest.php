@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Account\Types;
 
 use DTS\eBaySDK\Account\Types\UpdateAPaymentPolicyRestRequest;
 
-class UpdateAPaymentPolicyRestRequestTest extends \PHPUnit_Framework_TestCase
+class UpdateAPaymentPolicyRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateAPaymentPolicyRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\UpdateAPaymentPolicyRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\UpdateAPaymentPolicyRestRequest::class, $this->obj);
     }
 
     public function testExtendsPaymentPolicyRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\PaymentPolicyRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\PaymentPolicyRequest::class, $this->obj);
     }
 }

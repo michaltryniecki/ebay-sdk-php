@@ -53,7 +53,7 @@ class EbayOfferDetailsWithAll extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'format'
         ],
         'listing' => [
-            'type' => 'DTS\eBaySDK\Inventory\Types\ListingDetails',
+            'type' => \DTS\eBaySDK\Inventory\Types\ListingDetails::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'listing'
@@ -65,7 +65,7 @@ class EbayOfferDetailsWithAll extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'listingDescription'
         ],
         'listingPolicies' => [
-            'type' => 'DTS\eBaySDK\Inventory\Types\ListingPolicies',
+            'type' => \DTS\eBaySDK\Inventory\Types\ListingPolicies::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'listingPolicies'
@@ -89,7 +89,7 @@ class EbayOfferDetailsWithAll extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'offerId'
         ],
         'pricingSummary' => [
-            'type' => 'DTS\eBaySDK\Inventory\Types\PricingSummary',
+            'type' => \DTS\eBaySDK\Inventory\Types\PricingSummary::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'pricingSummary'
@@ -119,7 +119,7 @@ class EbayOfferDetailsWithAll extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'storeCategoryNames'
         ],
         'tax' => [
-            'type' => 'DTS\eBaySDK\Inventory\Types\Tax',
+            'type' => \DTS\eBaySDK\Inventory\Types\Tax::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'tax'
@@ -131,14 +131,14 @@ class EbayOfferDetailsWithAll extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

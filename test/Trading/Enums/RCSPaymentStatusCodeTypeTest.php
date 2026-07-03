@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\RCSPaymentStatusCodeType;
 
-class RCSPaymentStatusCodeTypeTest extends \PHPUnit_Framework_TestCase
+class RCSPaymentStatusCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new RCSPaymentStatusCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\RCSPaymentStatusCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\RCSPaymentStatusCodeType::class, $this->obj);
     }
 }

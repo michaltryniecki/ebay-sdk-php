@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Order\Types;
 
 use DTS\eBaySDK\Order\Types\PlaceGuestOrderRestResponse;
 
-class PlaceGuestOrderRestResponseTest extends \PHPUnit_Framework_TestCase
+class PlaceGuestOrderRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PlaceGuestOrderRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\PlaceGuestOrderRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\PlaceGuestOrderRestResponse::class, $this->obj);
     }
 
     public function testExtendsPurchaseOrderSummary()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\PurchaseOrderSummary', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\PurchaseOrderSummary::class, $this->obj);
     }
 }

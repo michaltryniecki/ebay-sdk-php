@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Marketing\Enums;
 
 use DTS\eBaySDK\Marketing\Enums\InventoryReferenceTypeEnum;
 
-class InventoryReferenceTypeEnumTest extends \PHPUnit_Framework_TestCase
+class InventoryReferenceTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new InventoryReferenceTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Enums\InventoryReferenceTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Enums\InventoryReferenceTypeEnum::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\CreateInventoryLocationRestRequest;
 
-class CreateInventoryLocationRestRequestTest extends \PHPUnit_Framework_TestCase
+class CreateInventoryLocationRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CreateInventoryLocationRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\CreateInventoryLocationRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\CreateInventoryLocationRestRequest::class, $this->obj);
     }
 
     public function testExtendsInventoryLocationFull()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\InventoryLocationFull', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\InventoryLocationFull::class, $this->obj);
     }
 }

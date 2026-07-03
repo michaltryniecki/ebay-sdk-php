@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\ExpressPicturesRequiredDefinitionType;
 
-class ExpressPicturesRequiredDefinitionTypeTest extends \PHPUnit_Framework_TestCase
+class ExpressPicturesRequiredDefinitionTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ExpressPicturesRequiredDefinitionType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\ExpressPicturesRequiredDefinitionType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\ExpressPicturesRequiredDefinitionType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

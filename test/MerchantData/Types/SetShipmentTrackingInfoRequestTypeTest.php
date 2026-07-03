@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\MerchantData\Types;
 
 use DTS\eBaySDK\MerchantData\Types\SetShipmentTrackingInfoRequestType;
 
-class SetShipmentTrackingInfoRequestTypeTest extends \PHPUnit_Framework_TestCase
+class SetShipmentTrackingInfoRequestTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SetShipmentTrackingInfoRequestType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\SetShipmentTrackingInfoRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\SetShipmentTrackingInfoRequestType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

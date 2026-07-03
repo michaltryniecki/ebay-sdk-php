@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\ReviseMyMessagesResponseType;
 
-class ReviseMyMessagesResponseTypeTest extends \PHPUnit_Framework_TestCase
+class ReviseMyMessagesResponseTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ReviseMyMessagesResponseType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\ReviseMyMessagesResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\ReviseMyMessagesResponseType::class, $this->obj);
     }
 
     public function testExtendsAbstractResponseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\AbstractResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\AbstractResponseType::class, $this->obj);
     }
 }

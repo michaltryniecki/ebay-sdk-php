@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\StoreCustomPageStatusCodeType;
 
-class StoreCustomPageStatusCodeTypeTest extends \PHPUnit_Framework_TestCase
+class StoreCustomPageStatusCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new StoreCustomPageStatusCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\StoreCustomPageStatusCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\StoreCustomPageStatusCodeType::class, $this->obj);
     }
 }

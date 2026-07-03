@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\MerchantData\Enums;
 
 use DTS\eBaySDK\MerchantData\Enums\PictureSetCodeType;
 
-class PictureSetCodeTypeTest extends \PHPUnit_Framework_TestCase
+class PictureSetCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PictureSetCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Enums\PictureSetCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Enums\PictureSetCodeType::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\UpdateBidRestRequest;
 
-class UpdateBidRestRequestTest extends \PHPUnit_Framework_TestCase
+class UpdateBidRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateBidRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\UpdateBidRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\UpdateBidRestRequest::class, $this->obj);
     }
 
     public function testExtendsUpdateBidPercentageRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\UpdateBidPercentageRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\UpdateBidPercentageRequest::class, $this->obj);
     }
 }

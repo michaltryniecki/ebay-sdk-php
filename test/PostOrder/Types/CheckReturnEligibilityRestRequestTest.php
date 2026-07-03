@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\CheckReturnEligibilityRestRequest;
 
-class CheckReturnEligibilityRestRequestTest extends \PHPUnit_Framework_TestCase
+class CheckReturnEligibilityRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CheckReturnEligibilityRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\CheckReturnEligibilityRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\CheckReturnEligibilityRestRequest::class, $this->obj);
     }
 
     public function testExtendsCheckEligibilityRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\CheckEligibilityRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\CheckEligibilityRequest::class, $this->obj);
     }
 }

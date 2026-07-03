@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Browse\Types;
 
 use DTS\eBaySDK\Browse\Types\CommonDescriptions;
 
-class CommonDescriptionsTest extends \PHPUnit_Framework_TestCase
+class CommonDescriptionsTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CommonDescriptions();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Browse\Types\CommonDescriptions', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Browse\Types\CommonDescriptions::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

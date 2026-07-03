@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\BusinessPoliciesManagement\Types;
 
 use DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveOverridesResponse;
 
-class RemoveOverridesResponseTest extends \PHPUnit_Framework_TestCase
+class RemoveOverridesResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new RemoveOverridesResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveOverridesResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveOverridesResponse::class, $this->obj);
     }
 
     public function testExtendsBaseResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BusinessPoliciesManagement\Types\BaseResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BusinessPoliciesManagement\Types\BaseResponse::class, $this->obj);
     }
 }

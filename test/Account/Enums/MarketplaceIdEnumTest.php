@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Account\Enums;
 
 use DTS\eBaySDK\Account\Enums\MarketplaceIdEnum;
 
-class MarketplaceIdEnumTest extends \PHPUnit_Framework_TestCase
+class MarketplaceIdEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new MarketplaceIdEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Enums\MarketplaceIdEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Enums\MarketplaceIdEnum::class, $this->obj);
     }
 }

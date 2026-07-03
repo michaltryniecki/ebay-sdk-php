@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\MerchantData\Enums;
 
 use DTS\eBaySDK\MerchantData\Enums\SiteCodeType;
 
-class SiteCodeTypeTest extends \PHPUnit_Framework_TestCase
+class SiteCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SiteCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Enums\SiteCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Enums\SiteCodeType::class, $this->obj);
     }
 }

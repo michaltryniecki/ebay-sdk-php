@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\CreateOrReplaceInventoryItemRestRequest;
 
-class CreateOrReplaceInventoryItemRestRequestTest extends \PHPUnit_Framework_TestCase
+class CreateOrReplaceInventoryItemRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CreateOrReplaceInventoryItemRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\CreateOrReplaceInventoryItemRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\CreateOrReplaceInventoryItemRestRequest::class, $this->obj);
     }
 
     public function testExtendsInventoryItem()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\InventoryItem', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\InventoryItem::class, $this->obj);
     }
 }

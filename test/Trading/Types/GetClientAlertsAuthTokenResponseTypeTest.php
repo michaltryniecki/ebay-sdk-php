@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\GetClientAlertsAuthTokenResponseType;
 
-class GetClientAlertsAuthTokenResponseTypeTest extends \PHPUnit_Framework_TestCase
+class GetClientAlertsAuthTokenResponseTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetClientAlertsAuthTokenResponseType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\GetClientAlertsAuthTokenResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\GetClientAlertsAuthTokenResponseType::class, $this->obj);
     }
 
     public function testExtendsAbstractResponseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\AbstractResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\AbstractResponseType::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\SubmitReturnFileRestRequest;
 
-class SubmitReturnFileRestRequestTest extends \PHPUnit_Framework_TestCase
+class SubmitReturnFileRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SubmitReturnFileRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\SubmitReturnFileRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\SubmitReturnFileRestRequest::class, $this->obj);
     }
 
     public function testExtendsSubmitFileRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\SubmitFileRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\SubmitFileRequest::class, $this->obj);
     }
 }

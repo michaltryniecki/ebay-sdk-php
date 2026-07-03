@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\MerchantData\Types;
 
 use DTS\eBaySDK\MerchantData\Types\ActiveInventoryReportResponseType;
 
-class ActiveInventoryReportResponseTypeTest extends \PHPUnit_Framework_TestCase
+class ActiveInventoryReportResponseTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ActiveInventoryReportResponseType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\ActiveInventoryReportResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\ActiveInventoryReportResponseType::class, $this->obj);
     }
 
     public function testExtendsAbstractResponseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\AbstractResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\AbstractResponseType::class, $this->obj);
     }
 }

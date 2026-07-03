@@ -49,7 +49,7 @@ class HalfCatalogProductType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'stockPhotoURL'
         ],
         'productID' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\ProductIDType',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\ProductIDType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'productID'
@@ -61,19 +61,19 @@ class HalfCatalogProductType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'categoryName'
         ],
         'itemSpecifics' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\NameValueListArrayType',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\NameValueListArrayType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemSpecifics'
         ],
         'item' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\ItemType',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\ItemType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'item'
         ],
         'listPrice' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'listPrice'
@@ -85,13 +85,13 @@ class HalfCatalogProductType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'reviewCount'
         ],
         'BestFixedPrice' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BestFixedPrice'
         ],
         'BestRentalPrice' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BestRentalPrice'
@@ -103,18 +103,18 @@ class HalfCatalogProductType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="http://www.ebay.com/marketplace/half/v1/services"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="http://www.ebay.com/marketplace/half/v1/services"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

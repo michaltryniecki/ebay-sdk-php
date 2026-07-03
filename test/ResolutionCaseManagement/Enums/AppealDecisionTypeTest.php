@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\ResolutionCaseManagement\Enums;
 
 use DTS\eBaySDK\ResolutionCaseManagement\Enums\AppealDecisionType;
 
-class AppealDecisionTypeTest extends \PHPUnit_Framework_TestCase
+class AppealDecisionTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AppealDecisionType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ResolutionCaseManagement\Enums\AppealDecisionType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ResolutionCaseManagement\Enums\AppealDecisionType::class, $this->obj);
     }
 }

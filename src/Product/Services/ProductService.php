@@ -40,7 +40,7 @@ class ProductService extends \DTS\eBaySDK\Product\Services\ProductBaseService
         return $this->callOperationAsync(
             'findProducts',
             $request,
-            '\DTS\eBaySDK\Product\Types\FindProductsResponse'
+            \DTS\eBaySDK\Product\Types\FindProductsResponse::class
         );
     }
 
@@ -62,7 +62,7 @@ class ProductService extends \DTS\eBaySDK\Product\Services\ProductBaseService
         return $this->callOperationAsync(
             'findProductsByCompatibility',
             $request,
-            '\DTS\eBaySDK\Product\Types\FindProductsResponse'
+            \DTS\eBaySDK\Product\Types\FindProductsResponse::class
         );
     }
 
@@ -84,7 +84,7 @@ class ProductService extends \DTS\eBaySDK\Product\Services\ProductBaseService
         return $this->callOperationAsync(
             'getProductDetails',
             $request,
-            '\DTS\eBaySDK\Product\Types\GetProductDetailsResponse'
+            \DTS\eBaySDK\Product\Types\GetProductDetailsResponse::class
         );
     }
 
@@ -106,7 +106,7 @@ class ProductService extends \DTS\eBaySDK\Product\Services\ProductBaseService
         return $this->callOperationAsync(
             'getProductCompatibilities',
             $request,
-            '\DTS\eBaySDK\Product\Types\GetProductCompatiblitiesResponse'
+            \DTS\eBaySDK\Product\Types\GetProductCompatiblitiesResponse::class
         );
     }
 
@@ -128,7 +128,7 @@ class ProductService extends \DTS\eBaySDK\Product\Services\ProductBaseService
         return $this->callOperationAsync(
             'findCompatibilitiesBySpecification',
             $request,
-            '\DTS\eBaySDK\Product\Types\FindCompatibilitiesBySpecificationResponse'
+            \DTS\eBaySDK\Product\Types\FindCompatibilitiesBySpecificationResponse::class
         );
     }
 
@@ -150,7 +150,7 @@ class ProductService extends \DTS\eBaySDK\Product\Services\ProductBaseService
         return $this->callOperationAsync(
             'addProducts',
             $request,
-            '\DTS\eBaySDK\Product\Types\AddProductsResponse'
+            \DTS\eBaySDK\Product\Types\AddProductsResponse::class
         );
     }
 
@@ -172,7 +172,7 @@ class ProductService extends \DTS\eBaySDK\Product\Services\ProductBaseService
         return $this->callOperationAsync(
             'getProductSubmissions',
             $request,
-            '\DTS\eBaySDK\Product\Types\GetProductSubmissionsResponse'
+            \DTS\eBaySDK\Product\Types\GetProductSubmissionsResponse::class
         );
     }
 }

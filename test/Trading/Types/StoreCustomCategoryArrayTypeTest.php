@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType;
 
-class StoreCustomCategoryArrayTypeTest extends \PHPUnit_Framework_TestCase
+class StoreCustomCategoryArrayTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new StoreCustomCategoryArrayType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\StoreCustomCategoryArrayType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

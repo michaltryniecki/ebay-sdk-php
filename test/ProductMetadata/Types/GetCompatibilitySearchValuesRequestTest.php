@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\ProductMetadata\Types;
 
 use DTS\eBaySDK\ProductMetadata\Types\GetCompatibilitySearchValuesRequest;
 
-class GetCompatibilitySearchValuesRequestTest extends \PHPUnit_Framework_TestCase
+class GetCompatibilitySearchValuesRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetCompatibilitySearchValuesRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ProductMetadata\Types\GetCompatibilitySearchValuesRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ProductMetadata\Types\GetCompatibilitySearchValuesRequest::class, $this->obj);
     }
 
     public function testExtendsGetProductSearchValuesBaseRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ProductMetadata\Types\GetProductSearchValuesBaseRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ProductMetadata\Types\GetProductSearchValuesBaseRequest::class, $this->obj);
     }
 }

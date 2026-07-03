@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\GetInventoryLocationRestResponse;
 
-class GetInventoryLocationRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetInventoryLocationRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetInventoryLocationRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\GetInventoryLocationRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\GetInventoryLocationRestResponse::class, $this->obj);
     }
 
     public function testExtendsInventoryLocationResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\InventoryLocationResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\InventoryLocationResponse::class, $this->obj);
     }
 }

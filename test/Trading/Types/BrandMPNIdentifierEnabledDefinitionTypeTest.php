@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\BrandMPNIdentifierEnabledDefinitionType;
 
-class BrandMPNIdentifierEnabledDefinitionTypeTest extends \PHPUnit_Framework_TestCase
+class BrandMPNIdentifierEnabledDefinitionTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new BrandMPNIdentifierEnabledDefinitionType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\BrandMPNIdentifierEnabledDefinitionType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\BrandMPNIdentifierEnabledDefinitionType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

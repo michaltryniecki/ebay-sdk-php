@@ -45,7 +45,7 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'additionalImages' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Image',
+            'type' => \DTS\eBaySDK\Browse\Types\Image::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'additionalImages'
@@ -63,7 +63,7 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'buyingOptions'
         ],
         'categories' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Category',
+            'type' => \DTS\eBaySDK\Browse\Types\Category::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'categories'
@@ -81,13 +81,13 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'conditionId'
         ],
         'currentBidPrice' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
+            'type' => \DTS\eBaySDK\Browse\Types\ConvertedAmount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'currentBidPrice'
         ],
         'distanceFromPickupLocation' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\TargetLocation',
+            'type' => \DTS\eBaySDK\Browse\Types\TargetLocation::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'distanceFromPickupLocation'
@@ -105,7 +105,7 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'epid'
         ],
         'image' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Image',
+            'type' => \DTS\eBaySDK\Browse\Types\Image::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'image'
@@ -141,7 +141,7 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'itemId'
         ],
         'itemLocation' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ItemLocationImpl',
+            'type' => \DTS\eBaySDK\Browse\Types\ItemLocationImpl::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'itemLocation'
@@ -153,37 +153,37 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'itemWebUrl'
         ],
         'marketingPrice' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\MarketingPrice',
+            'type' => \DTS\eBaySDK\Browse\Types\MarketingPrice::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'marketingPrice'
         ],
         'pickupOptions' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\PickupOptionSummary',
+            'type' => \DTS\eBaySDK\Browse\Types\PickupOptionSummary::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'pickupOptions'
         ],
         'price' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ConvertedAmount',
+            'type' => \DTS\eBaySDK\Browse\Types\ConvertedAmount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'price'
         ],
         'seller' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Seller',
+            'type' => \DTS\eBaySDK\Browse\Types\Seller::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'seller'
         ],
         'shippingOptions' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\ShippingOptionSummary',
+            'type' => \DTS\eBaySDK\Browse\Types\ShippingOptionSummary::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'shippingOptions'
         ],
         'thumbnailImages' => [
-            'type' => 'DTS\eBaySDK\Browse\Types\Image',
+            'type' => \DTS\eBaySDK\Browse\Types\Image::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'thumbnailImages'
@@ -201,14 +201,14 @@ class ItemSummary extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

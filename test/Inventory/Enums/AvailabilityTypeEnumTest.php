@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Inventory\Enums;
 
 use DTS\eBaySDK\Inventory\Enums\AvailabilityTypeEnum;
 
-class AvailabilityTypeEnumTest extends \PHPUnit_Framework_TestCase
+class AvailabilityTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AvailabilityTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Enums\AvailabilityTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Enums\AvailabilityTypeEnum::class, $this->obj);
     }
 }

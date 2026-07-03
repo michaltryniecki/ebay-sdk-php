@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\GetInventoryItemsRestResponse;
 
-class GetInventoryItemsRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetInventoryItemsRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetInventoryItemsRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\GetInventoryItemsRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\GetInventoryItemsRestResponse::class, $this->obj);
     }
 
     public function testExtendsInventoryItems()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\InventoryItems', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\InventoryItems::class, $this->obj);
     }
 }

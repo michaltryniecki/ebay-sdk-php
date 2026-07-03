@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\BusinessPoliciesManagement\Types;
 
 use DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveProfileResponse;
 
-class RemoveProfileResponseTest extends \PHPUnit_Framework_TestCase
+class RemoveProfileResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new RemoveProfileResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveProfileResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BusinessPoliciesManagement\Types\RemoveProfileResponse::class, $this->obj);
     }
 
     public function testExtendsBaseResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BusinessPoliciesManagement\Types\BaseResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BusinessPoliciesManagement\Types\BaseResponse::class, $this->obj);
     }
 }

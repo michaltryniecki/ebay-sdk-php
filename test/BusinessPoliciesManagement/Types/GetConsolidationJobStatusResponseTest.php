@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\BusinessPoliciesManagement\Types;
 
 use DTS\eBaySDK\BusinessPoliciesManagement\Types\GetConsolidationJobStatusResponse;
 
-class GetConsolidationJobStatusResponseTest extends \PHPUnit_Framework_TestCase
+class GetConsolidationJobStatusResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetConsolidationJobStatusResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BusinessPoliciesManagement\Types\GetConsolidationJobStatusResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BusinessPoliciesManagement\Types\GetConsolidationJobStatusResponse::class, $this->obj);
     }
 
     public function testExtendsBaseResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BusinessPoliciesManagement\Types\BaseResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BusinessPoliciesManagement\Types\BaseResponse::class, $this->obj);
     }
 }

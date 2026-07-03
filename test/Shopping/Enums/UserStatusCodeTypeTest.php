@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Shopping\Enums;
 
 use DTS\eBaySDK\Shopping\Enums\UserStatusCodeType;
 
-class UserStatusCodeTypeTest extends \PHPUnit_Framework_TestCase
+class UserStatusCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UserStatusCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Enums\UserStatusCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Shopping\Enums\UserStatusCodeType::class, $this->obj);
     }
 }

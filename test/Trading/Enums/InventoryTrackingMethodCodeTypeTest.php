@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\InventoryTrackingMethodCodeType;
 
-class InventoryTrackingMethodCodeTypeTest extends \PHPUnit_Framework_TestCase
+class InventoryTrackingMethodCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new InventoryTrackingMethodCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\InventoryTrackingMethodCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\InventoryTrackingMethodCodeType::class, $this->obj);
     }
 }

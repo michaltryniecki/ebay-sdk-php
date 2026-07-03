@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\KTypeSupportedDefinitionType;
 
-class KTypeSupportedDefinitionTypeTest extends \PHPUnit_Framework_TestCase
+class KTypeSupportedDefinitionTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new KTypeSupportedDefinitionType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\KTypeSupportedDefinitionType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\KTypeSupportedDefinitionType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

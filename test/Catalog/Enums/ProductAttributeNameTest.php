@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Catalog\Enums;
 
 use DTS\eBaySDK\Catalog\Enums\ProductAttributeName;
 
-class ProductAttributeNameTest extends \PHPUnit_Framework_TestCase
+class ProductAttributeNameTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ProductAttributeName();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Catalog\Enums\ProductAttributeName', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Catalog\Enums\ProductAttributeName::class, $this->obj);
     }
 }

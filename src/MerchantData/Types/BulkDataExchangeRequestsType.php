@@ -35,91 +35,91 @@ class BulkDataExchangeRequestsType extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'Header' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\MerchantDataRequestHeaderType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\MerchantDataRequestHeaderType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Header'
         ],
         'AddFixedPriceItemRequest' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AddFixedPriceItemRequestType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AddFixedPriceItemRequestType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'AddFixedPriceItemRequest'
         ],
         'AddItemRequest' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AddItemRequestType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AddItemRequestType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'AddItemRequest'
         ],
         'EndFixedPriceItemRequest' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\EndFixedPriceItemRequestType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\EndFixedPriceItemRequestType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'EndFixedPriceItemRequest'
         ],
         'EndItemRequest' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\EndItemRequestType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\EndItemRequestType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'EndItemRequest'
         ],
         'OrderAckRequest' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\OrderAckRequestType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\OrderAckRequestType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'OrderAckRequest'
         ],
         'RelistFixedPriceItemRequest' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\RelistFixedPriceItemRequestType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\RelistFixedPriceItemRequestType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'RelistFixedPriceItemRequest'
         ],
         'RelistItemRequest' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\RelistItemRequestType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\RelistItemRequestType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'RelistItemRequest'
         ],
         'ReviseFixedPriceItemRequest' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ReviseFixedPriceItemRequestType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\ReviseFixedPriceItemRequestType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ReviseFixedPriceItemRequest'
         ],
         'ReviseInventoryStatusRequest' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ReviseInventoryStatusRequestType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\ReviseInventoryStatusRequestType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ReviseInventoryStatusRequest'
         ],
         'ReviseItemRequest' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ReviseItemRequestType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\ReviseItemRequestType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ReviseItemRequest'
         ],
         'SetShipmentTrackingInfoRequest' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\SetShipmentTrackingInfoRequestType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\SetShipmentTrackingInfoRequestType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'SetShipmentTrackingInfoRequest'
         ],
         'UploadSiteHostedPicturesRequest' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\UploadSiteHostedPicturesRequestType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\UploadSiteHostedPicturesRequestType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'UploadSiteHostedPicturesRequest'
         ],
         'VerifyAddFixedPriceItemRequest' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\VerifyAddFixedPriceItemRequestType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\VerifyAddFixedPriceItemRequestType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'VerifyAddFixedPriceItemRequest'
         ],
         'VerifyAddItemRequest' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\VerifyAddItemRequestType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\VerifyAddItemRequestType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'VerifyAddItemRequest'
@@ -131,22 +131,22 @@ class BulkDataExchangeRequestsType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
-            self::$requestXmlRootElementNames[__CLASS__] = 'BulkDataExchangeRequests';
+        if (!array_key_exists(self::class, self::$requestXmlRootElementNames)) {
+            self::$requestXmlRootElementNames[self::class] = 'BulkDataExchangeRequests';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

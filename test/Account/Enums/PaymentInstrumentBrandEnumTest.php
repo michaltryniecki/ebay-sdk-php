@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Account\Enums;
 
 use DTS\eBaySDK\Account\Enums\PaymentInstrumentBrandEnum;
 
-class PaymentInstrumentBrandEnumTest extends \PHPUnit_Framework_TestCase
+class PaymentInstrumentBrandEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PaymentInstrumentBrandEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Enums\PaymentInstrumentBrandEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Enums\PaymentInstrumentBrandEnum::class, $this->obj);
     }
 }

@@ -3,23 +3,23 @@ namespace DTS\eBaySDK\Test\OAuth\Types;
 
 use DTS\eBaySDK\OAuth\Types\GetAppTokenRestRequest;
 
-class GetAppTokenRestRequestTest extends \PHPUnit_Framework_TestCase
+class GetAppTokenRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetAppTokenRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\OAuth\Types\GetAppTokenRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\OAuth\Types\GetAppTokenRestRequest::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 
     public function testProperties()

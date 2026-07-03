@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Account\Types;
 
 use DTS\eBaySDK\Account\Types\GetAFulfillmentPolicyByNameRestResponse;
 
-class GetAFulfillmentPolicyByNameRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetAFulfillmentPolicyByNameRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetAFulfillmentPolicyByNameRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\GetAFulfillmentPolicyByNameRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\GetAFulfillmentPolicyByNameRestResponse::class, $this->obj);
     }
 
     public function testExtendsFulfillmentPolicy()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\FulfillmentPolicy', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\FulfillmentPolicy::class, $this->obj);
     }
 }

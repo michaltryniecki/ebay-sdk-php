@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Finding\Enums;
 
 use DTS\eBaySDK\Finding\Enums\GallerySizeEnum;
 
-class GallerySizeEnumTest extends \PHPUnit_Framework_TestCase
+class GallerySizeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GallerySizeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Finding\Enums\GallerySizeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Finding\Enums\GallerySizeEnum::class, $this->obj);
     }
 }

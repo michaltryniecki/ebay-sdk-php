@@ -40,7 +40,7 @@ class ProductMetadataService extends \DTS\eBaySDK\ProductMetadata\Services\Produ
         return $this->callOperationAsync(
             'getProductSearchNames',
             $request,
-            '\DTS\eBaySDK\ProductMetadata\Types\GetProductSearchNamesResponse'
+            \DTS\eBaySDK\ProductMetadata\Types\GetProductSearchNamesResponse::class
         );
     }
 
@@ -62,7 +62,7 @@ class ProductMetadataService extends \DTS\eBaySDK\ProductMetadata\Services\Produ
         return $this->callOperationAsync(
             'getCompatibilitySearchNames',
             $request,
-            '\DTS\eBaySDK\ProductMetadata\Types\GetCompatibilitySearchNamesResponse'
+            \DTS\eBaySDK\ProductMetadata\Types\GetCompatibilitySearchNamesResponse::class
         );
     }
 
@@ -84,7 +84,7 @@ class ProductMetadataService extends \DTS\eBaySDK\ProductMetadata\Services\Produ
         return $this->callOperationAsync(
             'getProductSearchValues',
             $request,
-            '\DTS\eBaySDK\ProductMetadata\Types\GetProductSearchValuesResponse'
+            \DTS\eBaySDK\ProductMetadata\Types\GetProductSearchValuesResponse::class
         );
     }
 
@@ -106,7 +106,7 @@ class ProductMetadataService extends \DTS\eBaySDK\ProductMetadata\Services\Produ
         return $this->callOperationAsync(
             'getProductSearchValuesBulk',
             $request,
-            '\DTS\eBaySDK\ProductMetadata\Types\GetProductSearchValuesBulkResponse'
+            \DTS\eBaySDK\ProductMetadata\Types\GetProductSearchValuesBulkResponse::class
         );
     }
 
@@ -128,7 +128,7 @@ class ProductMetadataService extends \DTS\eBaySDK\ProductMetadata\Services\Produ
         return $this->callOperationAsync(
             'getCompatibilitySearchValues',
             $request,
-            '\DTS\eBaySDK\ProductMetadata\Types\GetCompatibilitySearchValuesResponse'
+            \DTS\eBaySDK\ProductMetadata\Types\GetCompatibilitySearchValuesResponse::class
         );
     }
 
@@ -150,7 +150,7 @@ class ProductMetadataService extends \DTS\eBaySDK\ProductMetadata\Services\Produ
         return $this->callOperationAsync(
             'getCompatibilitySearchValuesBulk',
             $request,
-            '\DTS\eBaySDK\ProductMetadata\Types\GetCompatibilitySearchValuesBulkResponse'
+            \DTS\eBaySDK\ProductMetadata\Types\GetCompatibilitySearchValuesBulkResponse::class
         );
     }
 
@@ -172,7 +172,7 @@ class ProductMetadataService extends \DTS\eBaySDK\ProductMetadata\Services\Produ
         return $this->callOperationAsync(
             'getProductSearchDataVersion',
             $request,
-            '\DTS\eBaySDK\ProductMetadata\Types\GetProductSearchDataVersionResponse'
+            \DTS\eBaySDK\ProductMetadata\Types\GetProductSearchDataVersionResponse::class
         );
     }
 
@@ -194,7 +194,7 @@ class ProductMetadataService extends \DTS\eBaySDK\ProductMetadata\Services\Produ
         return $this->callOperationAsync(
             'getCompatibilitySearchDataVersion',
             $request,
-            '\DTS\eBaySDK\ProductMetadata\Types\GetCompatibilitySearchDataVersionResponse'
+            \DTS\eBaySDK\ProductMetadata\Types\GetCompatibilitySearchDataVersionResponse::class
         );
     }
 
@@ -216,7 +216,7 @@ class ProductMetadataService extends \DTS\eBaySDK\ProductMetadata\Services\Produ
         return $this->callOperationAsync(
             'getProductMetadataBulk',
             $request,
-            '\DTS\eBaySDK\ProductMetadata\Types\ProductMetadataBulkResponse'
+            \DTS\eBaySDK\ProductMetadata\Types\ProductMetadataBulkResponse::class
         );
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Taxonomy\Types;
 
 use DTS\eBaySDK\Taxonomy\Types\GetSuggestedCategoriesRestResponse;
 
-class GetSuggestedCategoriesRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetSuggestedCategoriesRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetSuggestedCategoriesRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Taxonomy\Types\GetSuggestedCategoriesRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Taxonomy\Types\GetSuggestedCategoriesRestResponse::class, $this->obj);
     }
 
     public function testExtendsCategorySuggestionResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Taxonomy\Types\CategorySuggestionResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Taxonomy\Types\CategorySuggestionResponse::class, $this->obj);
     }
 }

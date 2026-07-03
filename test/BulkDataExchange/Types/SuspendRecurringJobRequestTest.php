@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\BulkDataExchange\Types;
 
 use DTS\eBaySDK\BulkDataExchange\Types\SuspendRecurringJobRequest;
 
-class SuspendRecurringJobRequestTest extends \PHPUnit_Framework_TestCase
+class SuspendRecurringJobRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SuspendRecurringJobRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BulkDataExchange\Types\SuspendRecurringJobRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BulkDataExchange\Types\SuspendRecurringJobRequest::class, $this->obj);
     }
 
     public function testExtendsBaseServiceRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BulkDataExchange\Types\BaseServiceRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BulkDataExchange\Types\BaseServiceRequest::class, $this->obj);
     }
 }

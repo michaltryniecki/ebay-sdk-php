@@ -37,103 +37,103 @@ class BulkDataExchangeResponsesType extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'ActiveInventoryReport' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ActiveInventoryReportResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\ActiveInventoryReportResponseType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ActiveInventoryReport'
         ],
         'AddFixedPriceItemResponse' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AddFixedPriceItemResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AddFixedPriceItemResponseType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'AddFixedPriceItemResponse'
         ],
         'AddItemResponse' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AddItemResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AddItemResponseType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'AddItemResponse'
         ],
         'EndFixedPriceItemResponse' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\EndFixedPriceItemResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\EndFixedPriceItemResponseType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'EndFixedPriceItemResponse'
         ],
         'EndItemResponse' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\EndItemResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\EndItemResponseType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'EndItemResponse'
         ],
         'FeeSettlementReport' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\FeeSettlementReportResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\FeeSettlementReportResponseType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FeeSettlementReport'
         ],
         'OrderAckResponse' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\OrderAckResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\OrderAckResponseType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'OrderAckResponse'
         ],
         'RelistFixedPriceItemResponse' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\RelistFixedPriceItemResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\RelistFixedPriceItemResponseType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'RelistFixedPriceItemResponse'
         ],
         'RelistItemResponse' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\RelistItemResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\RelistItemResponseType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'RelistItemResponse'
         ],
         'ReviseFixedPriceItemResponse' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ReviseFixedPriceItemResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\ReviseFixedPriceItemResponseType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ReviseFixedPriceItemResponse'
         ],
         'ReviseInventoryStatusResponse' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ReviseInventoryStatusResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\ReviseInventoryStatusResponseType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ReviseInventoryStatusResponse'
         ],
         'ReviseItemResponse' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ReviseItemResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\ReviseItemResponseType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ReviseItemResponse'
         ],
         'SetShipmentTrackingInfoResponse' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\SetShipmentTrackingInfoResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\SetShipmentTrackingInfoResponseType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'SetShipmentTrackingInfoResponse'
         ],
         'SoldReport' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\SoldReportResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\SoldReportResponseType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SoldReport'
         ],
         'UploadSiteHostedPicturesResponse' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\UploadSiteHostedPicturesResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\UploadSiteHostedPicturesResponseType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'UploadSiteHostedPicturesResponse'
         ],
         'VerifyAddFixedPriceItemResponse' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\VerifyAddFixedPriceItemResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\VerifyAddFixedPriceItemResponseType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'VerifyAddFixedPriceItemResponse'
         ],
         'VerifyAddItemResponse' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\VerifyAddItemResponseType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\VerifyAddItemResponseType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'VerifyAddItemResponse'
@@ -145,22 +145,22 @@ class BulkDataExchangeResponsesType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
-            self::$requestXmlRootElementNames[__CLASS__] = 'BulkDataExchangeResponses';
+        if (!array_key_exists(self::class, self::$requestXmlRootElementNames)) {
+            self::$requestXmlRootElementNames[self::class] = 'BulkDataExchangeResponses';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

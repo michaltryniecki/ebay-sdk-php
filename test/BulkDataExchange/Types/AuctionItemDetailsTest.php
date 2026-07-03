@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\BulkDataExchange\Types;
 
 use DTS\eBaySDK\BulkDataExchange\Types\AuctionItemDetails;
 
-class AuctionItemDetailsTest extends \PHPUnit_Framework_TestCase
+class AuctionItemDetailsTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AuctionItemDetails();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BulkDataExchange\Types\AuctionItemDetails', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BulkDataExchange\Types\AuctionItemDetails::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

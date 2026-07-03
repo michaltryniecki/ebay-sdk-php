@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\SellingManagerAutomationPropertyTypeCodeType;
 
-class SellingManagerAutomationPropertyTypeCodeTypeTest extends \PHPUnit_Framework_TestCase
+class SellingManagerAutomationPropertyTypeCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SellingManagerAutomationPropertyTypeCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\SellingManagerAutomationPropertyTypeCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\SellingManagerAutomationPropertyTypeCodeType::class, $this->obj);
     }
 }

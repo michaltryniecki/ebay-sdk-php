@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\ListingDurationReferenceType;
 
-class ListingDurationReferenceTypeTest extends \PHPUnit_Framework_TestCase
+class ListingDurationReferenceTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ListingDurationReferenceType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\ListingDurationReferenceType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\ListingDurationReferenceType::class, $this->obj);
     }
 
     public function testExtendsIntegerType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\IntegerType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\IntegerType::class, $this->obj);
     }
 }

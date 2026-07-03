@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\BusinessPoliciesManagement\Enums;
 
 use DTS\eBaySDK\BusinessPoliciesManagement\Enums\ErrorCategory;
 
-class ErrorCategoryTest extends \PHPUnit_Framework_TestCase
+class ErrorCategoryTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ErrorCategory();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BusinessPoliciesManagement\Enums\ErrorCategory', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BusinessPoliciesManagement\Enums\ErrorCategory::class, $this->obj);
     }
 }

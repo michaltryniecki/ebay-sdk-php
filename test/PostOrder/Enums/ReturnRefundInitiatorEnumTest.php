@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\PostOrder\Enums;
 
 use DTS\eBaySDK\PostOrder\Enums\ReturnRefundInitiatorEnum;
 
-class ReturnRefundInitiatorEnumTest extends \PHPUnit_Framework_TestCase
+class ReturnRefundInitiatorEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ReturnRefundInitiatorEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Enums\ReturnRefundInitiatorEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Enums\ReturnRefundInitiatorEnum::class, $this->obj);
     }
 }

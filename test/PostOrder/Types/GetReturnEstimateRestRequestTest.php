@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\GetReturnEstimateRestRequest;
 
-class GetReturnEstimateRestRequestTest extends \PHPUnit_Framework_TestCase
+class GetReturnEstimateRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetReturnEstimateRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\GetReturnEstimateRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\GetReturnEstimateRestRequest::class, $this->obj);
     }
 
     public function testExtendsGetEstimateRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\GetEstimateRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\GetEstimateRequest::class, $this->obj);
     }
 }

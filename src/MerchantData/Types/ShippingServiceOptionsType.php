@@ -34,7 +34,7 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'ShippingInsuranceCost' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingInsuranceCost'
@@ -46,13 +46,13 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShippingService'
         ],
         'ShippingServiceCost' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceCost'
         ],
         'ShippingServiceAdditionalCost' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceAdditionalCost'
@@ -82,7 +82,7 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShippingTimeMax'
         ],
         'ShippingSurcharge' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingSurcharge'
@@ -100,13 +100,13 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'LocalPickup'
         ],
         'ImportCharge' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ImportCharge'
         ],
         'ShippingPackageInfo' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ShippingPackageInfoType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\ShippingPackageInfoType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ShippingPackageInfo'
@@ -124,18 +124,18 @@ class ShippingServiceOptionsType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

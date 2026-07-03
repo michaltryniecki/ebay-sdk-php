@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Order\Types;
 
 use DTS\eBaySDK\Order\Types\InitiateCheckoutSessionRestRequest;
 
-class InitiateCheckoutSessionRestRequestTest extends \PHPUnit_Framework_TestCase
+class InitiateCheckoutSessionRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new InitiateCheckoutSessionRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\InitiateCheckoutSessionRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\InitiateCheckoutSessionRestRequest::class, $this->obj);
     }
 
     public function testExtendsCreateSignInCheckoutSessionRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\CreateSignInCheckoutSessionRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\CreateSignInCheckoutSessionRequest::class, $this->obj);
     }
 }

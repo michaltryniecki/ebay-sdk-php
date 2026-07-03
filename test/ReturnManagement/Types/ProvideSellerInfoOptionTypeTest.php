@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\ReturnManagement\Types;
 
 use DTS\eBaySDK\ReturnManagement\Types\ProvideSellerInfoOptionType;
 
-class ProvideSellerInfoOptionTypeTest extends \PHPUnit_Framework_TestCase
+class ProvideSellerInfoOptionTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ProvideSellerInfoOptionType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ReturnManagement\Types\ProvideSellerInfoOptionType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ReturnManagement\Types\ProvideSellerInfoOptionType::class, $this->obj);
     }
 
     public function testExtendsBaseActivityOptionType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ReturnManagement\Types\BaseActivityOptionType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ReturnManagement\Types\BaseActivityOptionType::class, $this->obj);
     }
 }

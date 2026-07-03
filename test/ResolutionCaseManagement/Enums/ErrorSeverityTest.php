@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\ResolutionCaseManagement\Enums;
 
 use DTS\eBaySDK\ResolutionCaseManagement\Enums\ErrorSeverity;
 
-class ErrorSeverityTest extends \PHPUnit_Framework_TestCase
+class ErrorSeverityTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ErrorSeverity();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ResolutionCaseManagement\Enums\ErrorSeverity', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ResolutionCaseManagement\Enums\ErrorSeverity::class, $this->obj);
     }
 }

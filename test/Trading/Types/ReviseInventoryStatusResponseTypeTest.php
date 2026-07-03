@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\ReviseInventoryStatusResponseType;
 
-class ReviseInventoryStatusResponseTypeTest extends \PHPUnit_Framework_TestCase
+class ReviseInventoryStatusResponseTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ReviseInventoryStatusResponseType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\ReviseInventoryStatusResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\ReviseInventoryStatusResponseType::class, $this->obj);
     }
 
     public function testExtendsAbstractResponseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\AbstractResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\AbstractResponseType::class, $this->obj);
     }
 }

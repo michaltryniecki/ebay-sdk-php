@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\PictureManagerSubscriptionLevelCodeType;
 
-class PictureManagerSubscriptionLevelCodeTypeTest extends \PHPUnit_Framework_TestCase
+class PictureManagerSubscriptionLevelCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PictureManagerSubscriptionLevelCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\PictureManagerSubscriptionLevelCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\PictureManagerSubscriptionLevelCodeType::class, $this->obj);
     }
 }

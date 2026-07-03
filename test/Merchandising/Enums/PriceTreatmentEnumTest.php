@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Merchandising\Enums;
 
 use DTS\eBaySDK\Merchandising\Enums\PriceTreatmentEnum;
 
-class PriceTreatmentEnumTest extends \PHPUnit_Framework_TestCase
+class PriceTreatmentEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PriceTreatmentEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Merchandising\Enums\PriceTreatmentEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Merchandising\Enums\PriceTreatmentEnum::class, $this->obj);
     }
 }

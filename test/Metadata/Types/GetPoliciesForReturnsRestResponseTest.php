@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Metadata\Types;
 
 use DTS\eBaySDK\Metadata\Types\GetPoliciesForReturnsRestResponse;
 
-class GetPoliciesForReturnsRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetPoliciesForReturnsRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetPoliciesForReturnsRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Metadata\Types\GetPoliciesForReturnsRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Metadata\Types\GetPoliciesForReturnsRestResponse::class, $this->obj);
     }
 
     public function testExtendsReturnPolicyResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Metadata\Types\ReturnPolicyResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Metadata\Types\ReturnPolicyResponse::class, $this->obj);
     }
 }

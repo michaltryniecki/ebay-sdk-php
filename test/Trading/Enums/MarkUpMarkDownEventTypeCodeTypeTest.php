@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\MarkUpMarkDownEventTypeCodeType;
 
-class MarkUpMarkDownEventTypeCodeTypeTest extends \PHPUnit_Framework_TestCase
+class MarkUpMarkDownEventTypeCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new MarkUpMarkDownEventTypeCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\MarkUpMarkDownEventTypeCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\MarkUpMarkDownEventTypeCodeType::class, $this->obj);
     }
 }

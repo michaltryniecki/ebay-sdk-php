@@ -101,7 +101,7 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'BestOfferEnabled'
         ],
         'BuyItNowPrice' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'type' => \DTS\eBaySDK\Shopping\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyItNowPrice'
@@ -125,7 +125,7 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'BuyItNowAvailable'
         ],
         'ConvertedBuyItNowPrice' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'type' => \DTS\eBaySDK\Shopping\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ConvertedBuyItNowPrice'
@@ -203,7 +203,7 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'Quantity'
         ],
         'Seller' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\SimpleUserType',
+            'type' => \DTS\eBaySDK\Shopping\Types\SimpleUserType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Seller'
@@ -215,19 +215,19 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'BidCount'
         ],
         'ConvertedCurrentPrice' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'type' => \DTS\eBaySDK\Shopping\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ConvertedCurrentPrice'
         ],
         'CurrentPrice' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'type' => \DTS\eBaySDK\Shopping\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CurrentPrice'
         ],
         'HighBidder' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\SimpleUserType',
+            'type' => \DTS\eBaySDK\Shopping\Types\SimpleUserType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'HighBidder'
@@ -275,13 +275,13 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'Title'
         ],
         'ShippingCostSummary' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType',
+            'type' => \DTS\eBaySDK\Shopping\Types\ShippingCostSummaryType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingCostSummary'
         ],
         'ItemSpecifics' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\NameValueListArrayType',
+            'type' => \DTS\eBaySDK\Shopping\Types\NameValueListArrayType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemSpecifics'
@@ -323,13 +323,13 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'SecondaryCategoryIDPath'
         ],
         'Charity' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\CharityType',
+            'type' => \DTS\eBaySDK\Shopping\Types\CharityType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Charity'
         ],
         'Storefront' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\StorefrontType',
+            'type' => \DTS\eBaySDK\Shopping\Types\StorefrontType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Storefront'
@@ -353,19 +353,19 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'SellerComments'
         ],
         'ReturnPolicy' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\ReturnPolicyType',
+            'type' => \DTS\eBaySDK\Shopping\Types\ReturnPolicyType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnPolicy'
         ],
         'MinimumToBid' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\AmountType',
+            'type' => \DTS\eBaySDK\Shopping\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MinimumToBid'
         ],
         'ProductID' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\ProductIDType',
+            'type' => \DTS\eBaySDK\Shopping\Types\ProductIDType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProductID'
@@ -377,7 +377,7 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'AutoPay'
         ],
         'BusinessSellerDetails' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\BusinessSellerDetailsType',
+            'type' => \DTS\eBaySDK\Shopping\Types\BusinessSellerDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BusinessSellerDetails'
@@ -395,7 +395,7 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'IntegratedMerchantCreditCardEnabled'
         ],
         'Variations' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\VariationsType',
+            'type' => \DTS\eBaySDK\Shopping\Types\VariationsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Variations'
@@ -437,7 +437,7 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'QuantityThreshold'
         ],
         'DiscountPriceInfo' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\DiscountPriceInfoType',
+            'type' => \DTS\eBaySDK\Shopping\Types\DiscountPriceInfoType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DiscountPriceInfo'
@@ -467,13 +467,13 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'VhrAvailable'
         ],
         'QuantityInfo' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\QuantityInfo',
+            'type' => \DTS\eBaySDK\Shopping\Types\QuantityInfo::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantityInfo'
         ],
         'UnitInfo' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\UnitInfoType',
+            'type' => \DTS\eBaySDK\Shopping\Types\UnitInfoType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UnitInfo'
@@ -497,7 +497,7 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ItemCompatibilityCount'
         ],
         'ItemCompatibilityList' => [
-            'type' => 'DTS\eBaySDK\Shopping\Types\ItemCompatibilityListType',
+            'type' => \DTS\eBaySDK\Shopping\Types\ItemCompatibilityListType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemCompatibilityList'
@@ -551,18 +551,18 @@ class SimpleItemType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

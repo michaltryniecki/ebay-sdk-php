@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\GetSpecificReportTaskRestResponse;
 
-class GetSpecificReportTaskRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetSpecificReportTaskRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetSpecificReportTaskRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\GetSpecificReportTaskRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\GetSpecificReportTaskRestResponse::class, $this->obj);
     }
 
     public function testExtendsReportTask()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\ReportTask', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\ReportTask::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\BulkDataExchange\Types;
 
 use DTS\eBaySDK\BulkDataExchange\Types\StartUploadJobResponse;
 
-class StartUploadJobResponseTest extends \PHPUnit_Framework_TestCase
+class StartUploadJobResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new StartUploadJobResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BulkDataExchange\Types\StartUploadJobResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BulkDataExchange\Types\StartUploadJobResponse::class, $this->obj);
     }
 
     public function testExtendsBaseServiceResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BulkDataExchange\Types\BaseServiceResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BulkDataExchange\Types\BaseServiceResponse::class, $this->obj);
     }
 }

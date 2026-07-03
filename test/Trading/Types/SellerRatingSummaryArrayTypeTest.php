@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\SellerRatingSummaryArrayType;
 
-class SellerRatingSummaryArrayTypeTest extends \PHPUnit_Framework_TestCase
+class SellerRatingSummaryArrayTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SellerRatingSummaryArrayType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\SellerRatingSummaryArrayType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\SellerRatingSummaryArrayType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

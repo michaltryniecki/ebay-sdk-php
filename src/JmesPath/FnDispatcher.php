@@ -66,9 +66,7 @@ class FnDispatcher
     {
         $this->validate('avg', $args, [['array']]);
         $arg = Utils::toArray($args[0]);
-        $sum = $this->reduce('avg:0', $arg, ['number'], function ($a, $b) {
-            return $a + $b;
-        });
+        $sum = $this->reduce('avg:0', $arg, ['number'], fn($a, $b) => $a + $b);
         return $arg ? ($sum / count($arg)) : null;
     }
 
@@ -85,7 +83,7 @@ class FnDispatcher
         if (is_array($arg)) {
             return in_array($args[1], $arg);
         } elseif (is_string($args[1])) {
-            return strpos($arg, $args[1]) !== false;
+            return str_contains((string) $arg, $args[1]);
         } else {
             return null;
         }
@@ -94,8 +92,8 @@ class FnDispatcher
     private function fn_ends_with(array $args)
     {
         $this->validate('ends_with', $args, [['string'], ['string']]);
-        list($search, $suffix) = $args;
-        return $suffix === '' || substr($search, -strlen($suffix)) === $suffix;
+        [$search, $suffix] = $args;
+        return $suffix === '' || str_ends_with((string) $search, (string) $suffix);
     }
 
     private function fn_floor(array $args)
@@ -112,17 +110,13 @@ class FnDispatcher
             );
         }
 
-        return array_reduce($args, function ($carry, $item) {
-            return $carry !== null ? $carry : $item;
-        });
+        return array_reduce($args, fn($carry, $item) => $carry ?? $item);
     }
 
     private function fn_join(array $args)
     {
         $this->validate('join', $args, [['string'], ['array']]);
-        $fn = function ($a, $b, $i) use ($args) {
-            return $i ? ($a . $args[0] . $b) : $b;
-        };
+        $fn = (fn($a, $b, $i) => $i ? ($a . $args[0] . $b) : $b);
         return $this->reduce('join:0', Utils::toArray($args[1]), ['string'], $fn);
     }
 
@@ -142,7 +136,7 @@ class FnDispatcher
     private function fn_max(array $args)
     {
         $this->validate('max', $args, [['array']]);
-        $fn = function ($a, $b) { return $a >= $b ? $a : $b; };
+        $fn = (fn($a, $b) => $a >= $b ? $a : $b);
         return $this->reduce('max:0', Utils::toArray($args[0]), ['number', 'string'], $fn);
     }
 
@@ -150,18 +144,16 @@ class FnDispatcher
     {
         $this->validate('max_by', $args, [['array'], ['expression']]);
         $expr = $this->wrapExpression('max_by:1', $args[1], ['number', 'string']);
-        $fn = function ($carry, $item, $index) use ($expr) {
-            return $index
-                ? ($expr($carry) >= $expr($item) ? $carry : $item)
-                : $item;
-        };
+        $fn = (fn($carry, $item, $index) => $index
+            ? ($expr($carry) >= $expr($item) ? $carry : $item)
+            : $item);
         return $this->reduce('max_by:1', Utils::toArray($args[0]), ['any'], $fn);
     }
 
     private function fn_min(array $args)
     {
         $this->validate('min', $args, [['array']]);
-        $fn = function ($a, $b, $i) { return $i && $a <= $b ? $a : $b; };
+        $fn = (fn($a, $b, $i) => $i && $a <= $b ? $a : $b);
         return $this->reduce('min:0', Utils::toArray($args[0]), ['number', 'string'], $fn);
     }
 
@@ -192,7 +184,7 @@ class FnDispatcher
     private function fn_sum(array $args)
     {
         $this->validate('sum', $args, [['array']]);
-        $fn = function ($a, $b) { return $a + $b; };
+        $fn = (fn($a, $b) => $a + $b);
         return $this->reduce('sum:0', Utils::toArray($args[0]), ['number'], $fn);
     }
 
@@ -225,8 +217,8 @@ class FnDispatcher
     private function fn_starts_with(array $args)
     {
         $this->validate('starts_with', $args, [['string'], ['string']]);
-        list($search, $prefix) = $args;
-        return $prefix === '' || strpos($search, $prefix) === 0;
+        [$search, $prefix] = $args;
+        return $prefix === '' || str_starts_with((string) $search, (string) $prefix);
     }
 
     private function fn_type(array $args)
@@ -306,8 +298,8 @@ class FnDispatcher
 
     private function typeError($from, $msg)
     {
-        if (strpos($from, ':')) {
-            list($fn, $pos) = explode(':', $from);
+        if (strpos((string) $from, ':')) {
+            [$fn, $pos] = explode(':', (string) $from);
             throw new \RuntimeException(
                 sprintf('Argument %d of %s %s', $pos, $fn, $msg)
             );
@@ -413,7 +405,7 @@ class FnDispatcher
      */
     private function wrapExpression($from, callable $expr, array $types)
     {
-        list($fn, $pos) = explode(':', $from);
+        [$fn, $pos] = explode(':', $from);
         $from = "The expression return value of argument {$pos} of {$fn}";
         return function ($value) use ($from, $expr, $types) {
             $value = $expr($value);

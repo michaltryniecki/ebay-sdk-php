@@ -34,29 +34,17 @@ abstract class BaseService
     private $config;
 
     /**
-     * @var string The production URL for the service.
-     */
-    private $productionUrl;
-
-    /**
-     * @var string The sandbox URL for the service.
-     */
-    private $sandboxUrl;
-
-    /**
      * @param string $productionUrl The production URL.
      * @param string $sandboxUrl The sandbox URL.
      * @param array $config Configuration option values.
      */
     public function __construct(
-        $productionUrl,
-        $sandboxUrl,
+        private $productionUrl,
+        private $sandboxUrl,
         array $config
     ) {
         $this->resolver = new ConfigurationResolver(static::getConfigDefinitions());
         $this->config = $this->resolver->resolve($config);
-        $this->productionUrl = $productionUrl;
-        $this->sandboxUrl = $sandboxUrl;
     }
 
     /**
@@ -76,9 +64,9 @@ abstract class BaseService
                 'default' => false
             ],
             'credentials' => [
-                'valid'   => ['DTS\eBaySDK\Credentials\CredentialsInterface', 'array', 'callable'],
+                'valid'   => [\DTS\eBaySDK\Credentials\CredentialsInterface::class, 'array', 'callable'],
                 'fn'      => 'DTS\eBaySDK\applyCredentials',
-                'default' => [CredentialsProvider::class, 'defaultProvider']
+                'default' => CredentialsProvider::defaultProvider(...)
             ],
             'debug' => [
                 'valid'   => ['bool', 'array'],
@@ -112,9 +100,7 @@ abstract class BaseService
     {
         return $option === null
             ? $this->config
-            : (isset($this->config[$option])
-                ? $this->config[$option]
-                : null);
+            : ($this->config[$option] ?? null);
     }
 
     /**
@@ -166,7 +152,7 @@ abstract class BaseService
 
         return $httpHandler($request, $httpOptions)->then(
             function (ResponseInterface $res) use ($debug, $responseClass) {
-                list($xmlResponse, $attachment) = $this->extractXml($res->getBody()->getContents());
+                [$xmlResponse, $attachment] = $this->extractXml($res->getBody()->getContents());
 
                 if ($debug !== false) {
                     $this->debugResponse($xmlResponse);
@@ -328,7 +314,7 @@ abstract class BaseService
         /**
          * Ugly way of seeing if an attachment is present in the response.
          */
-        if (strpos($response, 'application/xop+xml') === false) {
+        if (!str_contains($response, 'application/xop+xml')) {
             return [$response, ['data' => null, 'mimeType' => null]];
         } else {
             return $this->extractXmlAndAttachment($response);

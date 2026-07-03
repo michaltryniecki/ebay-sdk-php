@@ -21,7 +21,7 @@ class CatalogService extends \DTS\eBaySDK\Catalog\Services\CatalogBaseService
         'GetProduct' => [
             'method' => 'GET',
             'resource' => 'product/{epid}',
-            'responseClass' => '\DTS\eBaySDK\Catalog\Types\GetProductRestResponse',
+            'responseClass' => \DTS\eBaySDK\Catalog\Types\GetProductRestResponse::class,
             'params' => [
                 'epid' => [
                     'valid' => ['string'],
@@ -32,7 +32,7 @@ class CatalogService extends \DTS\eBaySDK\Catalog\Services\CatalogBaseService
         'Search' => [
             'method' => 'GET',
             'resource' => 'product_summary/search',
-            'responseClass' => '\DTS\eBaySDK\Catalog\Types\SearchRestResponse',
+            'responseClass' => \DTS\eBaySDK\Catalog\Types\SearchRestResponse::class,
             'params' => [
                 'offset' => [
                     'valid' => ['string']
@@ -63,7 +63,7 @@ class CatalogService extends \DTS\eBaySDK\Catalog\Services\CatalogBaseService
         'GetProductMetadata' => [
             'method' => 'GET',
             'resource' => 'get_product_metadata',
-            'responseClass' => '\DTS\eBaySDK\Catalog\Types\GetProductMetadataRestResponse',
+            'responseClass' => \DTS\eBaySDK\Catalog\Types\GetProductMetadataRestResponse::class,
             'params' => [
                 'other_applicable_category_ids' => [
                     'valid' => ['string']
@@ -80,7 +80,7 @@ class CatalogService extends \DTS\eBaySDK\Catalog\Services\CatalogBaseService
         'GetProductMetadataForCategories' => [
             'method' => 'GET',
             'resource' => 'get_product_metadata_for_categories',
-            'responseClass' => '\DTS\eBaySDK\Catalog\Types\GetProductMetadataForCategoriesRestResponse',
+            'responseClass' => \DTS\eBaySDK\Catalog\Types\GetProductMetadataForCategoriesRestResponse::class,
             'params' => [
                 'other_applicable_category_ids' => [
                     'valid' => ['string']
@@ -94,7 +94,7 @@ class CatalogService extends \DTS\eBaySDK\Catalog\Services\CatalogBaseService
         'GetChangeRequest' => [
             'method' => 'GET',
             'resource' => 'change_request/{change_request_id}',
-            'responseClass' => '\DTS\eBaySDK\Catalog\Types\GetChangeRequestRestResponse',
+            'responseClass' => \DTS\eBaySDK\Catalog\Types\GetChangeRequestRestResponse::class,
             'params' => [
                 'change_request_id' => [
                     'valid' => ['string'],
@@ -105,7 +105,7 @@ class CatalogService extends \DTS\eBaySDK\Catalog\Services\CatalogBaseService
         'GetChangeRequests' => [
             'method' => 'GET',
             'resource' => 'change_request',
-            'responseClass' => '\DTS\eBaySDK\Catalog\Types\GetChangeRequestsRestResponse',
+            'responseClass' => \DTS\eBaySDK\Catalog\Types\GetChangeRequestsRestResponse::class,
             'params' => [
                 'offset' => [
                     'valid' => ['string']
@@ -121,7 +121,7 @@ class CatalogService extends \DTS\eBaySDK\Catalog\Services\CatalogBaseService
         'CreateChangeRequest' => [
             'method' => 'PUT',
             'resource' => 'change_request',
-            'responseClass' => '\DTS\eBaySDK\Catalog\Types\CreateChangeRequestRestResponse',
+            'responseClass' => \DTS\eBaySDK\Catalog\Types\CreateChangeRequestRestResponse::class,
             'params' => [
             ]
         ]

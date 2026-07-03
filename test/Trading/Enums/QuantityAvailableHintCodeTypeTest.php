@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\QuantityAvailableHintCodeType;
 
-class QuantityAvailableHintCodeTypeTest extends \PHPUnit_Framework_TestCase
+class QuantityAvailableHintCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new QuantityAvailableHintCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\QuantityAvailableHintCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\QuantityAvailableHintCodeType::class, $this->obj);
     }
 }

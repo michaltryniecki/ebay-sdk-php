@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Inventory\Enums;
 
 use DTS\eBaySDK\Inventory\Enums\ShippingServiceTypeEnum;
 
-class ShippingServiceTypeEnumTest extends \PHPUnit_Framework_TestCase
+class ShippingServiceTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ShippingServiceTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Enums\ShippingServiceTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Enums\ShippingServiceTypeEnum::class, $this->obj);
     }
 }

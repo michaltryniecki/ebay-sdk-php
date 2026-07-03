@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\FlatRateInsuranceRangeCodeType;
 
-class FlatRateInsuranceRangeCodeTypeTest extends \PHPUnit_Framework_TestCase
+class FlatRateInsuranceRangeCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FlatRateInsuranceRangeCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\FlatRateInsuranceRangeCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\FlatRateInsuranceRangeCodeType::class, $this->obj);
     }
 }

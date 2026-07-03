@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\FeedbackRatingDetailCodeType;
 
-class FeedbackRatingDetailCodeTypeTest extends \PHPUnit_Framework_TestCase
+class FeedbackRatingDetailCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FeedbackRatingDetailCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\FeedbackRatingDetailCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\FeedbackRatingDetailCodeType::class, $this->obj);
     }
 }

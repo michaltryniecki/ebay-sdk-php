@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\DeleteProductCompatibilityRestRequest;
 
-class DeleteProductCompatibilityRestRequestTest extends \PHPUnit_Framework_TestCase
+class DeleteProductCompatibilityRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DeleteProductCompatibilityRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\DeleteProductCompatibilityRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\DeleteProductCompatibilityRestRequest::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\PostOrder\Enums;
 
 use DTS\eBaySDK\PostOrder\Enums\InquiryEligibilityStatusEnum;
 
-class InquiryEligibilityStatusEnumTest extends \PHPUnit_Framework_TestCase
+class InquiryEligibilityStatusEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new InquiryEligibilityStatusEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Enums\InquiryEligibilityStatusEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Enums\InquiryEligibilityStatusEnum::class, $this->obj);
     }
 }

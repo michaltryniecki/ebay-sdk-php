@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\DigitalDeliverySelectedType;
 
-class DigitalDeliverySelectedTypeTest extends \PHPUnit_Framework_TestCase
+class DigitalDeliverySelectedTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DigitalDeliverySelectedType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\DigitalDeliverySelectedType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\DigitalDeliverySelectedType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Marketing\Enums;
 
 use DTS\eBaySDK\Marketing\Enums\DataTypeEnum;
 
-class DataTypeEnumTest extends \PHPUnit_Framework_TestCase
+class DataTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DataTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Enums\DataTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Enums\DataTypeEnum::class, $this->obj);
     }
 }

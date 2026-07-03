@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Shopping\Types;
 
 use DTS\eBaySDK\Shopping\Types\ProductIDType;
 
-class ProductIDTypeTest extends \PHPUnit_Framework_TestCase
+class ProductIDTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ProductIDType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Types\ProductIDType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Shopping\Types\ProductIDType::class, $this->obj);
     }
 
     public function testExtendsStringType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\StringType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\StringType::class, $this->obj);
     }
 }

@@ -48,13 +48,13 @@ class CaseSummaryType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'caseStatusEnum'
         ],
         'claimAmount' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\Amount',
+            'type' => \DTS\eBaySDK\PostOrder\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'claimAmount'
         ],
         'creationDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'creationDate'
@@ -66,13 +66,13 @@ class CaseSummaryType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'itemId'
         ],
         'lastModifiedDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'lastModifiedDate'
         ],
         'respondByDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'respondByDate'
@@ -96,14 +96,14 @@ class CaseSummaryType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

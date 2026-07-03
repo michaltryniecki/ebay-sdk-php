@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\MerchantData\Types;
 
 use DTS\eBaySDK\MerchantData\Types\Base64BinaryType;
 
-class Base64BinaryTypeTest extends \PHPUnit_Framework_TestCase
+class Base64BinaryTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new Base64BinaryType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\Base64BinaryType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\Base64BinaryType::class, $this->obj);
     }
 
     public function testExtendsBase64BinaryType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\Base64BinaryType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\Base64BinaryType::class, $this->obj);
     }
 }

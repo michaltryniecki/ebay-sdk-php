@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Inventory\Types;
 
 use DTS\eBaySDK\Inventory\Types\CreateOrReplaceProductCompatibilityRestResponse;
 
-class CreateOrReplaceProductCompatibilityRestResponseTest extends \PHPUnit_Framework_TestCase
+class CreateOrReplaceProductCompatibilityRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CreateOrReplaceProductCompatibilityRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\CreateOrReplaceProductCompatibilityRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\CreateOrReplaceProductCompatibilityRestResponse::class, $this->obj);
     }
 
     public function testExtendsBaseResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Types\BaseResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Types\BaseResponse::class, $this->obj);
     }
 }

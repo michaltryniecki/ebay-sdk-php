@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\ResolutionCaseManagement\Types;
 
 use DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideRefundInfoOptionType;
 
-class ProvideRefundInfoOptionTypeTest extends \PHPUnit_Framework_TestCase
+class ProvideRefundInfoOptionTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ProvideRefundInfoOptionType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideRefundInfoOptionType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideRefundInfoOptionType::class, $this->obj);
     }
 
     public function testExtendsBaseActivityOptionType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ResolutionCaseManagement\Types\BaseActivityOptionType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ResolutionCaseManagement\Types\BaseActivityOptionType::class, $this->obj);
     }
 }

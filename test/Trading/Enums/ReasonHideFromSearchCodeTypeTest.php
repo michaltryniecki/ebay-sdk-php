@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\ReasonHideFromSearchCodeType;
 
-class ReasonHideFromSearchCodeTypeTest extends \PHPUnit_Framework_TestCase
+class ReasonHideFromSearchCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ReasonHideFromSearchCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\ReasonHideFromSearchCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\ReasonHideFromSearchCodeType::class, $this->obj);
     }
 }

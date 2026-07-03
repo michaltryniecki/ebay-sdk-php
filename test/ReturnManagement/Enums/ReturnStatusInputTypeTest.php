@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\ReturnManagement\Enums;
 
 use DTS\eBaySDK\ReturnManagement\Enums\ReturnStatusInputType;
 
-class ReturnStatusInputTypeTest extends \PHPUnit_Framework_TestCase
+class ReturnStatusInputTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ReturnStatusInputType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ReturnManagement\Enums\ReturnStatusInputType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ReturnManagement\Enums\ReturnStatusInputType::class, $this->obj);
     }
 }

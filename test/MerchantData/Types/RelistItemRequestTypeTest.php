@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\MerchantData\Types;
 
 use DTS\eBaySDK\MerchantData\Types\RelistItemRequestType;
 
-class RelistItemRequestTypeTest extends \PHPUnit_Framework_TestCase
+class RelistItemRequestTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new RelistItemRequestType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\RelistItemRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\RelistItemRequestType::class, $this->obj);
     }
 
     public function testExtendsAbstractRequestType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\AbstractRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\AbstractRequestType::class, $this->obj);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Inventory\Enums;
 
 use DTS\eBaySDK\Inventory\Enums\OfferStatusEnum;
 
-class OfferStatusEnumTest extends \PHPUnit_Framework_TestCase
+class OfferStatusEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new OfferStatusEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Enums\OfferStatusEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Enums\OfferStatusEnum::class, $this->obj);
     }
 }

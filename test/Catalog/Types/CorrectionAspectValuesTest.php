@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Catalog\Types;
 
 use DTS\eBaySDK\Catalog\Types\CorrectionAspectValues;
 
-class CorrectionAspectValuesTest extends \PHPUnit_Framework_TestCase
+class CorrectionAspectValuesTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CorrectionAspectValues();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Catalog\Types\CorrectionAspectValues', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Catalog\Types\CorrectionAspectValues::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

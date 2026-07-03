@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Inventory\Enums;
 
 use DTS\eBaySDK\Inventory\Enums\FormatTypeEnum;
 
-class FormatTypeEnumTest extends \PHPUnit_Framework_TestCase
+class FormatTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FormatTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Inventory\Enums\FormatTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Inventory\Enums\FormatTypeEnum::class, $this->obj);
     }
 }

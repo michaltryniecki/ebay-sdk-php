@@ -40,7 +40,7 @@ class RelatedItemsManagementService extends \DTS\eBaySDK\RelatedItemsManagement\
         return $this->callOperationAsync(
             'createBundles',
             $request,
-            '\DTS\eBaySDK\RelatedItemsManagement\Types\CreateBundlesResponse'
+            \DTS\eBaySDK\RelatedItemsManagement\Types\CreateBundlesResponse::class
         );
     }
 
@@ -62,7 +62,7 @@ class RelatedItemsManagementService extends \DTS\eBaySDK\RelatedItemsManagement\
         return $this->callOperationAsync(
             'findBundles',
             $request,
-            '\DTS\eBaySDK\RelatedItemsManagement\Types\FindBundlesResponse'
+            \DTS\eBaySDK\RelatedItemsManagement\Types\FindBundlesResponse::class
         );
     }
 
@@ -84,7 +84,7 @@ class RelatedItemsManagementService extends \DTS\eBaySDK\RelatedItemsManagement\
         return $this->callOperationAsync(
             'getBundles',
             $request,
-            '\DTS\eBaySDK\RelatedItemsManagement\Types\GetBundlesResponse'
+            \DTS\eBaySDK\RelatedItemsManagement\Types\GetBundlesResponse::class
         );
     }
 
@@ -106,7 +106,7 @@ class RelatedItemsManagementService extends \DTS\eBaySDK\RelatedItemsManagement\
         return $this->callOperationAsync(
             'updateBundles',
             $request,
-            '\DTS\eBaySDK\RelatedItemsManagement\Types\UpdateBundlesResponse'
+            \DTS\eBaySDK\RelatedItemsManagement\Types\UpdateBundlesResponse::class
         );
     }
 
@@ -128,7 +128,7 @@ class RelatedItemsManagementService extends \DTS\eBaySDK\RelatedItemsManagement\
         return $this->callOperationAsync(
             'updateBundleStatus',
             $request,
-            '\DTS\eBaySDK\RelatedItemsManagement\Types\UpdateBundleStatusResponse'
+            \DTS\eBaySDK\RelatedItemsManagement\Types\UpdateBundleStatusResponse::class
         );
     }
 
@@ -150,7 +150,7 @@ class RelatedItemsManagementService extends \DTS\eBaySDK\RelatedItemsManagement\
         return $this->callOperationAsync(
             'deleteBundles',
             $request,
-            '\DTS\eBaySDK\RelatedItemsManagement\Types\DeleteBundlesResponse'
+            \DTS\eBaySDK\RelatedItemsManagement\Types\DeleteBundlesResponse::class
         );
     }
 
@@ -172,7 +172,7 @@ class RelatedItemsManagementService extends \DTS\eBaySDK\RelatedItemsManagement\
         return $this->callOperationAsync(
             'getVersion',
             $request,
-            '\DTS\eBaySDK\RelatedItemsManagement\Types\GetVersionResponse'
+            \DTS\eBaySDK\RelatedItemsManagement\Types\GetVersionResponse::class
         );
     }
 }

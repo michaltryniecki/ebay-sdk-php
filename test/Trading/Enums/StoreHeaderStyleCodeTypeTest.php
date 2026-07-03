@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\StoreHeaderStyleCodeType;
 
-class StoreHeaderStyleCodeTypeTest extends \PHPUnit_Framework_TestCase
+class StoreHeaderStyleCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new StoreHeaderStyleCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\StoreHeaderStyleCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\StoreHeaderStyleCodeType::class, $this->obj);
     }
 }

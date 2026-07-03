@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\ReturnsAcceptedOptionsCodeType;
 
-class ReturnsAcceptedOptionsCodeTypeTest extends \PHPUnit_Framework_TestCase
+class ReturnsAcceptedOptionsCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ReturnsAcceptedOptionsCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\ReturnsAcceptedOptionsCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\ReturnsAcceptedOptionsCodeType::class, $this->obj);
     }
 }

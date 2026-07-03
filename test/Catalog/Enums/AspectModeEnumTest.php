@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Catalog\Enums;
 
 use DTS\eBaySDK\Catalog\Enums\AspectModeEnum;
 
-class AspectModeEnumTest extends \PHPUnit_Framework_TestCase
+class AspectModeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AspectModeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Catalog\Enums\AspectModeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Catalog\Enums\AspectModeEnum::class, $this->obj);
     }
 }

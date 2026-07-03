@@ -33,7 +33,7 @@ class CreateRecurringJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\Base
             'elementName' => 'UUID'
         ],
         'downloadJobRecurringFilter' => [
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\DownloadJobRecurringFilter',
+            'type' => \DTS\eBaySDK\BulkDataExchange\Types\DownloadJobRecurringFilter::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'downloadJobRecurringFilter'
@@ -51,19 +51,19 @@ class CreateRecurringJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\Base
             'elementName' => 'downloadJobType'
         ],
         'monthlyRecurrence' => [
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\MonthlyRecurrence',
+            'type' => \DTS\eBaySDK\BulkDataExchange\Types\MonthlyRecurrence::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'monthlyRecurrence'
         ],
         'weeklyRecurrence' => [
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\WeeklyRecurrence',
+            'type' => \DTS\eBaySDK\BulkDataExchange\Types\WeeklyRecurrence::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'weeklyRecurrence'
         ],
         'dailyRecurrence' => [
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\DailyRecurrence',
+            'type' => \DTS\eBaySDK\BulkDataExchange\Types\DailyRecurrence::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'dailyRecurrence'
@@ -75,22 +75,22 @@ class CreateRecurringJobRequest extends \DTS\eBaySDK\BulkDataExchange\Types\Base
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="http://www.ebay.com/marketplace/services"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="http://www.ebay.com/marketplace/services"';
         }
 
-        if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
-            self::$requestXmlRootElementNames[__CLASS__] = 'createRecurringJobRequest';
+        if (!array_key_exists(self::class, self::$requestXmlRootElementNames)) {
+            self::$requestXmlRootElementNames[self::class] = 'createRecurringJobRequest';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

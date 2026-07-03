@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\ShippingCostPaidByOptionsCodeType;
 
-class ShippingCostPaidByOptionsCodeTypeTest extends \PHPUnit_Framework_TestCase
+class ShippingCostPaidByOptionsCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ShippingCostPaidByOptionsCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\ShippingCostPaidByOptionsCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\ShippingCostPaidByOptionsCodeType::class, $this->obj);
     }
 }

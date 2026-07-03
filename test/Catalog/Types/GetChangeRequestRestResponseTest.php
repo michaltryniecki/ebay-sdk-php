@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Catalog\Types;
 
 use DTS\eBaySDK\Catalog\Types\GetChangeRequestRestResponse;
 
-class GetChangeRequestRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetChangeRequestRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetChangeRequestRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Catalog\Types\GetChangeRequestRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Catalog\Types\GetChangeRequestRestResponse::class, $this->obj);
     }
 
     public function testExtendsChangeRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Catalog\Types\ChangeRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Catalog\Types\ChangeRequest::class, $this->obj);
     }
 }

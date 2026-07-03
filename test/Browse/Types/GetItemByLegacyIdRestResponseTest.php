@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Browse\Types;
 
 use DTS\eBaySDK\Browse\Types\GetItemByLegacyIdRestResponse;
 
-class GetItemByLegacyIdRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetItemByLegacyIdRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetItemByLegacyIdRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Browse\Types\GetItemByLegacyIdRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Browse\Types\GetItemByLegacyIdRestResponse::class, $this->obj);
     }
 
     public function testExtendsItem()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Browse\Types\Item', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Browse\Types\Item::class, $this->obj);
     }
 }

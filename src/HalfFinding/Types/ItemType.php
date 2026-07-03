@@ -51,25 +51,25 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'quantity'
         ],
         'seller' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\UserType',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\UserType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'seller'
         ],
         'price' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\Amount',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'price'
         ],
         'rentalPrice' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\RentalAmount',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\RentalAmount::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'rentalPrice'
         ],
         'shippingService' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\ShippingServiceOptionsType',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\ShippingServiceOptionsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'shippingService'
@@ -105,7 +105,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'description'
         ],
         'storefront' => [
-            'type' => 'DTS\eBaySDK\HalfFinding\Types\StorefrontType',
+            'type' => \DTS\eBaySDK\HalfFinding\Types\StorefrontType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'storefront'
@@ -117,18 +117,18 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="http://www.ebay.com/marketplace/half/v1/services"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="http://www.ebay.com/marketplace/half/v1/services"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

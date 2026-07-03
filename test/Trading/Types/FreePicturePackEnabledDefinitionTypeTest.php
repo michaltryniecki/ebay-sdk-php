@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\FreePicturePackEnabledDefinitionType;
 
-class FreePicturePackEnabledDefinitionTypeTest extends \PHPUnit_Framework_TestCase
+class FreePicturePackEnabledDefinitionTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FreePicturePackEnabledDefinitionType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\FreePicturePackEnabledDefinitionType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\FreePicturePackEnabledDefinitionType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

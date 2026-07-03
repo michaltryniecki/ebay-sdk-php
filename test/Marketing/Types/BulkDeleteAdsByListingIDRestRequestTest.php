@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\BulkDeleteAdsByListingIDRestRequest;
 
-class BulkDeleteAdsByListingIDRestRequestTest extends \PHPUnit_Framework_TestCase
+class BulkDeleteAdsByListingIDRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new BulkDeleteAdsByListingIDRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\BulkDeleteAdsByListingIDRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\BulkDeleteAdsByListingIDRestRequest::class, $this->obj);
     }
 
     public function testExtendsBulkDeleteAdRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\BulkDeleteAdRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\BulkDeleteAdRequest::class, $this->obj);
     }
 }

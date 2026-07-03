@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Shopping\Enums;
 
 use DTS\eBaySDK\Shopping\Enums\ListingTypeCodeType;
 
-class ListingTypeCodeTypeTest extends \PHPUnit_Framework_TestCase
+class ListingTypeCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ListingTypeCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Enums\ListingTypeCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Shopping\Enums\ListingTypeCodeType::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Taxonomy\Types;
 
 use DTS\eBaySDK\Taxonomy\Types\GetItemAspectsForCategoryRestResponse;
 
-class GetItemAspectsForCategoryRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetItemAspectsForCategoryRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetItemAspectsForCategoryRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Taxonomy\Types\GetItemAspectsForCategoryRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Taxonomy\Types\GetItemAspectsForCategoryRestResponse::class, $this->obj);
     }
 
     public function testExtendsAspectMetadata()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Taxonomy\Types\AspectMetadata', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Taxonomy\Types\AspectMetadata::class, $this->obj);
     }
 }

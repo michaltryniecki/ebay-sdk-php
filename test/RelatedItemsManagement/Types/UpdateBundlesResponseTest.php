@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\RelatedItemsManagement\Types;
 
 use DTS\eBaySDK\RelatedItemsManagement\Types\UpdateBundlesResponse;
 
-class UpdateBundlesResponseTest extends \PHPUnit_Framework_TestCase
+class UpdateBundlesResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateBundlesResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\RelatedItemsManagement\Types\UpdateBundlesResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\RelatedItemsManagement\Types\UpdateBundlesResponse::class, $this->obj);
     }
 
     public function testExtendsBaseResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\RelatedItemsManagement\Types\BaseResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\RelatedItemsManagement\Types\BaseResponse::class, $this->obj);
     }
 }

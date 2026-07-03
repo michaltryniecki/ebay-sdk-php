@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\ProductMetadata\Types;
 
 use DTS\eBaySDK\ProductMetadata\Types\StringTypeSpecificInformation;
 
-class StringTypeSpecificInformationTest extends \PHPUnit_Framework_TestCase
+class StringTypeSpecificInformationTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new StringTypeSpecificInformation();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ProductMetadata\Types\StringTypeSpecificInformation', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ProductMetadata\Types\StringTypeSpecificInformation::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

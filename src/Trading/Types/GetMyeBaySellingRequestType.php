@@ -28,43 +28,43 @@ class GetMyeBaySellingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
      */
     private static $propertyTypes = [
         'ScheduledList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ScheduledList'
         ],
         'ActiveList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ActiveList'
         ],
         'SoldList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SoldList'
         ],
         'UnsoldList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UnsoldList'
         ],
         'DeletedFromSoldList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeletedFromSoldList'
         ],
         'DeletedFromUnsoldList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DeletedFromUnsoldList'
         ],
         'SellingSummary' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemListCustomizationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemListCustomizationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellingSummary'
@@ -82,22 +82,22 @@ class GetMyeBaySellingRequestType extends \DTS\eBaySDK\Trading\Types\AbstractReq
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        if (!array_key_exists(__CLASS__, self::$requestXmlRootElementNames)) {
-            self::$requestXmlRootElementNames[__CLASS__] = 'GetMyeBaySellingRequest';
+        if (!array_key_exists(self::class, self::$requestXmlRootElementNames)) {
+            self::$requestXmlRootElementNames[self::class] = 'GetMyeBaySellingRequest';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

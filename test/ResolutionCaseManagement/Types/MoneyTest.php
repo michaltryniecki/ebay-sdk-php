@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\ResolutionCaseManagement\Types;
 
 use DTS\eBaySDK\ResolutionCaseManagement\Types\Money;
 
-class MoneyTest extends \PHPUnit_Framework_TestCase
+class MoneyTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new Money();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ResolutionCaseManagement\Types\Money', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ResolutionCaseManagement\Types\Money::class, $this->obj);
     }
 
     public function testExtendsDecimalType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\DecimalType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\DecimalType::class, $this->obj);
     }
 }

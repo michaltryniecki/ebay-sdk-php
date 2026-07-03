@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\ListingAnalyzerRecommendationsType;
 
-class ListingAnalyzerRecommendationsTypeTest extends \PHPUnit_Framework_TestCase
+class ListingAnalyzerRecommendationsTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ListingAnalyzerRecommendationsType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\ListingAnalyzerRecommendationsType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\ListingAnalyzerRecommendationsType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

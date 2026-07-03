@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Merchandising\Types;
 
 use DTS\eBaySDK\Merchandising\Types\ItemRecommendations;
 
-class ItemRecommendationsTest extends \PHPUnit_Framework_TestCase
+class ItemRecommendationsTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ItemRecommendations();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Merchandising\Types\ItemRecommendations', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Merchandising\Types\ItemRecommendations::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

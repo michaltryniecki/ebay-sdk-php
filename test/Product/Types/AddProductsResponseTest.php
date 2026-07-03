@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Product\Types;
 
 use DTS\eBaySDK\Product\Types\AddProductsResponse;
 
-class AddProductsResponseTest extends \PHPUnit_Framework_TestCase
+class AddProductsResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AddProductsResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Product\Types\AddProductsResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Product\Types\AddProductsResponse::class, $this->obj);
     }
 
     public function testExtendsBaseServiceResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Product\Types\BaseServiceResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Product\Types\BaseServiceResponse::class, $this->obj);
     }
 }

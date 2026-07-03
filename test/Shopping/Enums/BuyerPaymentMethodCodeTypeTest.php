@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Shopping\Enums;
 
 use DTS\eBaySDK\Shopping\Enums\BuyerPaymentMethodCodeType;
 
-class BuyerPaymentMethodCodeTypeTest extends \PHPUnit_Framework_TestCase
+class BuyerPaymentMethodCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new BuyerPaymentMethodCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Enums\BuyerPaymentMethodCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Shopping\Enums\BuyerPaymentMethodCodeType::class, $this->obj);
     }
 }

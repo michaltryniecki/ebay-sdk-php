@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Shopping\Types;
 
 use DTS\eBaySDK\Shopping\Types\FindHalfProductsResponseType;
 
-class FindHalfProductsResponseTypeTest extends \PHPUnit_Framework_TestCase
+class FindHalfProductsResponseTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FindHalfProductsResponseType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Types\FindHalfProductsResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Shopping\Types\FindHalfProductsResponseType::class, $this->obj);
     }
 
     public function testExtendsAbstractResponseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Types\AbstractResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Shopping\Types\AbstractResponseType::class, $this->obj);
     }
 }

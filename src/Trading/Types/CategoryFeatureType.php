@@ -143,7 +143,7 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'CategoryID'
         ],
         'ListingDuration' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingDurationReferenceType',
+            'type' => \DTS\eBaySDK\Trading\Types\ListingDurationReferenceType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ListingDuration'
@@ -365,7 +365,7 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'BuyerGuaranteeEnabled'
         ],
         'GalleryFeaturedDurations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingEnhancementDurationReferenceType',
+            'type' => \DTS\eBaySDK\Trading\Types\ListingEnhancementDurationReferenceType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'GalleryFeaturedDurations'
@@ -617,7 +617,7 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'StoreOwnerExtendedListingDurationsEnabled'
         ],
         'StoreOwnerExtendedListingDurations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\StoreOwnerExtendedListingDurationsType',
+            'type' => \DTS\eBaySDK\Trading\Types\StoreOwnerExtendedListingDurationsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StoreOwnerExtendedListingDurations'
@@ -635,25 +635,25 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'HandlingTimeEnabled'
         ],
         'MaxFlatShippingCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'MaxFlatShippingCost'
         ],
         'Group1MaxFlatShippingCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Group1MaxFlatShippingCost'
         ],
         'Group2MaxFlatShippingCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Group2MaxFlatShippingCost'
         ],
         'Group3MaxFlatShippingCost' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Group3MaxFlatShippingCost'
@@ -707,7 +707,7 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ConditionEnabled'
         ],
         'ConditionValues' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ConditionValuesType',
+            'type' => \DTS\eBaySDK\Trading\Types\ConditionValuesType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ConditionValues'
@@ -845,18 +845,18 @@ class CategoryFeatureType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

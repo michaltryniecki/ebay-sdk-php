@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Order\Types;
 
 use DTS\eBaySDK\Order\Types\UpdateGuestLineItemShippingAddressRestResponse;
 
-class UpdateGuestLineItemShippingAddressRestResponseTest extends \PHPUnit_Framework_TestCase
+class UpdateGuestLineItemShippingAddressRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateGuestLineItemShippingAddressRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\UpdateGuestLineItemShippingAddressRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\UpdateGuestLineItemShippingAddressRestResponse::class, $this->obj);
     }
 
     public function testExtendsCheckoutSessionResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\CheckoutSessionResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\CheckoutSessionResponse::class, $this->obj);
     }
 }

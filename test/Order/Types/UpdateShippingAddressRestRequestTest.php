@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Order\Types;
 
 use DTS\eBaySDK\Order\Types\UpdateShippingAddressRestRequest;
 
-class UpdateShippingAddressRestRequestTest extends \PHPUnit_Framework_TestCase
+class UpdateShippingAddressRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateShippingAddressRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\UpdateShippingAddressRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\UpdateShippingAddressRestRequest::class, $this->obj);
     }
 
     public function testExtendsShippingAddressImpl()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Types\ShippingAddressImpl', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Types\ShippingAddressImpl::class, $this->obj);
     }
 }

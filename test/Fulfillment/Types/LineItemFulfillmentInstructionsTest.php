@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Fulfillment\Types;
 
 use DTS\eBaySDK\Fulfillment\Types\LineItemFulfillmentInstructions;
 
-class LineItemFulfillmentInstructionsTest extends \PHPUnit_Framework_TestCase
+class LineItemFulfillmentInstructionsTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new LineItemFulfillmentInstructions();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Fulfillment\Types\LineItemFulfillmentInstructions', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Fulfillment\Types\LineItemFulfillmentInstructions::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

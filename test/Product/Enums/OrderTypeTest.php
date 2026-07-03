@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Product\Enums;
 
 use DTS\eBaySDK\Product\Enums\OrderType;
 
-class OrderTypeTest extends \PHPUnit_Framework_TestCase
+class OrderTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new OrderType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Product\Enums\OrderType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Product\Enums\OrderType::class, $this->obj);
     }
 }

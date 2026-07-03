@@ -40,7 +40,7 @@ class MerchandisingService extends \DTS\eBaySDK\Merchandising\Services\Merchandi
         return $this->callOperationAsync(
             'getRelatedCategoryItems',
             $request,
-            '\DTS\eBaySDK\Merchandising\Types\MerchandisingServiceItemResponse'
+            \DTS\eBaySDK\Merchandising\Types\MerchandisingServiceItemResponse::class
         );
     }
 
@@ -62,7 +62,7 @@ class MerchandisingService extends \DTS\eBaySDK\Merchandising\Services\Merchandi
         return $this->callOperationAsync(
             'getMostWatchedItems',
             $request,
-            '\DTS\eBaySDK\Merchandising\Types\MerchandisingServiceItemResponse'
+            \DTS\eBaySDK\Merchandising\Types\MerchandisingServiceItemResponse::class
         );
     }
 
@@ -84,7 +84,7 @@ class MerchandisingService extends \DTS\eBaySDK\Merchandising\Services\Merchandi
         return $this->callOperationAsync(
             'getTopSellingProducts',
             $request,
-            '\DTS\eBaySDK\Merchandising\Types\MerchandisingServiceProductResponse'
+            \DTS\eBaySDK\Merchandising\Types\MerchandisingServiceProductResponse::class
         );
     }
 
@@ -106,7 +106,7 @@ class MerchandisingService extends \DTS\eBaySDK\Merchandising\Services\Merchandi
         return $this->callOperationAsync(
             'getDeals',
             $request,
-            '\DTS\eBaySDK\Merchandising\Types\MerchandisingServiceItemResponse'
+            \DTS\eBaySDK\Merchandising\Types\MerchandisingServiceItemResponse::class
         );
     }
 
@@ -128,7 +128,7 @@ class MerchandisingService extends \DTS\eBaySDK\Merchandising\Services\Merchandi
         return $this->callOperationAsync(
             'getSimilarItems',
             $request,
-            '\DTS\eBaySDK\Merchandising\Types\MerchandisingServiceItemResponse'
+            \DTS\eBaySDK\Merchandising\Types\MerchandisingServiceItemResponse::class
         );
     }
 
@@ -150,7 +150,7 @@ class MerchandisingService extends \DTS\eBaySDK\Merchandising\Services\Merchandi
         return $this->callOperationAsync(
             'getVersion',
             $request,
-            '\DTS\eBaySDK\Merchandising\Types\GetVersionResponse'
+            \DTS\eBaySDK\Merchandising\Types\GetVersionResponse::class
         );
     }
 }

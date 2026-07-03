@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Taxonomy\Types;
 
 use DTS\eBaySDK\Taxonomy\Types\GetADefaultCategoryTreeIdRestResponse;
 
-class GetADefaultCategoryTreeIdRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetADefaultCategoryTreeIdRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetADefaultCategoryTreeIdRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Taxonomy\Types\GetADefaultCategoryTreeIdRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Taxonomy\Types\GetADefaultCategoryTreeIdRestResponse::class, $this->obj);
     }
 
     public function testExtendsBaseCategoryTree()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Taxonomy\Types\BaseCategoryTree', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Taxonomy\Types\BaseCategoryTree::class, $this->obj);
     }
 }

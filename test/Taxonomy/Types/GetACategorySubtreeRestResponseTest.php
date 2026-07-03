@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Taxonomy\Types;
 
 use DTS\eBaySDK\Taxonomy\Types\GetACategorySubtreeRestResponse;
 
-class GetACategorySubtreeRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetACategorySubtreeRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetACategorySubtreeRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Taxonomy\Types\GetACategorySubtreeRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Taxonomy\Types\GetACategorySubtreeRestResponse::class, $this->obj);
     }
 
     public function testExtendsCategorySubtree()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Taxonomy\Types\CategorySubtree', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Taxonomy\Types\CategorySubtree::class, $this->obj);
     }
 }

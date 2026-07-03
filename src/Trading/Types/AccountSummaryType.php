@@ -46,31 +46,31 @@ class AccountSummaryType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'AccountState'
         ],
         'InvoicePayment' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InvoicePayment'
         ],
         'InvoiceCredit' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InvoiceCredit'
         ],
         'InvoiceNewFee' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InvoiceNewFee'
         ],
         'AdditionalAccount' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AdditionalAccountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AdditionalAccountType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'AdditionalAccount'
         ],
         'AmountPastDue' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'AmountPastDue'
@@ -112,7 +112,7 @@ class AccountSummaryType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'CreditCardModifyDate'
         ],
         'CurrentBalance' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CurrentBalance'
@@ -124,7 +124,7 @@ class AccountSummaryType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'Email'
         ],
         'InvoiceBalance' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InvoiceBalance'
@@ -136,7 +136,7 @@ class AccountSummaryType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'InvoiceDate'
         ],
         'LastAmountPaid' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'LastAmountPaid'
@@ -166,18 +166,18 @@ class AccountSummaryType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

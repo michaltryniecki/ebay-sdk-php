@@ -27,21 +27,21 @@ class OAuthService
         'getUserToken' => [
             'method' => 'POST',
             'resource' => 'oauth2/token',
-            'responseClass' => '\DTS\eBaySDK\OAuth\Types\GetUserTokenRestResponse',
+            'responseClass' => \DTS\eBaySDK\OAuth\Types\GetUserTokenRestResponse::class,
             'params' => [
             ]
         ],
         'refreshUserToken' => [
             'method' => 'POST',
             'resource' => 'oauth2/token',
-            'responseClass' => '\DTS\eBaySDK\OAuth\Types\RefreshUserTokenRestResponse',
+            'responseClass' => \DTS\eBaySDK\OAuth\Types\RefreshUserTokenRestResponse::class,
             'params' => [
             ]
         ],
         'getAppToken' => [
             'method' => 'POST',
             'resource' => 'oauth2/token',
-            'responseClass' => '\DTS\eBaySDK\OAuth\Types\GetAppTokenRestResponse',
+            'responseClass' => \DTS\eBaySDK\OAuth\Types\GetAppTokenRestResponse::class,
             'params' => [
             ]
         ]
@@ -90,9 +90,9 @@ class OAuthService
                 'fn'    => 'DTS\eBaySDK\applyProfile',
             ],
             'credentials' => [
-                'valid'   => ['DTS\eBaySDK\Credentials\CredentialsInterface', 'array', 'callable'],
+                'valid'   => [\DTS\eBaySDK\Credentials\CredentialsInterface::class, 'array', 'callable'],
                 'fn'      => 'DTS\eBaySDK\applyCredentials',
-                'default' => [CredentialsProvider::class, 'defaultProvider']
+                'default' => CredentialsProvider::defaultProvider(...)
             ],
             'debug' => [
                 'valid'   => ['bool', 'array'],
@@ -132,9 +132,7 @@ class OAuthService
     {
         return $option === null
             ? $this->config
-            : (isset($this->config[$option])
-                ? $this->config[$option]
-                : null);
+            : ($this->config[$option] ?? null);
     }
 
     /**
@@ -185,11 +183,11 @@ class OAuthService
             'redirect_uri'  => $this->getConfig('ruName'),
             'response_type' => 'code',
             'state'         => $params['state'],
-            'scope'         => implode($params['scope'], ' ')
+            'scope'         => implode(' ', $params['scope'])
 
         ];
 
-        return $url.http_build_query($urlParams, null, '&', PHP_QUERY_RFC3986);
+        return $url.http_build_query($urlParams, '', '&', PHP_QUERY_RFC3986);
     }
 
     /**
@@ -249,7 +247,7 @@ class OAuthService
      * @param \DTS\eBaySDK\OAuth\Types\GetAppTokenRestRequest $request
      * @return \DTS\eBaySDK\OAuth\Types\GetAppTokenRestResponse
      */
-    public function getAppToken(\DTS\eBaySDK\OAuth\Types\GetAppTokenRestRequest $request = null)
+    public function getAppToken(?\DTS\eBaySDK\OAuth\Types\GetAppTokenRestRequest $request = null)
     {
         return $this->getAppTokenAsync($request)->wait();
     }
@@ -258,7 +256,7 @@ class OAuthService
      * @param \DTS\eBaySDK\OAuth\Types\GetAppTokenRestRequest $request
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getAppTokenAsync(\DTS\eBaySDK\OAuth\Types\GetAppTokenRestRequest $request = null)
+    public function getAppTokenAsync(?\DTS\eBaySDK\OAuth\Types\GetAppTokenRestRequest $request = null)
     {
         if (!$request) {
             $request = new \DTS\eBaySDK\OAuth\Types\GetAppTokenRestRequest();
@@ -284,7 +282,7 @@ class OAuthService
      *
      * @return \GuzzleHttp\Promise\PromiseInterface A promise that will be resolved with an object created from the JSON response.
      */
-    private function callOperationAsync($name, \DTS\eBaySDK\Types\BaseType $request = null)
+    private function callOperationAsync($name, ?\DTS\eBaySDK\Types\BaseType $request = null)
     {
         $operation = static::$operations[$name];
 
@@ -360,7 +358,7 @@ class OAuthService
             return $carry;
         }, []);
 
-        return empty($request) ? '' : http_build_query($params, null, '&', PHP_QUERY_RFC3986);
+        return empty($request) ? '' : http_build_query($params, '', '&', PHP_QUERY_RFC3986);
     }
 
     /**

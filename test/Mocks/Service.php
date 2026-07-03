@@ -21,7 +21,7 @@ class Service extends \DTS\eBaySDK\Test\Mocks\BaseService
         return $this->callOperationAsync(
             'foo',
             $request,
-            '\DTS\eBaySDK\Test\Mocks\ComplexClass'
+            \DTS\eBaySDK\Test\Mocks\ComplexClass::class
         )->wait();
     }
 
@@ -30,7 +30,7 @@ class Service extends \DTS\eBaySDK\Test\Mocks\BaseService
         return $this->callOperationAsync(
             'foo',
             $request,
-            '\DTS\eBaySDK\Test\Mocks\ComplexClass'
+            \DTS\eBaySDK\Test\Mocks\ComplexClass::class
         )->wait();
     }
 }

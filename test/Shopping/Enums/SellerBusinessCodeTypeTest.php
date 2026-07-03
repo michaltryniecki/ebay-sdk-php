@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Shopping\Enums;
 
 use DTS\eBaySDK\Shopping\Enums\SellerBusinessCodeType;
 
-class SellerBusinessCodeTypeTest extends \PHPUnit_Framework_TestCase
+class SellerBusinessCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SellerBusinessCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Enums\SellerBusinessCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Shopping\Enums\SellerBusinessCodeType::class, $this->obj);
     }
 }

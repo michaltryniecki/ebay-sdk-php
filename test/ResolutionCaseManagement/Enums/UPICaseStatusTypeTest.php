@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\ResolutionCaseManagement\Enums;
 
 use DTS\eBaySDK\ResolutionCaseManagement\Enums\UPICaseStatusType;
 
-class UPICaseStatusTypeTest extends \PHPUnit_Framework_TestCase
+class UPICaseStatusTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UPICaseStatusType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ResolutionCaseManagement\Enums\UPICaseStatusType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ResolutionCaseManagement\Enums\UPICaseStatusType::class, $this->obj);
     }
 }

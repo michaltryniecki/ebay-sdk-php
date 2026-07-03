@@ -5,53 +5,53 @@ use DTS\eBaySDK\Test\Mocks\AmountClass;
 use DTS\eBaySDK\Test\Mocks\SimpleClass;
 use DTS\eBaySDK\Test\Mocks\ComplexClass;
 
-class ComplexClassTest extends \PHPUnit_Framework_TestCase
+class ComplexClassTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ComplexClass();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Test\Mocks\ComplexClass', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Test\Mocks\ComplexClass::class, $this->obj);
     }
 
     public function testExtendsSimpleClass()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Test\Mocks\SimpleClass', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Test\Mocks\SimpleClass::class, $this->obj);
     }
 
     public function testGettingSettingProperties()
     {
         $this->obj->foo = 'foo';
         $this->assertEquals('foo', $this->obj->foo);
-        $this->assertInternalType('string', $this->obj->foo);
+        $this->assertIsString($this->obj->foo);
     }
 
     public function testGettingSettingInheritedProperties()
     {
         $this->obj->integer = 123;
         $this->assertEquals(123, $this->obj->integer);
-        $this->assertInternalType('integer', $this->obj->integer);
+        $this->assertIsInt($this->obj->integer);
 
         $this->obj->string = 'foo';
         $this->assertEquals('foo', $this->obj->string);
-        $this->assertInternalType('string', $this->obj->string);
+        $this->assertIsString($this->obj->string);
 
         $this->obj->double = 123.45;
         $this->assertEquals(123.45, $this->obj->double);
-        $this->assertInternalType('float', $this->obj->double);
+        $this->assertIsFloat($this->obj->double);
 
         $this->obj->booleanTrue = true;
         $this->assertEquals(true, $this->obj->booleanTrue);
-        $this->assertInternalType('boolean', $this->obj->booleanTrue);
+        $this->assertIsBool($this->obj->booleanTrue);
 
         $this->obj->booleanFalse = false;
         $this->assertEquals(false, $this->obj->booleanFalse);
-        $this->assertInternalType('boolean', $this->obj->booleanFalse);
+        $this->assertIsBool($this->obj->booleanFalse);
 
         $date = new \DateTime('2000-01-01', new \DateTimeZone("UTC"));
         $this->obj->DateTime = $date;
@@ -61,27 +61,27 @@ class ComplexClassTest extends \PHPUnit_Framework_TestCase
         $simpleClass = new SimpleClass();
         $this->obj->SimpleClass = $simpleClass;
         $this->assertEquals($simpleClass, $this->obj->SimpleClass);
-        $this->assertInstanceOf('\DTS\eBaySDK\Test\Mocks\SimpleClass', $this->obj->SimpleClass);
+        $this->assertInstanceOf(\DTS\eBaySDK\Test\Mocks\SimpleClass::class, $this->obj->SimpleClass);
 
         $this->assertEquals(0, count($this->obj->strings));
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $this->obj->strings);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\RepeatableType::class, $this->obj->strings);
 
         $this->obj->strings[] = 'foo';
         $this->obj->strings[] = 'bar';
         $this->assertEquals(2, count($this->obj->strings));
         $this->assertEquals('foo', $this->obj->strings[0]);
         $this->assertEquals('bar', $this->obj->strings[1]);
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $this->obj->strings);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\RepeatableType::class, $this->obj->strings);
 
         $this->obj->strings = ['foo', 'bar'];
         $this->assertEquals(2, count($this->obj->strings));
         $this->assertEquals('foo', $this->obj->strings[0]);
         $this->assertEquals('bar', $this->obj->strings[1]);
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $this->obj->strings);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\RepeatableType::class, $this->obj->strings);
 
         $this->obj->strings = [];
         $this->assertEquals(0, count($this->obj->strings));
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\RepeatableType', $this->obj->strings);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\RepeatableType::class, $this->obj->strings);
     }
 
     public function testToXml()

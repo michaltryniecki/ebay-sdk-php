@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\SellingManagerPaidStatusCodeType;
 
-class SellingManagerPaidStatusCodeTypeTest extends \PHPUnit_Framework_TestCase
+class SellingManagerPaidStatusCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SellingManagerPaidStatusCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\SellingManagerPaidStatusCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\SellingManagerPaidStatusCodeType::class, $this->obj);
     }
 }

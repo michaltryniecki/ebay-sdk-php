@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\ProductIdentiferEnabledCodeType;
 
-class ProductIdentiferEnabledCodeTypeTest extends \PHPUnit_Framework_TestCase
+class ProductIdentiferEnabledCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ProductIdentiferEnabledCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\ProductIdentiferEnabledCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\ProductIdentiferEnabledCodeType::class, $this->obj);
     }
 }

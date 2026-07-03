@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\ReturnManagement\Enums;
 
 use DTS\eBaySDK\ReturnManagement\Enums\ReturnSortType;
 
-class ReturnSortTypeTest extends \PHPUnit_Framework_TestCase
+class ReturnSortTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ReturnSortType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ReturnManagement\Enums\ReturnSortType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ReturnManagement\Enums\ReturnSortType::class, $this->obj);
     }
 }

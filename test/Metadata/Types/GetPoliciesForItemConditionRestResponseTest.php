@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Metadata\Types;
 
 use DTS\eBaySDK\Metadata\Types\GetPoliciesForItemConditionRestResponse;
 
-class GetPoliciesForItemConditionRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetPoliciesForItemConditionRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetPoliciesForItemConditionRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Metadata\Types\GetPoliciesForItemConditionRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Metadata\Types\GetPoliciesForItemConditionRestResponse::class, $this->obj);
     }
 
     public function testExtendsItemConditionPolicyResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Metadata\Types\ItemConditionPolicyResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Metadata\Types\ItemConditionPolicyResponse::class, $this->obj);
     }
 }

@@ -78,7 +78,7 @@ class Parser
     /**
      * @param Lexer $lexer Lexer used to tokenize expressions
      */
-    public function __construct(Lexer $lexer = null)
+    public function __construct(?Lexer $lexer = null)
     {
         $this->lexer = $lexer ?: new Lexer();
     }
@@ -223,16 +223,13 @@ class Parser
     {
         static $nextTypes = [T::T_NUMBER => true, T::T_COLON => true, T::T_STAR => true];
         $this->next($nextTypes);
-        switch ($this->token['type']) {
-            case T::T_NUMBER:
-            case T::T_COLON:
-                return [
-                    'type' => 'subexpression',
-                    'children' => [$left, $this->parseArrayIndexExpression()]
-                ];
-            default:
-                return $this->parseWildcardArray($left);
-        }
+        return match ($this->token['type']) {
+            T::T_NUMBER, T::T_COLON => [
+                'type' => 'subexpression',
+                'children' => [$left, $this->parseArrayIndexExpression()]
+            ],
+            default => $this->parseWildcardArray($left),
+        };
     }
 
     private function led_flatten(array $left)
@@ -386,7 +383,7 @@ class Parser
         ];
     }
 
-    private function parseWildcardObject(array $left = null)
+    private function parseWildcardObject(?array $left = null)
     {
         $this->next();
 
@@ -400,7 +397,7 @@ class Parser
         ];
     }
 
-    private function parseWildcardArray(array $left = null)
+    private function parseWildcardArray(?array $left = null)
     {
         static $getRbracket = [T::T_RBRACKET => true];
         $this->next($getRbracket);
@@ -493,7 +490,7 @@ class Parser
             : $this->tokens[$this->tpos + 1]['type'];
     }
 
-    private function next(array $match = null)
+    private function next(?array $match = null)
     {
         if (!isset($this->tokens[$this->tpos + 1])) {
             $this->token = self::$nullToken;
@@ -520,18 +517,14 @@ class Parser
      */
     public function __call($method, $args)
     {
-        $prefix = substr($method, 0, 4);
+        $prefix = substr((string) $method, 0, 4);
         if ($prefix == 'nud_' || $prefix == 'led_') {
-            $token = substr($method, 4);
+            $token = substr((string) $method, 4);
             $message = "Unexpected \"$token\" token ($method). Expected one of"
                 . " the following tokens: "
-                . implode(', ', array_map(function ($i) {
-                    return '"' . substr($i, 4) . '"';
-                }, array_filter(
+                . implode(', ', array_map(fn($i) => '"' . substr((string) $i, 4) . '"', array_filter(
                     get_class_methods($this),
-                    function ($i) use ($prefix) {
-                        return strpos($i, $prefix) === 0;
-                    }
+                    fn($i) => str_starts_with((string) $i, $prefix)
                 )));
             throw $this->syntax($message);
         }

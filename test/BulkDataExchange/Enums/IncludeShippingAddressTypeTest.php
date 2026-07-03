@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\BulkDataExchange\Enums;
 
 use DTS\eBaySDK\BulkDataExchange\Enums\IncludeShippingAddressType;
 
-class IncludeShippingAddressTypeTest extends \PHPUnit_Framework_TestCase
+class IncludeShippingAddressTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new IncludeShippingAddressType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\BulkDataExchange\Enums\IncludeShippingAddressType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\BulkDataExchange\Enums\IncludeShippingAddressType::class, $this->obj);
     }
 }

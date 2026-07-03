@@ -159,13 +159,13 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'AutoPay'
         ],
         'PaymentDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PaymentDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\PaymentDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PaymentDetails'
         ],
         'BiddingDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BiddingDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\BiddingDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BiddingDetails'
@@ -183,7 +183,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'BuyerProtection'
         ],
         'BuyItNowPrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyItNowPrice'
@@ -195,7 +195,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'CategoryMappingAllowed'
         ],
         'Charity' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CharityType',
+            'type' => \DTS\eBaySDK\Trading\Types\CharityType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Charity'
@@ -237,13 +237,13 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ItemID'
         ],
         'ListingDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\ListingDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListingDetails'
         ],
         'ListingDesigner' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ListingDesignerType',
+            'type' => \DTS\eBaySDK\Trading\Types\ListingDesignerType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ListingDesigner'
@@ -291,13 +291,13 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'PayPalEmailAddress'
         ],
         'PrimaryCategory' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CategoryType',
+            'type' => \DTS\eBaySDK\Trading\Types\CategoryType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PrimaryCategory'
         ],
         'ProductListingDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ProductListingDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\ProductListingDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ProductListingDetails'
@@ -315,7 +315,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'PrivateNotes'
         ],
         'Regulatory' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\RegulatoryType',
+            'type' => \DTS\eBaySDK\Trading\Types\RegulatoryType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Regulatory'
@@ -327,13 +327,13 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'RelistLink'
         ],
         'ReservePrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReservePrice'
         ],
         'ReviseStatus' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ReviseStatusType',
+            'type' => \DTS\eBaySDK\Trading\Types\ReviseStatusType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReviseStatus'
@@ -345,31 +345,31 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ScheduleTime'
         ],
         'SecondaryCategory' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CategoryType',
+            'type' => \DTS\eBaySDK\Trading\Types\CategoryType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SecondaryCategory'
         ],
         'FreeAddedCategory' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\CategoryType',
+            'type' => \DTS\eBaySDK\Trading\Types\CategoryType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FreeAddedCategory'
         ],
         'Seller' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\UserType',
+            'type' => \DTS\eBaySDK\Trading\Types\UserType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Seller'
         ],
         'SellingStatus' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellingStatusType',
+            'type' => \DTS\eBaySDK\Trading\Types\SellingStatusType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellingStatus'
         ],
         'ShippingDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\ShippingDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingDetails'
@@ -387,13 +387,13 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'Site'
         ],
         'StartPrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'StartPrice'
         ],
         'Storefront' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\StorefrontType',
+            'type' => \DTS\eBaySDK\Trading\Types\StorefrontType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Storefront'
@@ -423,7 +423,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'UUID'
         ],
         'VATDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\VATDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\VATDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'VATDetails'
@@ -453,7 +453,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'DisableBuyerRequirements'
         ],
         'BestOfferDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BestOfferDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\BestOfferDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BestOfferDetails'
@@ -525,7 +525,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShippingTermsInDescription'
         ],
         'PictureDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PictureDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\PictureDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PictureDetails'
@@ -537,7 +537,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'DispatchTimeMax'
         ],
         'SellerContactDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
+            'type' => \DTS\eBaySDK\Trading\Types\AddressType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerContactDetails'
@@ -555,7 +555,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ProxyItem'
         ],
         'ExtendedSellerContactDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ExtendedContactDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\ExtendedContactDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ExtendedSellerContactDetails'
@@ -573,19 +573,19 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'NewLeadCount'
         ],
         'ItemSpecifics' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\NameValueListArrayType',
+            'type' => \DTS\eBaySDK\Trading\Types\NameValueListArrayType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemSpecifics'
         ],
         'ClassifiedAdPayPerLeadFee' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ClassifiedAdPayPerLeadFee'
         ],
         'ApplyBuyerProtection' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BuyerProtectionDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\BuyerProtectionDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ApplyBuyerProtection'
@@ -615,7 +615,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'UpdateReturnPolicy'
         ],
         'ItemPolicyViolation' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemPolicyViolationType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemPolicyViolationType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemPolicyViolation'
@@ -627,25 +627,25 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'CrossBorderTrade'
         ],
         'BusinessSellerDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BusinessSellerDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\BusinessSellerDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BusinessSellerDetails'
         ],
         'BuyerGuaranteePrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyerGuaranteePrice'
         ],
         'BuyerRequirementDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\BuyerRequirementDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\BuyerRequirementDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'BuyerRequirementDetails'
         ],
         'ReturnPolicy' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ReturnPolicyType',
+            'type' => \DTS\eBaySDK\Trading\Types\ReturnPolicyType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ReturnPolicy'
@@ -669,13 +669,13 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'IntegratedMerchantCreditCardEnabled'
         ],
         'Variations' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\VariationsType',
+            'type' => \DTS\eBaySDK\Trading\Types\VariationsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'Variations'
         ],
         'ItemCompatibilityList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemCompatibilityListType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemCompatibilityListType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ItemCompatibilityList'
@@ -723,7 +723,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'QuantityThreshold'
         ],
         'DiscountPriceInfo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\DiscountPriceInfoType',
+            'type' => \DTS\eBaySDK\Trading\Types\DiscountPriceInfoType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DiscountPriceInfo'
@@ -747,25 +747,25 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'VRM'
         ],
         'QuantityInfo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\QuantityInfoType',
+            'type' => \DTS\eBaySDK\Trading\Types\QuantityInfoType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantityInfo'
         ],
         'SellerProfiles' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\SellerProfilesType',
+            'type' => \DTS\eBaySDK\Trading\Types\SellerProfilesType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SellerProfiles'
         ],
         'ShippingServiceCostOverrideList' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShippingServiceCostOverrideListType',
+            'type' => \DTS\eBaySDK\Trading\Types\ShippingServiceCostOverrideListType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingServiceCostOverrideList'
         ],
         'ShippingPackageDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShipPackageDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\ShipPackageDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingPackageDetails'
@@ -777,19 +777,19 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'TopRatedListing'
         ],
         'QuantityRestrictionPerBuyer' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\QuantityRestrictionPerBuyerInfoType',
+            'type' => \DTS\eBaySDK\Trading\Types\QuantityRestrictionPerBuyerInfoType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'QuantityRestrictionPerBuyer'
         ],
         'FloorPrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FloorPrice'
         ],
         'CeilingPrice' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CeilingPrice'
@@ -801,7 +801,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'IsIntermediatedShippingEligible'
         ],
         'UnitInfo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\UnitInfoType',
+            'type' => \DTS\eBaySDK\Trading\Types\UnitInfoType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'UnitInfo'
@@ -837,7 +837,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'IncludeRecommendations'
         ],
         'PickupInStoreDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\PickupInStoreDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\PickupInStoreDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PickupInStoreDetails'
@@ -879,7 +879,7 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'LiveAuction'
         ],
         'DigitalGoodInfo' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\DigitalGoodInfoType',
+            'type' => \DTS\eBaySDK\Trading\Types\DigitalGoodInfoType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DigitalGoodInfo'
@@ -915,18 +915,18 @@ class ItemType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

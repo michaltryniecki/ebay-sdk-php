@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\CombinedPaymentPeriodCodeType;
 
-class CombinedPaymentPeriodCodeTypeTest extends \PHPUnit_Framework_TestCase
+class CombinedPaymentPeriodCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CombinedPaymentPeriodCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\CombinedPaymentPeriodCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\CombinedPaymentPeriodCodeType::class, $this->obj);
     }
 }

@@ -26,37 +26,37 @@ class DownloadRequestFilter extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'feeSettlementReportFilter' => [
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\FeeSettlementReportFilter',
+            'type' => \DTS\eBaySDK\BulkDataExchange\Types\FeeSettlementReportFilter::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'feeSettlementReportFilter'
         ],
         'siteFilter' => [
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\SiteFilter',
+            'type' => \DTS\eBaySDK\BulkDataExchange\Types\SiteFilter::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'siteFilter'
         ],
         'activeInventoryReportFilter' => [
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\ActiveInventoryReportFilter',
+            'type' => \DTS\eBaySDK\BulkDataExchange\Types\ActiveInventoryReportFilter::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'activeInventoryReportFilter'
         ],
         'dateFilter' => [
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\DateFilter',
+            'type' => \DTS\eBaySDK\BulkDataExchange\Types\DateFilter::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'dateFilter'
         ],
         'soldReportFilter' => [
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\SoldReportFilter',
+            'type' => \DTS\eBaySDK\BulkDataExchange\Types\SoldReportFilter::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'soldReportFilter'
         ],
         'orderReportFilter' => [
-            'type' => 'DTS\eBaySDK\BulkDataExchange\Types\OrderReportFilter',
+            'type' => \DTS\eBaySDK\BulkDataExchange\Types\OrderReportFilter::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'orderReportFilter'
@@ -68,18 +68,18 @@ class DownloadRequestFilter extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="http://www.ebay.com/marketplace/services"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="http://www.ebay.com/marketplace/services"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

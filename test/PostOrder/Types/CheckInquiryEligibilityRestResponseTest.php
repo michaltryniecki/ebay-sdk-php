@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\CheckInquiryEligibilityRestResponse;
 
-class CheckInquiryEligibilityRestResponseTest extends \PHPUnit_Framework_TestCase
+class CheckInquiryEligibilityRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CheckInquiryEligibilityRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\CheckInquiryEligibilityRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\CheckInquiryEligibilityRestResponse::class, $this->obj);
     }
 
     public function testExtendsCheckInquiryEligibilityResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\CheckInquiryEligibilityResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\CheckInquiryEligibilityResponse::class, $this->obj);
     }
 }

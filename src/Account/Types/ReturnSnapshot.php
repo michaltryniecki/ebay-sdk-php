@@ -23,13 +23,13 @@ class ReturnSnapshot extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'lookbackPeriod' => [
-            'type' => 'DTS\eBaySDK\Account\Types\LookbackPeriod',
+            'type' => \DTS\eBaySDK\Account\Types\LookbackPeriod::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'lookbackPeriod'
         ],
         'returnedInventoryValue' => [
-            'type' => 'DTS\eBaySDK\Account\Types\Amount',
+            'type' => \DTS\eBaySDK\Account\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnedInventoryValue'
@@ -47,14 +47,14 @@ class ReturnSnapshot extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\BulkUpdateAdBidsByListingIDRestRequest;
 
-class BulkUpdateAdBidsByListingIDRestRequestTest extends \PHPUnit_Framework_TestCase
+class BulkUpdateAdBidsByListingIDRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new BulkUpdateAdBidsByListingIDRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\BulkUpdateAdBidsByListingIDRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\BulkUpdateAdBidsByListingIDRestRequest::class, $this->obj);
     }
 
     public function testExtendsBulkCreateAdRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\BulkCreateAdRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\BulkCreateAdRequest::class, $this->obj);
     }
 }

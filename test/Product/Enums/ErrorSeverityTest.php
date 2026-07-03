@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Product\Enums;
 
 use DTS\eBaySDK\Product\Enums\ErrorSeverity;
 
-class ErrorSeverityTest extends \PHPUnit_Framework_TestCase
+class ErrorSeverityTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ErrorSeverity();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Product\Enums\ErrorSeverity', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Product\Enums\ErrorSeverity::class, $this->obj);
     }
 }

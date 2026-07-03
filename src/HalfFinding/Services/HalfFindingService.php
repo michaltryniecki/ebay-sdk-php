@@ -40,7 +40,7 @@ class HalfFindingService extends \DTS\eBaySDK\HalfFinding\Services\HalfFindingBa
         return $this->callOperationAsync(
             'getVersion',
             $request,
-            '\DTS\eBaySDK\HalfFinding\Types\GetVersionResponse'
+            \DTS\eBaySDK\HalfFinding\Types\GetVersionResponse::class
         );
     }
 
@@ -62,7 +62,7 @@ class HalfFindingService extends \DTS\eBaySDK\HalfFinding\Services\HalfFindingBa
         return $this->callOperationAsync(
             'findHalfItems',
             $request,
-            '\DTS\eBaySDK\HalfFinding\Types\FindItemsResponse'
+            \DTS\eBaySDK\HalfFinding\Types\FindItemsResponse::class
         );
     }
 }

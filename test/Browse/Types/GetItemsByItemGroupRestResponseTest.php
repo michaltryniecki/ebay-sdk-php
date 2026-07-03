@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Browse\Types;
 
 use DTS\eBaySDK\Browse\Types\GetItemsByItemGroupRestResponse;
 
-class GetItemsByItemGroupRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetItemsByItemGroupRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetItemsByItemGroupRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Browse\Types\GetItemsByItemGroupRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Browse\Types\GetItemsByItemGroupRestResponse::class, $this->obj);
     }
 
     public function testExtendsItems()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Browse\Types\Items', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Browse\Types\Items::class, $this->obj);
     }
 }

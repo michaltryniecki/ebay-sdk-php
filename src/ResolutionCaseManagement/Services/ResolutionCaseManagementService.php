@@ -40,7 +40,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'getVersion',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\GetVersionResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\GetVersionResponse::class
         );
     }
 
@@ -62,7 +62,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'getUserCases',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\GetUserCasesResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\GetUserCasesResponse::class
         );
     }
 
@@ -84,7 +84,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'getEBPCaseDetail',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\GetEBPCaseDetailResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\GetEBPCaseDetailResponse::class
         );
     }
 
@@ -106,7 +106,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'getActivityOptions',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\GetActivityOptionsResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\GetActivityOptionsResponse::class
         );
     }
 
@@ -128,7 +128,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'issueFullRefund',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\IssueFullRefundResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\IssueFullRefundResponse::class
         );
     }
 
@@ -150,7 +150,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'provideTrackingInfo',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideTrackingInfoResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideTrackingInfoResponse::class
         );
     }
 
@@ -172,7 +172,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'offerOtherSolution',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\OfferOtherSolutionResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\OfferOtherSolutionResponse::class
         );
     }
 
@@ -194,7 +194,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'escalateToCustomerSupport',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\EscalateToCustomerSupportResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\EscalateToCustomerSupportResponse::class
         );
     }
 
@@ -216,7 +216,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'appealToCustomerSupport',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\AppealToCustomerSupportResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\AppealToCustomerSupportResponse::class
         );
     }
 
@@ -238,7 +238,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'offerPartialRefund',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\OfferPartialRefundResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\OfferPartialRefundResponse::class
         );
     }
 
@@ -260,7 +260,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'issuePartialRefund',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\IssuePartialRefundResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\IssuePartialRefundResponse::class
         );
     }
 
@@ -282,7 +282,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'provideShippingInfo',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideShippingInfoResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideShippingInfoResponse::class
         );
     }
 
@@ -304,7 +304,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'provideReturnInfo',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideReturnInfoResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideReturnInfoResponse::class
         );
     }
 
@@ -326,7 +326,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'provideRefundInfo',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideRefundInfoResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\ProvideRefundInfoResponse::class
         );
     }
 
@@ -348,7 +348,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'uploadDocuments',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\UploadDocumentsResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\UploadDocumentsResponse::class
         );
     }
 
@@ -370,7 +370,7 @@ class ResolutionCaseManagementService extends \DTS\eBaySDK\ResolutionCaseManagem
         return $this->callOperationAsync(
             'offerRefundUponReturn',
             $request,
-            '\DTS\eBaySDK\ResolutionCaseManagement\Types\OfferRefundUponReturnResponse'
+            \DTS\eBaySDK\ResolutionCaseManagement\Types\OfferRefundUponReturnResponse::class
         );
     }
 }

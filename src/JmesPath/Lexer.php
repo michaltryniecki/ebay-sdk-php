@@ -447,7 +447,7 @@ class Lexer
      */
     private function parseJson(array $token)
     {
-        $value = json_decode($token['value'], true);
+        $value = json_decode((string) $token['value'], true);
 
         if ($error = json_last_error()) {
             // Legacy support for elided quotes. Try to parse again by adding

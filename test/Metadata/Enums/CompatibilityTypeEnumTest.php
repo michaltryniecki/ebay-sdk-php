@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Metadata\Enums;
 
 use DTS\eBaySDK\Metadata\Enums\CompatibilityTypeEnum;
 
-class CompatibilityTypeEnumTest extends \PHPUnit_Framework_TestCase
+class CompatibilityTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CompatibilityTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Metadata\Enums\CompatibilityTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Metadata\Enums\CompatibilityTypeEnum::class, $this->obj);
     }
 }

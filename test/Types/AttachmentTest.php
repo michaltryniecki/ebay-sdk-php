@@ -5,14 +5,14 @@ use DTS\eBaySDK\Test\Mocks\Service;
 use DTS\eBaySDK\Test\Mocks\ComplexClass;
 use DTS\eBaySDK\Test\Mocks\HttpHandler;
 
-class AttachmentTest extends \PHPUnit_Framework_TestCase
+class AttachmentTest extends \PHPUnit\Framework\TestCase
 {
     private $httpHandler;
     private $service;
     private $request;
     private $requestXml;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         /**
          * Use a class that will fake sending requests and getting responses.
@@ -64,7 +64,7 @@ class AttachmentTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('Content-Type', $this->httpHandler->headers);
         $this->assertEquals('multipart/related;boundary=MIME_boundary;type="application/xop+xml";start="<request.xml@devbay.net>";start-info="text/xml"', $this->httpHandler->headers['Content-Type']);
         $this->assertArrayHasKey('Content-Length', $this->httpHandler->headers);
-        $this->assertEquals(strlen($this->requestXml), $this->httpHandler->headers['Content-Length']);
+        $this->assertEquals(strlen((string) $this->requestXml), $this->httpHandler->headers['Content-Length']);
     }
 
     public function testXmlIsCreated()
@@ -78,7 +78,7 @@ class AttachmentTest extends \PHPUnit_Framework_TestCase
     {
         $this->httpHandler->returnAttachment = true;
         $response = $this->service->bar($this->request);
-        $this->assertInstanceOf('\DTS\eBaySDK\Test\Mocks\ComplexClass', $response);
+        $this->assertInstanceOf(\DTS\eBaySDK\Test\Mocks\ComplexClass::class, $response);
         $this->assertEquals(123, $response->integer);
         $this->assertEquals('a string', $response->string);
         $this->assertEquals(123.45, $response->double);

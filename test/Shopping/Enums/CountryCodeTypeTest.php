@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Shopping\Enums;
 
 use DTS\eBaySDK\Shopping\Enums\CountryCodeType;
 
-class CountryCodeTypeTest extends \PHPUnit_Framework_TestCase
+class CountryCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CountryCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Enums\CountryCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Shopping\Enums\CountryCodeType::class, $this->obj);
     }
 }

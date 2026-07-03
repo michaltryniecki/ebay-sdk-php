@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Browse\Enums;
 
 use DTS\eBaySDK\Browse\Enums\AvailabilityThresholdEnum;
 
-class AvailabilityThresholdEnumTest extends \PHPUnit_Framework_TestCase
+class AvailabilityThresholdEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new AvailabilityThresholdEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Browse\Enums\AvailabilityThresholdEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Browse\Enums\AvailabilityThresholdEnum::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\CloneCampaignRestRequest;
 
-class CloneCampaignRestRequestTest extends \PHPUnit_Framework_TestCase
+class CloneCampaignRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CloneCampaignRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\CloneCampaignRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\CloneCampaignRestRequest::class, $this->obj);
     }
 
     public function testExtendsCloneCampaignRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\CloneCampaignRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\CloneCampaignRequest::class, $this->obj);
     }
 }

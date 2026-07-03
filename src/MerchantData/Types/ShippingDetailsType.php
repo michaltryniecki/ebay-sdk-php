@@ -60,7 +60,7 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'GlobalShipping'
         ],
         'CalculatedShippingRate' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\CalculatedShippingRateType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\CalculatedShippingRateType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CalculatedShippingRate'
@@ -72,7 +72,7 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ChangePaymentInstructions'
         ],
         'InsuranceFee' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InsuranceFee'
@@ -102,7 +102,7 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'PaymentInstructions'
         ],
         'SalesTax' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\SalesTaxType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\SalesTaxType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'SalesTax'
@@ -120,13 +120,13 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShippingRateType'
         ],
         'ShippingServiceOptions' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ShippingServiceOptionsType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\ShippingServiceOptionsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ShippingServiceOptions'
         ],
         'InternationalShippingServiceOption' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\InternationalShippingServiceOptionsType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\InternationalShippingServiceOptionsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'InternationalShippingServiceOption'
@@ -144,7 +144,7 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'SellingManagerSalesRecordNumber'
         ],
         'TaxTable' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\TaxTableType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\TaxTableType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'TaxTable'
@@ -156,19 +156,19 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShippingServiceUsed'
         ],
         'DefaultShippingCost' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'DefaultShippingCost'
         ],
         'InsuranceDetails' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\InsuranceDetailsType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\InsuranceDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InsuranceDetails'
         ],
         'InternationalInsuranceDetails' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\InsuranceDetailsType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\InsuranceDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InternationalInsuranceDetails'
@@ -180,13 +180,13 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShippingDiscountProfileID'
         ],
         'FlatShippingDiscount' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\FlatShippingDiscountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\FlatShippingDiscountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'FlatShippingDiscount'
         ],
         'CalculatedShippingDiscount' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\CalculatedShippingDiscountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\CalculatedShippingDiscountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CalculatedShippingDiscount'
@@ -204,13 +204,13 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'InternationalShippingDiscountProfileID'
         ],
         'InternationalFlatShippingDiscount' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\FlatShippingDiscountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\FlatShippingDiscountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InternationalFlatShippingDiscount'
         ],
         'InternationalCalculatedShippingDiscount' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\CalculatedShippingDiscountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\CalculatedShippingDiscountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InternationalCalculatedShippingDiscount'
@@ -222,13 +222,13 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'InternationalPromotionalShippingDiscount'
         ],
         'PromotionalShippingDiscountDetails' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\PromotionalShippingDiscountDetailsType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\PromotionalShippingDiscountDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PromotionalShippingDiscountDetails'
         ],
         'CODCost' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\AmountType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'CODCost'
@@ -246,13 +246,13 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'SellerExcludeShipToLocationsPreference'
         ],
         'ShipmentTrackingDetails' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\ShipmentTrackingDetailsType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\ShipmentTrackingDetailsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ShipmentTrackingDetails'
         ],
         'RateTableDetails' => [
-            'type' => 'DTS\eBaySDK\MerchantData\Types\RateTableDetailsType',
+            'type' => \DTS\eBaySDK\MerchantData\Types\RateTableDetailsType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'RateTableDetails'
@@ -264,18 +264,18 @@ class ShippingDetailsType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

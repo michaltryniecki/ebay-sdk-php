@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\ResolutionCaseManagement\Enums;
 
 use DTS\eBaySDK\ResolutionCaseManagement\Enums\CancelTransactionCaseStatusType;
 
-class CancelTransactionCaseStatusTypeTest extends \PHPUnit_Framework_TestCase
+class CancelTransactionCaseStatusTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CancelTransactionCaseStatusType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\ResolutionCaseManagement\Enums\CancelTransactionCaseStatusType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\ResolutionCaseManagement\Enums\CancelTransactionCaseStatusType::class, $this->obj);
     }
 }

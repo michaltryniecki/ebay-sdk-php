@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Finding\Types;
 
 use DTS\eBaySDK\Finding\Types\FindItemsIneBayStoresResponse;
 
-class FindItemsIneBayStoresResponseTest extends \PHPUnit_Framework_TestCase
+class FindItemsIneBayStoresResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FindItemsIneBayStoresResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Finding\Types\FindItemsIneBayStoresResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Finding\Types\FindItemsIneBayStoresResponse::class, $this->obj);
     }
 
     public function testExtendsBaseFindingServiceResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Finding\Types\BaseFindingServiceResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Finding\Types\BaseFindingServiceResponse::class, $this->obj);
     }
 }

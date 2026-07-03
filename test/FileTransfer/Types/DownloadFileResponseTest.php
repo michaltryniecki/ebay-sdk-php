@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\FileTransfer\Types;
 
 use DTS\eBaySDK\FileTransfer\Types\DownloadFileResponse;
 
-class DownloadFileResponseTest extends \PHPUnit_Framework_TestCase
+class DownloadFileResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DownloadFileResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\FileTransfer\Types\DownloadFileResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\FileTransfer\Types\DownloadFileResponse::class, $this->obj);
     }
 
     public function testExtendsBaseServiceResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\FileTransfer\Types\BaseServiceResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\FileTransfer\Types\BaseServiceResponse::class, $this->obj);
     }
 }

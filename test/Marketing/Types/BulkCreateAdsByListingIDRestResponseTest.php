@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\BulkCreateAdsByListingIDRestResponse;
 
-class BulkCreateAdsByListingIDRestResponseTest extends \PHPUnit_Framework_TestCase
+class BulkCreateAdsByListingIDRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new BulkCreateAdsByListingIDRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\BulkCreateAdsByListingIDRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\BulkCreateAdsByListingIDRestResponse::class, $this->obj);
     }
 
     public function testExtendsBulkAdResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\BulkAdResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\BulkAdResponse::class, $this->obj);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Account\Enums;
 
 use DTS\eBaySDK\Account\Enums\CategoryTypeEnum;
 
-class CategoryTypeEnumTest extends \PHPUnit_Framework_TestCase
+class CategoryTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CategoryTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Enums\CategoryTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Enums\CategoryTypeEnum::class, $this->obj);
     }
 }

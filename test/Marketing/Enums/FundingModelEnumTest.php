@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Marketing\Enums;
 
 use DTS\eBaySDK\Marketing\Enums\FundingModelEnum;
 
-class FundingModelEnumTest extends \PHPUnit_Framework_TestCase
+class FundingModelEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FundingModelEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Enums\FundingModelEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Enums\FundingModelEnum::class, $this->obj);
     }
 }

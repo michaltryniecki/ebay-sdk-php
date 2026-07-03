@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\UpdateReturnDraftRestRequest;
 
-class UpdateReturnDraftRestRequestTest extends \PHPUnit_Framework_TestCase
+class UpdateReturnDraftRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateReturnDraftRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\UpdateReturnDraftRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\UpdateReturnDraftRestRequest::class, $this->obj);
     }
 
     public function testExtendsSetReturnCreationSessionRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\SetReturnCreationSessionRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\SetReturnCreationSessionRequest::class, $this->obj);
     }
 }

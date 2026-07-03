@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\CreateCampaignRestRequest;
 
-class CreateCampaignRestRequestTest extends \PHPUnit_Framework_TestCase
+class CreateCampaignRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new CreateCampaignRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\CreateCampaignRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\CreateCampaignRestRequest::class, $this->obj);
     }
 
     public function testExtendsCreateCampaignRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\CreateCampaignRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\CreateCampaignRequest::class, $this->obj);
     }
 }

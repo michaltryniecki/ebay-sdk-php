@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\MyeBaySellingSummaryType;
 
-class MyeBaySellingSummaryTypeTest extends \PHPUnit_Framework_TestCase
+class MyeBaySellingSummaryTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new MyeBaySellingSummaryType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\MyeBaySellingSummaryType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\MyeBaySellingSummaryType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

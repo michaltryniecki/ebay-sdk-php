@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\ItemCompatibilityEnabledCodeType;
 
-class ItemCompatibilityEnabledCodeTypeTest extends \PHPUnit_Framework_TestCase
+class ItemCompatibilityEnabledCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ItemCompatibilityEnabledCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\ItemCompatibilityEnabledCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\ItemCompatibilityEnabledCodeType::class, $this->obj);
     }
 }

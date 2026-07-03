@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\RelatedItemsManagement\Types;
 
 use DTS\eBaySDK\RelatedItemsManagement\Types\DeleteBundlesRequest;
 
-class DeleteBundlesRequestTest extends \PHPUnit_Framework_TestCase
+class DeleteBundlesRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DeleteBundlesRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\RelatedItemsManagement\Types\DeleteBundlesRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\RelatedItemsManagement\Types\DeleteBundlesRequest::class, $this->obj);
     }
 
     public function testExtendsBaseRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\RelatedItemsManagement\Types\BaseRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\RelatedItemsManagement\Types\BaseRequest::class, $this->obj);
     }
 }

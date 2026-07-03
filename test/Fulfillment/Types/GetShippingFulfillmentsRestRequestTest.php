@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Fulfillment\Types;
 
 use DTS\eBaySDK\Fulfillment\Types\GetShippingFulfillmentsRestRequest;
 
-class GetShippingFulfillmentsRestRequestTest extends \PHPUnit_Framework_TestCase
+class GetShippingFulfillmentsRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetShippingFulfillmentsRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Fulfillment\Types\GetShippingFulfillmentsRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Fulfillment\Types\GetShippingFulfillmentsRestRequest::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

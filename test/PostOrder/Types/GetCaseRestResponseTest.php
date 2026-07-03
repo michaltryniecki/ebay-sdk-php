@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\GetCaseRestResponse;
 
-class GetCaseRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetCaseRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetCaseRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\GetCaseRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\GetCaseRestResponse::class, $this->obj);
     }
 
     public function testExtendsCaseDetailsResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\CaseDetailsResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\CaseDetailsResponse::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\SIFFTASRecommendationsType;
 
-class SIFFTASRecommendationsTypeTest extends \PHPUnit_Framework_TestCase
+class SIFFTASRecommendationsTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SIFFTASRecommendationsType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\SIFFTASRecommendationsType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\SIFFTASRecommendationsType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

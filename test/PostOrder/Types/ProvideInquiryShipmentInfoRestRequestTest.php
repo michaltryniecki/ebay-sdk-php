@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\ProvideInquiryShipmentInfoRestRequest;
 
-class ProvideInquiryShipmentInfoRestRequestTest extends \PHPUnit_Framework_TestCase
+class ProvideInquiryShipmentInfoRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ProvideInquiryShipmentInfoRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\ProvideInquiryShipmentInfoRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\ProvideInquiryShipmentInfoRestRequest::class, $this->obj);
     }
 
     public function testExtendsShipmentInfoRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\ShipmentInfoRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\ShipmentInfoRequest::class, $this->obj);
     }
 }

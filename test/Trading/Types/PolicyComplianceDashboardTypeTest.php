@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\PolicyComplianceDashboardType;
 
-class PolicyComplianceDashboardTypeTest extends \PHPUnit_Framework_TestCase
+class PolicyComplianceDashboardTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PolicyComplianceDashboardType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\PolicyComplianceDashboardType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\PolicyComplianceDashboardType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

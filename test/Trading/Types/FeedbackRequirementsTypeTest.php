@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\FeedbackRequirementsType;
 
-class FeedbackRequirementsTypeTest extends \PHPUnit_Framework_TestCase
+class FeedbackRequirementsTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new FeedbackRequirementsType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\FeedbackRequirementsType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\FeedbackRequirementsType::class, $this->obj);
     }
 
     public function testExtendsBooleanType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BooleanType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BooleanType::class, $this->obj);
     }
 }

@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\StoreCategoryUpdateActionCodeType;
 
-class StoreCategoryUpdateActionCodeTypeTest extends \PHPUnit_Framework_TestCase
+class StoreCategoryUpdateActionCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new StoreCategoryUpdateActionCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\StoreCategoryUpdateActionCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\StoreCategoryUpdateActionCodeType::class, $this->obj);
     }
 }

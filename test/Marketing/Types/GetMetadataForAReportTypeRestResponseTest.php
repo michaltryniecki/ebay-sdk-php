@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\GetMetadataForAReportTypeRestResponse;
 
-class GetMetadataForAReportTypeRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetMetadataForAReportTypeRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetMetadataForAReportTypeRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\GetMetadataForAReportTypeRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\GetMetadataForAReportTypeRestResponse::class, $this->obj);
     }
 
     public function testExtendsReportMetadata()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\ReportMetadata', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\ReportMetadata::class, $this->obj);
     }
 }

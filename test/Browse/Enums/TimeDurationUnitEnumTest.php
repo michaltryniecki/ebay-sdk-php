@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Browse\Enums;
 
 use DTS\eBaySDK\Browse\Enums\TimeDurationUnitEnum;
 
-class TimeDurationUnitEnumTest extends \PHPUnit_Framework_TestCase
+class TimeDurationUnitEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new TimeDurationUnitEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Browse\Enums\TimeDurationUnitEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Browse\Enums\TimeDurationUnitEnum::class, $this->obj);
     }
 }

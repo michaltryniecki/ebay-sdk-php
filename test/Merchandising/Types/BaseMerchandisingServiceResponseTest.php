@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Merchandising\Types;
 
 use DTS\eBaySDK\Merchandising\Types\BaseMerchandisingServiceResponse;
 
-class BaseMerchandisingServiceResponseTest extends \PHPUnit_Framework_TestCase
+class BaseMerchandisingServiceResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new BaseMerchandisingServiceResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Merchandising\Types\BaseMerchandisingServiceResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Merchandising\Types\BaseMerchandisingServiceResponse::class, $this->obj);
     }
 
     public function testExtendsBaseServiceResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Merchandising\Types\BaseServiceResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Merchandising\Types\BaseServiceResponse::class, $this->obj);
     }
 }

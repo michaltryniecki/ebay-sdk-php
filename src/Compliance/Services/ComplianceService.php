@@ -21,7 +21,7 @@ class ComplianceService extends \DTS\eBaySDK\Compliance\Services\ComplianceBaseS
         'GetListingViolationsSummary' => [
             'method' => 'GET',
             'resource' => 'listing_violation_summary',
-            'responseClass' => '\DTS\eBaySDK\Compliance\Types\GetListingViolationsSummaryRestResponse',
+            'responseClass' => \DTS\eBaySDK\Compliance\Types\GetListingViolationsSummaryRestResponse::class,
             'params' => [
                 'compliance_type' => [
                     'valid' => ['string']
@@ -31,7 +31,7 @@ class ComplianceService extends \DTS\eBaySDK\Compliance\Services\ComplianceBaseS
         'GetListingViolations' => [
             'method' => 'GET',
             'resource' => 'listing_violation',
-            'responseClass' => '\DTS\eBaySDK\Compliance\Types\GetListingViolationsRestResponse',
+            'responseClass' => \DTS\eBaySDK\Compliance\Types\GetListingViolationsRestResponse::class,
             'params' => [
                 'limit' => [
                     'valid' => ['integer']

@@ -51,25 +51,25 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'EstimatedDeliveryDate'
         ],
         'InsuredValue' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'InsuredValue'
         ],
         'PackageDepth' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MeasureType',
+            'type' => \DTS\eBaySDK\Trading\Types\MeasureType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PackageDepth'
         ],
         'PackageLength' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MeasureType',
+            'type' => \DTS\eBaySDK\Trading\Types\MeasureType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PackageLength'
         ],
         'PackageWidth' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MeasureType',
+            'type' => \DTS\eBaySDK\Trading\Types\MeasureType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PackageWidth'
@@ -87,7 +87,7 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShipmentID'
         ],
         'PostageTotal' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AmountType',
+            'type' => \DTS\eBaySDK\Trading\Types\AmountType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'PostageTotal'
@@ -99,13 +99,13 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'PrintedTime'
         ],
         'ShipFromAddress' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
+            'type' => \DTS\eBaySDK\Trading\Types\AddressType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShipFromAddress'
         ],
         'ShippingAddress' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\AddressType',
+            'type' => \DTS\eBaySDK\Trading\Types\AddressType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShippingAddress'
@@ -129,19 +129,19 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShippingServiceUsed'
         ],
         'WeightMajor' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MeasureType',
+            'type' => \DTS\eBaySDK\Trading\Types\MeasureType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WeightMajor'
         ],
         'WeightMinor' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\MeasureType',
+            'type' => \DTS\eBaySDK\Trading\Types\MeasureType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'WeightMinor'
         ],
         'ItemTransactionID' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ItemTransactionIDType',
+            'type' => \DTS\eBaySDK\Trading\Types\ItemTransactionIDType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ItemTransactionID'
@@ -183,13 +183,13 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'ShippedTime'
         ],
         'ShipmentTrackingDetails' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType',
+            'type' => \DTS\eBaySDK\Trading\Types\ShipmentTrackingDetailsType::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'ShipmentTrackingDetails'
         ],
         'ShipmentLineItem' => [
-            'type' => 'DTS\eBaySDK\Trading\Types\ShipmentLineItemType',
+            'type' => \DTS\eBaySDK\Trading\Types\ShipmentLineItemType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'ShipmentLineItem'
@@ -201,18 +201,18 @@ class ShipmentType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        if (!array_key_exists(__CLASS__, self::$xmlNamespaces)) {
-            self::$xmlNamespaces[__CLASS__] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
+        if (!array_key_exists(self::class, self::$xmlNamespaces)) {
+            self::$xmlNamespaces[self::class] = 'xmlns="urn:ebay:apis:eBLBaseComponents"';
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

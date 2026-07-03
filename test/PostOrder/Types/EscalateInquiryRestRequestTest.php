@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\EscalateInquiryRestRequest;
 
-class EscalateInquiryRestRequestTest extends \PHPUnit_Framework_TestCase
+class EscalateInquiryRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new EscalateInquiryRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\EscalateInquiryRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\EscalateInquiryRestRequest::class, $this->obj);
     }
 
     public function testExtendsEscalateInquiryRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\EscalateInquiryRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\EscalateInquiryRequest::class, $this->obj);
     }
 }

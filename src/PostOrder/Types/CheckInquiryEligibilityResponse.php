@@ -31,19 +31,19 @@ class CheckInquiryEligibilityResponse extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'earliestPossibleFilingDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'earliestPossibleFilingDate'
         ],
         'errors' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\EligibilityResponseError',
+            'type' => \DTS\eBaySDK\PostOrder\Types\EligibilityResponseError::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'errors'
         ],
         'estimatedDeliveryDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'estimatedDeliveryDate'
@@ -61,13 +61,13 @@ class CheckInquiryEligibilityResponse extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'inquiryId'
         ],
         'latestPossibleFilingDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'latestPossibleFilingDate'
         ],
         'nonOverridableErrors' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\EligibilityResponseError',
+            'type' => \DTS\eBaySDK\PostOrder\Types\EligibilityResponseError::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'nonOverridableErrors'
@@ -79,7 +79,7 @@ class CheckInquiryEligibilityResponse extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'paypalReasonToDenyRequestFiling'
         ],
         'returnFilingDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'returnFilingDate'
@@ -91,7 +91,7 @@ class CheckInquiryEligibilityResponse extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'returnId'
         ],
         'warnings' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\EligibilityResponseError',
+            'type' => \DTS\eBaySDK\PostOrder\Types\EligibilityResponseError::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'warnings'
@@ -103,14 +103,14 @@ class CheckInquiryEligibilityResponse extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

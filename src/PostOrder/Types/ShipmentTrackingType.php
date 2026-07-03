@@ -51,13 +51,13 @@ class ShipmentTrackingType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'active'
         ],
         'actualDeliveryDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'actualDeliveryDate'
         ],
         'actualShipDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'actualShipDate'
@@ -87,7 +87,7 @@ class ShipmentTrackingType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'carrierUsed'
         ],
         'deliveryDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'deliveryDate'
@@ -99,7 +99,7 @@ class ShipmentTrackingType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'deliveryStatus'
         ],
         'destinationAddress' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\ReturnAddressType',
+            'type' => \DTS\eBaySDK\PostOrder\Types\ReturnAddressType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'destinationAddress'
@@ -117,7 +117,7 @@ class ShipmentTrackingType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'labelAvailableUntilDate'
         ],
         'labelDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'labelDate'
@@ -147,25 +147,25 @@ class ShipmentTrackingType extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'markAsReceived'
         ],
         'maxDeliveryEstimate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'maxDeliveryEstimate'
         ],
         'minDeliveryEstimate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'minDeliveryEstimate'
         ],
         'originAddress' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\ReturnAddressType',
+            'type' => \DTS\eBaySDK\PostOrder\Types\ReturnAddressType::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'originAddress'
         ],
         'shipDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shipDate'
@@ -201,14 +201,14 @@ class ShipmentTrackingType extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

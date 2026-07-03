@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Metadata\Types;
 
 use DTS\eBaySDK\Metadata\Types\GetSalesTaxJurisdictionsRestResponse;
 
-class GetSalesTaxJurisdictionsRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetSalesTaxJurisdictionsRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetSalesTaxJurisdictionsRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Metadata\Types\GetSalesTaxJurisdictionsRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Metadata\Types\GetSalesTaxJurisdictionsRestResponse::class, $this->obj);
     }
 
     public function testExtendsSalesTaxJurisdictions()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Metadata\Types\SalesTaxJurisdictions', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Metadata\Types\SalesTaxJurisdictions::class, $this->obj);
     }
 }

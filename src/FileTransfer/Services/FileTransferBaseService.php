@@ -85,7 +85,7 @@ class FileTransferBaseService extends \DTS\eBaySDK\Services\BaseService
 
             if (!isset($request->fileAttachment->Size)) {
                 $attachment = $request->attachment();
-                $request->fileAttachment->Size = strlen($attachment['data']);
+                $request->fileAttachment->Size = strlen((string) $attachment['data']);
             }
         }
 

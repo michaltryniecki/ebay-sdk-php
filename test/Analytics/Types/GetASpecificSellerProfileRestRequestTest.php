@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Analytics\Types;
 
 use DTS\eBaySDK\Analytics\Types\GetASpecificSellerProfileRestRequest;
 
-class GetASpecificSellerProfileRestRequestTest extends \PHPUnit_Framework_TestCase
+class GetASpecificSellerProfileRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetASpecificSellerProfileRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Analytics\Types\GetASpecificSellerProfileRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Analytics\Types\GetASpecificSellerProfileRestRequest::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

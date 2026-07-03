@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Feedback\Types;
 
 use DTS\eBaySDK\Feedback\Types\GetDSRSummaryResponse;
 
-class GetDSRSummaryResponseTest extends \PHPUnit_Framework_TestCase
+class GetDSRSummaryResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetDSRSummaryResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Feedback\Types\GetDSRSummaryResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Feedback\Types\GetDSRSummaryResponse::class, $this->obj);
     }
 
     public function testExtendsBaseServiceResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Feedback\Types\BaseServiceResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Feedback\Types\BaseServiceResponse::class, $this->obj);
     }
 }

@@ -21,7 +21,7 @@ class TaxonomyService extends \DTS\eBaySDK\Taxonomy\Services\TaxonomyBaseService
         'GetADefaultCategoryTreeId' => [
             'method' => 'GET',
             'resource' => 'get_default_category_tree_id',
-            'responseClass' => '\DTS\eBaySDK\Taxonomy\Types\GetADefaultCategoryTreeIdRestResponse',
+            'responseClass' => \DTS\eBaySDK\Taxonomy\Types\GetADefaultCategoryTreeIdRestResponse::class,
             'params' => [
                 'marketplace_id' => [
                     'valid' => ['string'],
@@ -32,7 +32,7 @@ class TaxonomyService extends \DTS\eBaySDK\Taxonomy\Services\TaxonomyBaseService
         'GetACategoryTree' => [
             'method' => 'GET',
             'resource' => 'category_tree/{category_tree_id}',
-            'responseClass' => '\DTS\eBaySDK\Taxonomy\Types\GetACategoryTreeRestResponse',
+            'responseClass' => \DTS\eBaySDK\Taxonomy\Types\GetACategoryTreeRestResponse::class,
             'params' => [
                 'category_tree_id' => [
                     'valid' => ['string'],
@@ -43,7 +43,7 @@ class TaxonomyService extends \DTS\eBaySDK\Taxonomy\Services\TaxonomyBaseService
         'GetACategorySubtree' => [
             'method' => 'GET',
             'resource' => 'category_tree/{category_tree_id}/get_category_subtree',
-            'responseClass' => '\DTS\eBaySDK\Taxonomy\Types\GetACategorySubtreeRestResponse',
+            'responseClass' => \DTS\eBaySDK\Taxonomy\Types\GetACategorySubtreeRestResponse::class,
             'params' => [
                 'category_id' => [
                     'valid' => ['string'],
@@ -58,7 +58,7 @@ class TaxonomyService extends \DTS\eBaySDK\Taxonomy\Services\TaxonomyBaseService
         'GetSuggestedCategories' => [
             'method' => 'GET',
             'resource' => 'category_tree/{category_tree_id}/get_category_suggestions',
-            'responseClass' => '\DTS\eBaySDK\Taxonomy\Types\GetSuggestedCategoriesRestResponse',
+            'responseClass' => \DTS\eBaySDK\Taxonomy\Types\GetSuggestedCategoriesRestResponse::class,
             'params' => [
                 'category_tree_id' => [
                     'valid' => ['string'],
@@ -73,7 +73,7 @@ class TaxonomyService extends \DTS\eBaySDK\Taxonomy\Services\TaxonomyBaseService
         'GetItemAspectsForCategory' => [
             'method' => 'GET',
             'resource' => 'category_tree/{category_tree_id}/get_item_aspects_for_category',
-            'responseClass' => '\DTS\eBaySDK\Taxonomy\Types\GetItemAspectsForCategoryRestResponse',
+            'responseClass' => \DTS\eBaySDK\Taxonomy\Types\GetItemAspectsForCategoryRestResponse::class,
             'params' => [
                 'category_id' => [
                     'valid' => ['string'],

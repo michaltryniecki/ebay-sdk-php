@@ -40,7 +40,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
         return $this->callOperationAsync(
             'getSearchKeywordsRecommendation',
             $request,
-            '\DTS\eBaySDK\Finding\Types\GetSearchKeywordsRecommendationResponse'
+            \DTS\eBaySDK\Finding\Types\GetSearchKeywordsRecommendationResponse::class
         );
     }
 
@@ -62,7 +62,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
         return $this->callOperationAsync(
             'findItemsByKeywords',
             $request,
-            '\DTS\eBaySDK\Finding\Types\FindItemsByKeywordsResponse'
+            \DTS\eBaySDK\Finding\Types\FindItemsByKeywordsResponse::class
         );
     }
 
@@ -84,7 +84,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
         return $this->callOperationAsync(
             'findItemsByCategory',
             $request,
-            '\DTS\eBaySDK\Finding\Types\FindItemsByCategoryResponse'
+            \DTS\eBaySDK\Finding\Types\FindItemsByCategoryResponse::class
         );
     }
 
@@ -106,7 +106,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
         return $this->callOperationAsync(
             'findItemsAdvanced',
             $request,
-            '\DTS\eBaySDK\Finding\Types\FindItemsAdvancedResponse'
+            \DTS\eBaySDK\Finding\Types\FindItemsAdvancedResponse::class
         );
     }
 
@@ -128,7 +128,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
         return $this->callOperationAsync(
             'findItemsByProduct',
             $request,
-            '\DTS\eBaySDK\Finding\Types\FindItemsByProductResponse'
+            \DTS\eBaySDK\Finding\Types\FindItemsByProductResponse::class
         );
     }
 
@@ -150,7 +150,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
         return $this->callOperationAsync(
             'findItemsIneBayStores',
             $request,
-            '\DTS\eBaySDK\Finding\Types\FindItemsIneBayStoresResponse'
+            \DTS\eBaySDK\Finding\Types\FindItemsIneBayStoresResponse::class
         );
     }
 
@@ -172,7 +172,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
         return $this->callOperationAsync(
             'findItemsByImage',
             $request,
-            '\DTS\eBaySDK\Finding\Types\FindItemsByImageResponse'
+            \DTS\eBaySDK\Finding\Types\FindItemsByImageResponse::class
         );
     }
 
@@ -194,7 +194,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
         return $this->callOperationAsync(
             'getHistograms',
             $request,
-            '\DTS\eBaySDK\Finding\Types\GetHistogramsResponse'
+            \DTS\eBaySDK\Finding\Types\GetHistogramsResponse::class
         );
     }
 
@@ -216,7 +216,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
         return $this->callOperationAsync(
             'getVersion',
             $request,
-            '\DTS\eBaySDK\Finding\Types\GetVersionResponse'
+            \DTS\eBaySDK\Finding\Types\GetVersionResponse::class
         );
     }
 
@@ -238,7 +238,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
         return $this->callOperationAsync(
             'findItemsForFavoriteSearch',
             $request,
-            '\DTS\eBaySDK\Finding\Types\FindItemsForFavoriteSearchResponse'
+            \DTS\eBaySDK\Finding\Types\FindItemsForFavoriteSearchResponse::class
         );
     }
 
@@ -260,7 +260,7 @@ class FindingService extends \DTS\eBaySDK\Finding\Services\FindingBaseService
         return $this->callOperationAsync(
             'findCompletedItems',
             $request,
-            '\DTS\eBaySDK\Finding\Types\FindCompletedItemsResponse'
+            \DTS\eBaySDK\Finding\Types\FindCompletedItemsResponse::class
         );
     }
 }

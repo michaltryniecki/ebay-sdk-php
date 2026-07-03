@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\ListingEnhancementDurationCodeType;
 
-class ListingEnhancementDurationCodeTypeTest extends \PHPUnit_Framework_TestCase
+class ListingEnhancementDurationCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ListingEnhancementDurationCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\ListingEnhancementDurationCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\ListingEnhancementDurationCodeType::class, $this->obj);
     }
 }

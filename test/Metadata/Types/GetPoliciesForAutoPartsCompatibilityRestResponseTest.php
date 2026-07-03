@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Metadata\Types;
 
 use DTS\eBaySDK\Metadata\Types\GetPoliciesForAutoPartsCompatibilityRestResponse;
 
-class GetPoliciesForAutoPartsCompatibilityRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetPoliciesForAutoPartsCompatibilityRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetPoliciesForAutoPartsCompatibilityRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Metadata\Types\GetPoliciesForAutoPartsCompatibilityRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Metadata\Types\GetPoliciesForAutoPartsCompatibilityRestResponse::class, $this->obj);
     }
 
     public function testExtendsAutomotivePartsCompatibilityPolicyResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Metadata\Types\AutomotivePartsCompatibilityPolicyResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Metadata\Types\AutomotivePartsCompatibilityPolicyResponse::class, $this->obj);
     }
 }

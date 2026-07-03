@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Fulfillment\Enums;
 
 use DTS\eBaySDK\Fulfillment\Enums\RefundTypeEnum;
 
-class RefundTypeEnumTest extends \PHPUnit_Framework_TestCase
+class RefundTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new RefundTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Fulfillment\Enums\RefundTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Fulfillment\Enums\RefundTypeEnum::class, $this->obj);
     }
 }

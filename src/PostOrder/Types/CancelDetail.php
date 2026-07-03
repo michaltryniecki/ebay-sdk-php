@@ -39,19 +39,19 @@ class CancelDetail extends \DTS\eBaySDK\Types\BaseType
      */
     private static $propertyTypes = [
         'activityHistories' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\CancelActivityHistory',
+            'type' => \DTS\eBaySDK\PostOrder\Types\CancelActivityHistory::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'activityHistories'
         ],
         'buyerResponseDueDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'buyerResponseDueDate'
         ],
         'cancelCloseDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'cancelCloseDate'
@@ -75,7 +75,7 @@ class CancelDetail extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'cancelReason'
         ],
         'cancelRequestDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'cancelRequestDate'
@@ -93,7 +93,7 @@ class CancelDetail extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'legacyOrderId'
         ],
         'lineItems' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\OrderCancelLineItem',
+            'type' => \DTS\eBaySDK\PostOrder\Types\OrderCancelLineItem::class,
             'repeatable' => true,
             'attribute' => false,
             'elementName' => 'lineItems'
@@ -117,19 +117,19 @@ class CancelDetail extends \DTS\eBaySDK\Types\BaseType
             'elementName' => 'requestorType'
         ],
         'requestRefundAmount' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\Amount',
+            'type' => \DTS\eBaySDK\PostOrder\Types\Amount::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'requestRefundAmount'
         ],
         'sellerResponseDueDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'sellerResponseDueDate'
         ],
         'shipmentDate' => [
-            'type' => 'DTS\eBaySDK\PostOrder\Types\DateTime',
+            'type' => \DTS\eBaySDK\PostOrder\Types\DateTime::class,
             'repeatable' => false,
             'attribute' => false,
             'elementName' => 'shipmentDate'
@@ -159,14 +159,14 @@ class CancelDetail extends \DTS\eBaySDK\Types\BaseType
      */
     public function __construct(array $values = [])
     {
-        list($parentValues, $childValues) = self::getParentValues(self::$propertyTypes, $values);
+        [$parentValues, $childValues] = self::getParentValues(self::$propertyTypes, $values);
 
         parent::__construct($parentValues);
 
-        if (!array_key_exists(__CLASS__, self::$properties)) {
-            self::$properties[__CLASS__] = array_merge(self::$properties[get_parent_class()], self::$propertyTypes);
+        if (!array_key_exists(self::class, self::$properties)) {
+            self::$properties[self::class] = array_merge(self::$properties[parent::class], self::$propertyTypes);
         }
 
-        $this->setValues(__CLASS__, $childValues);
+        $this->setValues(self::class, $childValues);
     }
 }

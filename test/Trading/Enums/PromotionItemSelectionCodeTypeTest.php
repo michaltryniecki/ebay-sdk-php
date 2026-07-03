@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\PromotionItemSelectionCodeType;
 
-class PromotionItemSelectionCodeTypeTest extends \PHPUnit_Framework_TestCase
+class PromotionItemSelectionCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new PromotionItemSelectionCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\PromotionItemSelectionCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\PromotionItemSelectionCodeType::class, $this->obj);
     }
 }

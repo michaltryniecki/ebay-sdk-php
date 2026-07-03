@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\RelatedItemsManagement\Enums;
 
 use DTS\eBaySDK\RelatedItemsManagement\Enums\DiscountTypeEnum;
 
-class DiscountTypeEnumTest extends \PHPUnit_Framework_TestCase
+class DiscountTypeEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new DiscountTypeEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\RelatedItemsManagement\Enums\DiscountTypeEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\RelatedItemsManagement\Enums\DiscountTypeEnum::class, $this->obj);
     }
 }

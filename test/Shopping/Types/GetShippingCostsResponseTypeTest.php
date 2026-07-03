@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Shopping\Types;
 
 use DTS\eBaySDK\Shopping\Types\GetShippingCostsResponseType;
 
-class GetShippingCostsResponseTypeTest extends \PHPUnit_Framework_TestCase
+class GetShippingCostsResponseTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetShippingCostsResponseType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Types\GetShippingCostsResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Shopping\Types\GetShippingCostsResponseType::class, $this->obj);
     }
 
     public function testExtendsAbstractResponseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Shopping\Types\AbstractResponseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Shopping\Types\AbstractResponseType::class, $this->obj);
     }
 }

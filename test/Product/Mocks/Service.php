@@ -15,7 +15,7 @@ class Service extends \DTS\eBaySDK\Product\Services\ProductBaseService
         return $this->callOperationAsync(
             'testOperation',
             new ComplexClass(),
-            '\DTS\eBaySDK\Test\Mocks\ComplexClass'
+            \DTS\eBaySDK\Test\Mocks\ComplexClass::class
         )->wait();
     }
 }

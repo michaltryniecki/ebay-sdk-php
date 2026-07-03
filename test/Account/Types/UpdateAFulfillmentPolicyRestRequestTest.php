@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Account\Types;
 
 use DTS\eBaySDK\Account\Types\UpdateAFulfillmentPolicyRestRequest;
 
-class UpdateAFulfillmentPolicyRestRequestTest extends \PHPUnit_Framework_TestCase
+class UpdateAFulfillmentPolicyRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateAFulfillmentPolicyRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\UpdateAFulfillmentPolicyRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\UpdateAFulfillmentPolicyRestRequest::class, $this->obj);
     }
 
     public function testExtendsFulfillmentPolicyRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Account\Types\FulfillmentPolicyRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Account\Types\FulfillmentPolicyRequest::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\ProvideInquiryRefundInfoRestRequest;
 
-class ProvideInquiryRefundInfoRestRequestTest extends \PHPUnit_Framework_TestCase
+class ProvideInquiryRefundInfoRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ProvideInquiryRefundInfoRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\ProvideInquiryRefundInfoRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\ProvideInquiryRefundInfoRestRequest::class, $this->obj);
     }
 
     public function testExtendsSellerProvideRefundInfoRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\SellerProvideRefundInfoRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\SellerProvideRefundInfoRequest::class, $this->obj);
     }
 }

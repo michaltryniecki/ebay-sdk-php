@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\SellingManagerSoldListingsSortTypeCodeType;
 
-class SellingManagerSoldListingsSortTypeCodeTypeTest extends \PHPUnit_Framework_TestCase
+class SellingManagerSoldListingsSortTypeCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new SellingManagerSoldListingsSortTypeCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\SellingManagerSoldListingsSortTypeCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\SellingManagerSoldListingsSortTypeCodeType::class, $this->obj);
     }
 }

@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\GetReturnPreferencesRestResponse;
 
-class GetReturnPreferencesRestResponseTest extends \PHPUnit_Framework_TestCase
+class GetReturnPreferencesRestResponseTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetReturnPreferencesRestResponse();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\GetReturnPreferencesRestResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\GetReturnPreferencesRestResponse::class, $this->obj);
     }
 
     public function testExtendsGetSellerReturnPreferenceResponse()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\GetSellerReturnPreferenceResponse', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\GetSellerReturnPreferenceResponse::class, $this->obj);
     }
 }

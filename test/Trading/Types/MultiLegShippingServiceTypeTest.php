@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Trading\Types;
 
 use DTS\eBaySDK\Trading\Types\MultiLegShippingServiceType;
 
-class MultiLegShippingServiceTypeTest extends \PHPUnit_Framework_TestCase
+class MultiLegShippingServiceTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new MultiLegShippingServiceType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Types\MultiLegShippingServiceType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Types\MultiLegShippingServiceType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

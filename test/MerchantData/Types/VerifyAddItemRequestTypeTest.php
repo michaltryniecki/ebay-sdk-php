@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\MerchantData\Types;
 
 use DTS\eBaySDK\MerchantData\Types\VerifyAddItemRequestType;
 
-class VerifyAddItemRequestTypeTest extends \PHPUnit_Framework_TestCase
+class VerifyAddItemRequestTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new VerifyAddItemRequestType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\VerifyAddItemRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\VerifyAddItemRequestType::class, $this->obj);
     }
 
     public function testExtendsAbstractRequestType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\MerchantData\Types\AbstractRequestType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\MerchantData\Types\AbstractRequestType::class, $this->obj);
     }
 }

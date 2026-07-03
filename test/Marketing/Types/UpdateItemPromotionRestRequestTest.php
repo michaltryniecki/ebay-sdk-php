@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Marketing\Types;
 
 use DTS\eBaySDK\Marketing\Types\UpdateItemPromotionRestRequest;
 
-class UpdateItemPromotionRestRequestTest extends \PHPUnit_Framework_TestCase
+class UpdateItemPromotionRestRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new UpdateItemPromotionRestRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\UpdateItemPromotionRestRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\UpdateItemPromotionRestRequest::class, $this->obj);
     }
 
     public function testExtendsItemPromotion()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Marketing\Types\ItemPromotion', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Marketing\Types\ItemPromotion::class, $this->obj);
     }
 }

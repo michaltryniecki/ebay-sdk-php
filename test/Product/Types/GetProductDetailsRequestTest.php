@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\Product\Types;
 
 use DTS\eBaySDK\Product\Types\GetProductDetailsRequest;
 
-class GetProductDetailsRequestTest extends \PHPUnit_Framework_TestCase
+class GetProductDetailsRequestTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new GetProductDetailsRequest();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Product\Types\GetProductDetailsRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Product\Types\GetProductDetailsRequest::class, $this->obj);
     }
 
     public function testExtendsBaseServiceRequest()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Product\Types\BaseServiceRequest', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Product\Types\BaseServiceRequest::class, $this->obj);
     }
 }

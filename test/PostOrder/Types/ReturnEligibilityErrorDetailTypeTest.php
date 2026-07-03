@@ -12,22 +12,22 @@ namespace DTS\eBaySDK\Test\PostOrder\Types;
 
 use DTS\eBaySDK\PostOrder\Types\ReturnEligibilityErrorDetailType;
 
-class ReturnEligibilityErrorDetailTypeTest extends \PHPUnit_Framework_TestCase
+class ReturnEligibilityErrorDetailTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new ReturnEligibilityErrorDetailType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\PostOrder\Types\ReturnEligibilityErrorDetailType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\PostOrder\Types\ReturnEligibilityErrorDetailType::class, $this->obj);
     }
 
     public function testExtendsBaseType()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Types\BaseType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Types\BaseType::class, $this->obj);
     }
 }

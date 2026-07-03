@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Product\Enums;
 
 use DTS\eBaySDK\Product\Enums\MediaType;
 
-class MediaTypeTest extends \PHPUnit_Framework_TestCase
+class MediaTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new MediaType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Product\Enums\MediaType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Product\Enums\MediaType::class, $this->obj);
     }
 }

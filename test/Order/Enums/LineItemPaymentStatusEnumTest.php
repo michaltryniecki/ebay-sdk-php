@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Order\Enums;
 
 use DTS\eBaySDK\Order\Enums\LineItemPaymentStatusEnum;
 
-class LineItemPaymentStatusEnumTest extends \PHPUnit_Framework_TestCase
+class LineItemPaymentStatusEnumTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new LineItemPaymentStatusEnum();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Order\Enums\LineItemPaymentStatusEnum', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Order\Enums\LineItemPaymentStatusEnum::class, $this->obj);
     }
 }

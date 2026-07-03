@@ -12,17 +12,17 @@ namespace DTS\eBaySDK\Test\Trading\Enums;
 
 use DTS\eBaySDK\Trading\Enums\NotificationPayloadTypeCodeType;
 
-class NotificationPayloadTypeCodeTypeTest extends \PHPUnit_Framework_TestCase
+class NotificationPayloadTypeCodeTypeTest extends \PHPUnit\Framework\TestCase
 {
     private $obj;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->obj = new NotificationPayloadTypeCodeType();
     }
 
     public function testCanBeCreated()
     {
-        $this->assertInstanceOf('\DTS\eBaySDK\Trading\Enums\NotificationPayloadTypeCodeType', $this->obj);
+        $this->assertInstanceOf(\DTS\eBaySDK\Trading\Enums\NotificationPayloadTypeCodeType::class, $this->obj);
     }
 }
