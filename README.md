@@ -20,7 +20,7 @@ Some [examples](https://github.com/geekseller/ebay-sdk-examples) of using this S
 
 ## Requirements
 
-  - PHP 5.5 or greater with the following extensions:
+  - PHP 8.1 or greater (tested up to PHP 8.5) with the following extensions:
       - cURL
       - libxml
   - 64 bit version of PHP recommended as there are some [issues when using the SDK with 32 bit](http://devbay.net/sdk/guides/getting-started/requirements.html#using-the-sdk-with-32-bit-systems).

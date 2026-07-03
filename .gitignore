@@ -1,3 +1,6 @@
 vendor
 build/artifacts
 docs/_build
+.phpunit.cache
+.phpunit.result.cache
+.idea
